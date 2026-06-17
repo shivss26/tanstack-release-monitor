@@ -1,0 +1,15 @@
+[project]
+name = "tanstack-release-monitor"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic==0.109.1",
+]
+
+[tool.uv]
+exclude-newer = "7 days"          # self-updating 7-day cooldown
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.13"

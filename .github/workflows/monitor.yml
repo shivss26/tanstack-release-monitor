@@ -1,0 +1,84 @@
+name: release-monitor
+
+# Detect new release rollups + yanks (deterministic, stdlib), then — only when
+# there is pending work — enrich them into human-readable summaries via the
+# Sonnet harness and commit a digest. Email is deferred: the digest is committed,
+# not sent.
+#
+# Tested via manual `workflow_dispatch`; the hourly schedule is the real trigger.
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "17 * * * *"     # hourly, off-the-hour (public repo -> free unlimited minutes)
+
+permissions:
+  contents: write          # commit raw/, yanks/, state.json, prefetch/, summaries/, digest/
+
+concurrency:
+  group: release-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1) Deterministic detection (stdlib only — no setup needed).
+      - name: Detect new rollups and yanks
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 monitor/detect.py
+
+      # 2) How much enrich work is pending? (stdlib; gates the heavy setup below.)
+      - name: Count pending enrich work
+        id: pending
+        run: echo "count=$(python3 monitor/pending.py)" >> "$GITHUB_OUTPUT"
+
+      # 3) Heavy setup + enrich — ONLY when something is pending.
+      - name: Set up pnpm
+        if: steps.pending.outputs.count != '0'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.4.0
+
+      - name: Set up Node
+        if: steps.pending.outputs.count != '0'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install pinned TanStack CLI
+        if: steps.pending.outputs.count != '0'
+        run: |
+          pnpm add -g @tanstack/cli@0.69.3
+          echo "$(pnpm -g bin)" >> "$GITHUB_PATH"
+
+      - name: Set up uv
+        if: steps.pending.outputs.count != '0'
+        uses: astral-sh/setup-uv@v5
+
+      - name: Sync Python deps (locked)
+        if: steps.pending.outputs.count != '0'
+        run: uv sync --locked
+
+      - name: Enrich pending rollups + yanks
+        if: steps.pending.outputs.count != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run python monitor/enrich_run.py --root . --config monitor/config.json
+
+      # 4) Commit everything produced this run (detect + enrich outputs).
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name  "release-monitor[bot]"
+            git config user.email "release-monitor@users.noreply.github.com"
+            git add -A
+            git commit -m "monitor: run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          else
+            echo "no changes"
+          fi
