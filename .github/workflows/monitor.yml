@@ -52,8 +52,14 @@ jobs:
       - name: Install pinned TanStack CLI
         if: steps.pending.outputs.count != '0'
         run: |
+          # pnpm 11 installs global binaries into $PNPM_HOME/bin. pnpm/action-setup sets
+          # PNPM_HOME but does not add that bin subdir to PATH, so `pnpm add -g` errors
+          # ("global bin directory is not in PATH"). Export it inline for this step, and
+          # register it in GITHUB_PATH so the enrich step can resolve the `tanstack` binary.
+          export PATH="$PNPM_HOME/bin:$PATH"
+          echo "$PNPM_HOME/bin" >> "$GITHUB_PATH"
           pnpm add -g @tanstack/cli@0.69.3
-          echo "$(pnpm -g bin)" >> "$GITHUB_PATH"
+          tanstack --version
 
       - name: Set up uv
         if: steps.pending.outputs.count != '0'
