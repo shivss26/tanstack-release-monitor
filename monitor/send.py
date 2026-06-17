@@ -43,7 +43,10 @@ def send_email(api_key, sender, to, subject, text):
     req = urllib.request.Request(
         API_URL, data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {api_key}",
-                 "Content-Type": "application/json"}, method="POST")
+                 "Content-Type": "application/json",
+                 # Resend requires a User-Agent; without one Cloudflare's Browser
+                 # Integrity Check rejects the request with 403 (error code 1010).
+                 "User-Agent": "tanstack-release-monitor"}, method="POST")
     with urllib.request.urlopen(req) as resp:
         return (json.loads(resp.read()).get("data") or {}).get("id", "")
 
