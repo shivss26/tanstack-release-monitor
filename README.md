@@ -20,6 +20,8 @@ Each run has three stages:
    Markdown summary plus a combined digest. If a rollup does not match the expected
    release format, the summary falls back to the raw notes and is clearly marked as
    unverified.
+4. **Deliver** — emails the digest. Delivery is recorded once it succeeds, so a failed
+   send is retried on the next run rather than lost or duplicated.
 
 The pipeline is decoupled and self-healing: an interrupted run leaves its work marked
 as pending, and the next run retries it. A run that finds nothing new produces no output.
@@ -33,19 +35,21 @@ as pending, and the next run retries it. A run that finds nothing new produces n
 | `monitor/prefetch.py` | Assembles release notes and pull-request context. |
 | `monitor/enrich.py` | Language-model summarization and output assembly. |
 | `monitor/enrich_run.py` | Orchestrates detection output into summaries and a digest. |
+| `monitor/send.py` | Emails unsent digests (standard library only). |
 | `monitor/tanstack_tool.py` | Documentation lookup backed by the pinned TanStack CLI. |
 | `monitor/system-prompt.md` | Summarization instructions. |
 | `monitor/config.json` | Repositories to watch. |
 | `.github/workflows/monitor.yml` | The scheduled workflow. |
-| `raw/`, `summaries/`, `digest/`, … | Generated records and output. |
+| `raw/`, `summaries/`, `digest/`, `sent/`, … | Generated records, output, and delivery markers. |
 
 ## Configuration
 
 - **Watched repositories** live in `monitor/config.json` — each entry names an owner,
   a repository, and the libraries it covers.
 - **Schedule** is the cron in `.github/workflows/monitor.yml`; remove it to run on demand only.
-- Summarization requires an Anthropic API key, supplied to the workflow as an encrypted
-  secret.
+- Summarization requires an Anthropic API key; email delivery requires an email-provider
+  key and a recipient address. All are supplied to the workflow as encrypted secrets and
+  never live in the repository.
 
 ## Maintenance
 
@@ -73,4 +77,6 @@ are pinned in `mise.toml`.
 
 ## Status
 
-Summaries are committed to the repository. Email delivery is planned.
+Each run commits the summaries and a combined digest, and emails the digest. A digest is
+recorded as delivered once sent, so a delivery failure is retried on the next run rather
+than lost or duplicated.

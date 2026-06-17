@@ -76,8 +76,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run python monitor/enrich_run.py --root . --config monitor/config.json
 
-      # 4) Commit everything produced this run (detect + enrich outputs).
+      # 4) Deliver — email any unsent digest (stdlib; decoupled + self-healing).
+      #    Runs every time so a previously-failed send retries; a no-op when nothing is
+      #    unsent or when the email secrets aren't configured.
+      - name: Email unsent digests
+        if: always()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_EMAIL_TO: ${{ secrets.DIGEST_EMAIL_TO }}
+        run: python3 monitor/send.py --root .
+
+      # 5) Commit everything produced this run (detect + enrich + sent markers).
+      #    always() so enrich output is persisted even if the email step failed,
+      #    leaving the unsent digest to retry next run without re-enriching.
       - name: Commit changes
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name  "release-monitor[bot]"
