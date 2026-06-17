@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.3
 
       # 1) Deterministic detection (stdlib only — no setup needed).
       - name: Detect new rollups and yanks
@@ -39,13 +39,13 @@ jobs:
       # 3) Heavy setup + enrich — ONLY when something is pending.
       - name: Set up pnpm
         if: steps.pending.outputs.count != '0'
-        uses: pnpm/action-setup@v6
+        uses: pnpm/action-setup@v6.0.9
         with:
           version: 11.4.0
 
       - name: Set up Node
         if: steps.pending.outputs.count != '0'
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: 24
 
@@ -63,7 +63,7 @@ jobs:
 
       - name: Set up uv
         if: steps.pending.outputs.count != '0'
-        uses: astral-sh/setup-uv@v8
+        uses: astral-sh/setup-uv@v8.2.0
 
       - name: Sync Python deps (locked)
         if: steps.pending.outputs.count != '0'
