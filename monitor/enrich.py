@@ -87,7 +87,7 @@ def run_agent(context_md, system, transcript, metrics):
             model=MODEL, max_tokens=MAX_TOKENS,
             system=system,
             thinking={"type": "adaptive"},
-            output_config={"effort": "high"},
+            output_config={"effort": "medium"},
             tools=tools, messages=messages,
         ) as stream:
             resp = stream.get_final_message()
