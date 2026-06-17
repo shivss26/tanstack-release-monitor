@@ -48,7 +48,8 @@ def send_email(api_key, sender, to, subject, text):
                  # Integrity Check rejects the request with 403 (error code 1010).
                  "User-Agent": "tanstack-release-monitor"}, method="POST")
     with urllib.request.urlopen(req) as resp:
-        return (json.loads(resp.read()).get("data") or {}).get("id", "")
+        body = json.loads(resp.read())
+        return body.get("id") or (body.get("data") or {}).get("id", "")
 
 
 def deliver(root):

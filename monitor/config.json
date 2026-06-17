@@ -1,5 +1,6 @@
 {
   "sources": [
-    { "label": "sim", "owner": "shivss26", "repo": "tanstack-release-sim", "libraries": ["router", "start"] }
+    { "label": "router", "owner": "TanStack", "repo": "router", "libraries": ["router", "start"] },
+    { "label": "query",  "owner": "TanStack", "repo": "query",  "libraries": ["query"] }
   ]
 }
