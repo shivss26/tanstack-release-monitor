@@ -88,13 +88,19 @@ def process(root, config, token, system):
                 bullets = "_No developer-facing changes (dependency or internal updates only)._"
                 reportable = False
             else:
-                bullets = enrich.run_agent(context, system, [],
-                                           {"iterations": 0, "doc_calls": 0, "web_calls": 0})
+                transcript = [f"# {tag}  model={enrich.MODEL}"]
+                metrics = {"iterations": 0, "doc_calls": 0, "web_calls": 0}
+                bullets = enrich.run_agent(context, system, transcript, metrics)
                 reportable = (not meta.get("format_matched", True)) or bool(substantive)
+                tdir = root / "transcripts" / label
+                tdir.mkdir(parents=True, exist_ok=True)
+                (tdir / f"{stamp}__{tag}.log").write_text("\n".join(transcript) + "\n")
+                print(f"[{label}] {tag} iterations={metrics['iterations']} "
+                      f"doc_calls={metrics['doc_calls']} web_calls={metrics['web_calls']}")
 
             noise = sum(1 for c in changes if c["noise"])
             summary = enrich.build_summary(meta, bullets, noise,
-                                           stamp_to_ist(stamp), f"{stamp}__{tag}")
+                                           stamp_to_ist(stamp), f"{stamp}__{tag}", label)
             summ.parent.mkdir(parents=True, exist_ok=True)
             summ.write_text(summary)
             print(f"[{label}] enriched {tag} (reportable={reportable})")

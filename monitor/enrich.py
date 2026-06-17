@@ -87,7 +87,7 @@ def run_agent(context_md, system, transcript, metrics):
             model=MODEL, max_tokens=MAX_TOKENS,
             system=system,
             thinking={"type": "adaptive"},
-            output_config={"effort": "medium"},
+            output_config={"effort": "high"},
             tools=tools, messages=messages,
         ) as stream:
             resp = stream.get_final_message()
@@ -129,7 +129,7 @@ def run_agent(context_md, system, transcript, metrics):
 
 # --- summary assembly --------------------------------------------------------
 
-def build_summary(meta, bullets, noise_count, detected_ist, stamp):
+def build_summary(meta, bullets, noise_count, detected_ist, stamp, label=""):
     repo = f"{meta['owner']}/{meta['repo']}"
     libs = ", ".join(meta.get("libraries", [])) or meta.get("repo", "")
     released = tag_to_ist(meta.get("tag", ""))
@@ -149,10 +149,11 @@ def build_summary(meta, bullets, noise_count, detected_ist, stamp):
     if noise_count:
         L.append(f"- _Plus {noise_count} chore / dependency / test / example "
                  f"update{'s' if noise_count != 1 else ''}, not detailed._")
+    seg = f"{label}/" if label else ""
     L += ["", "## Files (this detection)",
-          f"- raw rollup: `raw/{stamp}.json`",
-          f"- prefetch:   `prefetch/{stamp}.md`",
-          f"- summary:    `summaries/{stamp}.md`", ""]
+          f"- raw rollup: `raw/{seg}{stamp}.json`",
+          f"- prefetch:   `prefetch/{seg}{stamp}.md`",
+          f"- summary:    `summaries/{seg}{stamp}.md`", ""]
     return "\n".join(L)
 
 
