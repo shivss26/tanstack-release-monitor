@@ -77,11 +77,12 @@ def deliver(root):
             print(f"sent {p.name} (id={mid})")
             sent_n += 1
         except urllib.error.HTTPError as e:
+            raw = e.read().decode(errors="replace")
             try:
-                err = json.loads(e.read()).get("error") or {}
+                err = json.loads(raw).get("error") or {}
                 detail = f"{err.get('name')}: {err.get('message')}"
             except Exception:
-                detail = e.reason
+                detail = raw[:400] or e.reason
             print(f"FAILED {p.name}: HTTP {e.code} {detail}", file=sys.stderr)
             failed_n += 1
         except (urllib.error.URLError, OSError, ValueError) as e:
