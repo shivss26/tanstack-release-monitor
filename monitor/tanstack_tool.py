@@ -93,10 +93,14 @@ def doc_search(library, query):
 
 def doc_get(library, path):
     path = path.strip()
+    # Drop any URL fragment (#section) or query (?...): an anchor only points within
+    # a page, so passing it through makes the CLI look up a page that doesn't exist.
+    path = path.split("#", 1)[0].split("?", 1)[0].strip()
     # Accept a full docs URL or a bare path; the CLI wants the path after /docs/.
     m = re.search(r"/docs/(.+?)/?$", path)
     if m:
         path = m.group(1)
+    path = path.rstrip("/")
     data = json.loads(_run(["doc", library, path, "--docs-version", "latest", "--json"]))
     out = (f"# {data.get('title', '')}\n"
            f"({data.get('library', library)} {data.get('version', '')}) "
