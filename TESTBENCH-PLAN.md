@@ -165,7 +165,21 @@ owner's call — deleting needs the `delete_repo` gh scope.
 
 ## Outcome (2026-07-11)
 
-15/15 runs passed with zero fixes required — the production setup needed no
-changes from the testbench. P4 (sim repo: yank / malformed-body / live settle)
-was optional and skipped; those three paths remain covered only by code review.
-Branch `testbench` deleted after this plan was copied to main as the record.
+15/15 CI runs passed with zero fixes required — the production setup needed
+no changes from the testbench. Branch `testbench` deleted (local + remote)
+after this plan was copied to main as the record.
+
+P4 was covered by a LOCAL sandbox instead of a sim repo (public-repo creation
+is permission-gated): the real detect.py / prefetch.py / enrich_run.py code ran
+against a monkeypatched GitHub API — 21/21 checks passed:
+- Yank: release detected, then 404 → yank record written, id dropped from
+  yank_watch; yank notice + "Retracted releases" digest section compose
+  correctly.
+- Malformed body (no `## Changes`): format_matched=False, context carries the
+  UNRECOGNISED FORMAT flag, orchestrator marks it reportable; a referenced but
+  missing PR returns the "(PR unavailable)" stub without crashing.
+- Settle delay: a 2-min-old batch is deferred ("still settling") with the
+  watermark NOT advanced; once past the settle window the whole batch is
+  consumed, the framework package lands in excluded_tags, and the watermark
+  advances past the entire batch.
+| P4 | sim (local sandbox) | local | PASS | yank / malformed-body / settle-delay + PR-404 stub + Retracted digest section — 21/21 checks against real code with mocked GitHub API |
