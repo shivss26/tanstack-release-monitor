@@ -1,6 +1,7 @@
 {
   "sources": [
     { "label": "router", "owner": "TanStack", "repo": "router", "libraries": ["router", "start"] },
-    { "label": "query",  "owner": "TanStack", "repo": "query",  "libraries": ["query"] }
+    { "label": "query",  "owner": "TanStack", "repo": "query",  "libraries": ["query"] },
+    { "label": "create-tsrouter-app", "owner": "TanStack", "repo": "create-tsrouter-app", "libraries": ["cli", "router", "start"] }
   ]
 }

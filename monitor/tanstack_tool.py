@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Custom client-side doc tools backed by the pinned `@tanstack/cli` (v0.69.3).
+"""Custom client-side doc tools backed by the pinned `@tanstack/cli` (v0.69.5).
 
 Exposes two Anthropic tool definitions + a dispatcher the harness calls when the
 model emits a `tool_use` for them. The CLI runs in OUR process (full network),
@@ -52,7 +52,7 @@ def _tanstack_bin():
             found = None
     if not found:
         raise RuntimeError(
-            "`tanstack` CLI not found. Install it: pnpm add -g @tanstack/cli@0.69.3")
+            "`tanstack` CLI not found. Install it: pnpm add -g @tanstack/cli@0.69.5")
     _BIN_CACHE = found
     return found
 

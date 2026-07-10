@@ -2,7 +2,7 @@
 """Layer 3 agent harness — turn one prefetch context into a human-readable summary.
 
 Reads samples/<tag>.context.md + samples/<tag>.inscope.json (produced by
-prefetch.py), runs Opus 4.8 with the TanStack doc tools + web search/fetch, and
+prefetch.py), runs the model in MODEL with the TanStack doc tools + web search/fetch, and
 writes a final summary file named by the DETECTION timestamp (the stamp the raw
 rollup and prefetch artifacts also share, so all three are findable together).
 
@@ -25,8 +25,8 @@ import anthropic
 import tanstack_tool
 
 ROOT = Path(__file__).resolve().parent
-MODEL = "claude-sonnet-4-6"
-MAX_TOKENS = 8000
+MODEL = "claude-sonnet-5"
+MAX_TOKENS = 16000  # Sonnet 5's tokenizer spends ~30% more tokens for the same text
 MAX_CONTINUATIONS = 10
 IST = timezone(timedelta(hours=5, minutes=30))
 TAG_DT_RE = re.compile(r"release-(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})")
@@ -86,7 +86,9 @@ def run_agent(context_md, system, transcript, metrics):
         with client.messages.stream(
             model=MODEL, max_tokens=MAX_TOKENS,
             system=system,
-            thinking={"type": "adaptive"},
+            # display="summarized" so the transcript log captures the reasoning
+            # (Sonnet 5 defaults to omitted); billing is identical either way.
+            thinking={"type": "adaptive", "display": "summarized"},
             output_config={"effort": "medium"},
             tools=tools, messages=messages,
         ) as stream:

@@ -67,3 +67,8 @@ noise split has no false positives or negatives in the observed data.
 
 ### Change log
 - 2026-06: initial set, derived from query + router (30 rollups each).
+- 2026-07: added source `create-tsrouter-app` (the only other TanStack repo using
+  the rollup tag format — the rest publish per-package `@tanstack/<pkg>@x.y.z`
+  releases). Observed scope: `create` (substantive, NOT infra — no INFRA_SCOPES
+  change needed). Some of its rollups are legitimately empty ("No changelog
+  entries"), which the empty-sentinel path already handles.

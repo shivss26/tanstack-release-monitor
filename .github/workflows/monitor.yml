@@ -58,7 +58,7 @@ jobs:
           # register it in GITHUB_PATH so the enrich step can resolve the `tanstack` binary.
           export PATH="$PNPM_HOME/bin:$PATH"
           echo "$PNPM_HOME/bin" >> "$GITHUB_PATH"
-          pnpm add -g @tanstack/cli@0.69.3
+          pnpm add -g @tanstack/cli@0.69.5
           tanstack --version
 
       - name: Set up uv
