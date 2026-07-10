@@ -65,6 +65,21 @@ noise split has no false positives or negatives in the observed data.
 3. Never add a token that is (or could become) a real TanStack library id — those
    must stay fetchable.
 
+## React-stack filtering (added 2026-07)
+
+The monitor covers a React tech stack only, so two more things count as noise:
+
+1. **Other-framework scopes/packages** — `detect.OTHER_FRAMEWORKS`
+   (vue, svelte, solid, preact, lit, angular, marko, qwik). In rollup bodies a
+   change whose scope starts with one of these tokens is noise; in package-batch
+   repos a package whose name contains one of these tokens (any position —
+   `ai-vue`, `solid-ai-devtools`) is dropped from the batch entirely (still
+   counted in the summary's "filtered out" line).
+2. **Noise categories** — `### Chore` plus table's `### Docs` style headers
+   (`prefetch.NOISE_CATEGORIES`).
+3. **`Updated dependencies` changesets bullets** (package-batch repos) — version
+   plumbing, never fetched, counted as noise.
+
 ### Change log
 - 2026-06: initial set, derived from query + router (30 rollups each).
 - 2026-07: added source `create-tsrouter-app` (the only other TanStack repo using
@@ -72,3 +87,6 @@ noise split has no false positives or negatives in the observed data.
   releases). Observed scope: `create` (substantive, NOT infra — no INFRA_SCOPES
   change needed). Some of its rollups are legitimately empty ("No changelog
   entries"), which the empty-sentinel path already handles.
+- 2026-07: added React-stack filtering (frameworks + NOISE_CATEGORIES + dependency
+  bullets) alongside the new table / intent / form / db / ai / virtual / store /
+  pacer sources.

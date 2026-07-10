@@ -2,6 +2,16 @@
   "sources": [
     { "label": "router", "owner": "TanStack", "repo": "router", "libraries": ["router", "start"] },
     { "label": "query",  "owner": "TanStack", "repo": "query",  "libraries": ["query"] },
-    { "label": "create-tsrouter-app", "owner": "TanStack", "repo": "create-tsrouter-app", "libraries": ["cli", "router", "start"] }
+    { "label": "create-tsrouter-app", "owner": "TanStack", "repo": "create-tsrouter-app", "libraries": ["cli", "router", "start"] },
+    { "label": "table",  "owner": "TanStack", "repo": "table",  "libraries": ["table"],
+      "style": "rollup", "tag_re": "^v\\d+\\.\\d+\\.\\d+$" },
+    { "label": "intent", "owner": "TanStack", "repo": "intent", "libraries": ["intent"],
+      "style": "single-package" },
+    { "label": "form",    "owner": "TanStack", "repo": "form",    "libraries": ["form"],    "style": "package-batch" },
+    { "label": "db",      "owner": "TanStack", "repo": "db",      "libraries": ["db"],      "style": "package-batch" },
+    { "label": "ai",      "owner": "TanStack", "repo": "ai",      "libraries": ["ai"],      "style": "package-batch" },
+    { "label": "virtual", "owner": "TanStack", "repo": "virtual", "libraries": ["virtual"], "style": "package-batch" },
+    { "label": "store",   "owner": "TanStack", "repo": "store",   "libraries": ["store"],   "style": "package-batch" },
+    { "label": "pacer",   "owner": "TanStack", "repo": "pacer",   "libraries": ["pacer"],   "style": "package-batch" }
   ]
 }

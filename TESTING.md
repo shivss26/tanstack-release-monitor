@@ -83,9 +83,15 @@ independent agent (with web and documentation access) is a good reference ceilin
 goal is that the monitor covers the same substantive changes accurately, not that wording
 matches.
 
-**Tool-use spot check** — for a rollup whose PR descriptions are thin, confirm from the
-transcript that the model consulted the documentation (doc/web tool calls) rather than
-guessing.
+**Tool-use spot check** — for a release whose PR descriptions are thin, confirm from the
+transcript that the model consulted the web (web_search / web_fetch calls, e.g. the
+official tanstack.com docs) rather than guessing.
+
+**React filtering spot check** — for package-batch sources (form, db, ai, virtual,
+store, pacer), confirm the raw record's `excluded_tags` contains only other-framework
+packages, and that no bullet in the summary describes a vue/solid/svelte/angular-only
+change. For rollup sources, framework-scoped changes must land in the noise count,
+not the bullets.
 
 ## C. Controlled end-to-end test (optional)
 

@@ -1,15 +1,15 @@
 name: release-monitor
 
-# Detect new release rollups + yanks (deterministic, stdlib), then — only when
-# there is pending work — enrich them into human-readable summaries via the
-# Sonnet harness and commit a digest. Email is deferred: the digest is committed,
-# not sent.
+# Detect new releases + yanks (deterministic, stdlib), then — only when there
+# is pending work — enrich them into human-readable summaries via the Sonnet
+# harness and commit a digest. Everything reportable found in one run lands in
+# ONE combined digest email; a quiet run sends nothing.
 #
-# Tested via manual `workflow_dispatch`; the hourly schedule is the real trigger.
+# Tested via manual `workflow_dispatch`; the 4-hourly schedule is the real trigger.
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "17 * * * *"     # hourly, off-the-hour (public repo -> free unlimited minutes)
+    - cron: "17 */4 * * *"   # every 4 hours (public repo -> free unlimited minutes)
 
 permissions:
   contents: write          # commit raw/, yanks/, state.json, prefetch/, summaries/, digest/
@@ -37,30 +37,6 @@ jobs:
         run: echo "count=$(python3 monitor/pending.py)" >> "$GITHUB_OUTPUT"
 
       # 3) Heavy setup + enrich — ONLY when something is pending.
-      - name: Set up pnpm
-        if: steps.pending.outputs.count != '0'
-        uses: pnpm/action-setup@v6.0.9
-        with:
-          version: 11.4.0
-
-      - name: Set up Node
-        if: steps.pending.outputs.count != '0'
-        uses: actions/setup-node@v6.4.0
-        with:
-          node-version: 24
-
-      - name: Install pinned TanStack CLI
-        if: steps.pending.outputs.count != '0'
-        run: |
-          # pnpm 11 installs global binaries into $PNPM_HOME/bin. pnpm/action-setup sets
-          # PNPM_HOME but does not add that bin subdir to PATH, so `pnpm add -g` errors
-          # ("global bin directory is not in PATH"). Export it inline for this step, and
-          # register it in GITHUB_PATH so the enrich step can resolve the `tanstack` binary.
-          export PATH="$PNPM_HOME/bin:$PATH"
-          echo "$PNPM_HOME/bin" >> "$GITHUB_PATH"
-          pnpm add -g @tanstack/cli@0.69.5
-          tanstack --version
-
       - name: Set up uv
         if: steps.pending.outputs.count != '0'
         uses: astral-sh/setup-uv@v8.2.0

@@ -31,6 +31,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+from detect import OTHER_FRAMEWORKS  # single source of truth for the React filter
+
 API = "https://api.github.com"
 
 # Noise = a change whose PR body won't describe a library behaviour change, so we
@@ -41,6 +43,11 @@ INFRA_SCOPES = {
     "examples", "example", "test", "tests", "benchmark", "benchmarks", "bench",
     "e2e", "ci", "docs", "doc", "build", "scripts", "script",
 }
+
+# Rollup `###` categories that are never library behaviour changes. Most repos
+# put docs/ci under `### Chore` or an infra scope, but table uses `### Docs`.
+NOISE_CATEGORIES = {"chore", "docs", "doc", "ci", "build", "test", "tests",
+                    "examples", "example"}
 
 # Sentinel for an empty / dependency-only rollup — a legit `## Changes` body, not
 # a format mismatch.
@@ -55,6 +62,11 @@ CHANGE_RE = re.compile(
 # Safety net: any `## Changes` bullet carrying a (#NNNN) that the strict shape
 # misses is still recovered via this, so a PR can never be silently dropped.
 LOOSE_PR_RE = re.compile(r"\(#(\d+)\)")
+# Changesets-style markdown PR links: [#194](https://github.com/owner/repo/pull/194)
+MD_PR_RE = re.compile(r"\[#(\d+)\]\(https://github\.com/[^)]+/pull/\d+\)")
+# Changesets dependency-bump bullet — pure noise, never fetched.
+DEP_BULLET_RE = re.compile(r"^\s*Updated dependencies\b")
+CHANGESET_SECTION_RE = re.compile(r"^###\s+(Patch|Minor|Major)\s+Changes\s*$", re.I)
 HEADER_RE = re.compile(r"^###\s+(?P<cat>.+?)\s*$")
 FIXES_RE = re.compile(r"(?:fix(?:e[sd])?|close[sd]?|resolve[sd]?)\s+#(\d+)", re.I)
 
@@ -94,9 +106,12 @@ def _tokens(s):
 
 
 def is_noise(category, scope):
-    """True if the PR body is not worth fetching (chore / infra-scoped change)."""
+    """True if the PR body is not worth fetching: chore, infra-scoped, or an
+    other-framework adapter change (vue/solid/svelte/... — the monitor covers
+    the React stack only; those changes stay visible in the verbatim notes)."""
     first = (_tokens(scope) or [""])[0]
-    return (category or "").lower() == "chore" or first in INFRA_SCOPES or scope.startswith(".")
+    return ((category or "").lower() in NOISE_CATEGORIES or first in INFRA_SCOPES
+            or first in OTHER_FRAMEWORKS or scope.startswith("."))
 
 
 def analyze_format(body):
@@ -287,6 +302,185 @@ def assemble(owner, repo, tag, body, html_url="", token="", source_libs=None):
         ],
     }
     return context_md, inscope
+
+
+# --- "single-package" style (e.g. intent) -------------------------------------
+
+def _extract_prs(text):
+    """Unique PR numbers referenced as [#123](.../pull/123) or bare (#123)."""
+    prs = [int(n) for n in MD_PR_RE.findall(text or "")]
+    prs += [int(n) for n in LOOSE_PR_RE.findall(text or "")]
+    return list(dict.fromkeys(prs))
+
+
+def assemble_single(owner, repo, release, token, source_libs=None):
+    """Context for one stable release of a single-package repo: the changelog
+    body verbatim, plus the body + linked issue of every referenced PR."""
+    tag = release.get("tag_name", "")
+    body = (release.get("body") or "").strip()
+    libs = sorted(source_libs) if source_libs else default_libs(repo)
+    meta = {"tag": tag, "owner": owner, "repo": repo,
+            "html_url": release.get("html_url", ""), "libraries": libs,
+            "published_at": release.get("published_at"), "format_matched": True}
+
+    prs = _extract_prs(body)
+    details = {pr: fetch_pr(owner, repo, pr, token) for pr in prs}
+
+    L = [f"# Release: {tag} ({owner}/{repo})", "",
+         f"- Repository: `{owner}/{repo}`",
+         f"- Libraries this repo covers: {', '.join(libs)}", "",
+         "Below is the COMPLETE release changelog verbatim, then the full body of "
+         "each referenced pull request. Use the web tools for old-vs-new behaviour "
+         "the text leaves unclear.",
+         "", "---", "", "## Release notes (verbatim)", "", body or "_(empty)_",
+         "", "---", ""]
+    for pr in prs:
+        d = details[pr]
+        L.append(f"### #{pr} — {d['pr_title']}")
+        if d.get("linked_issue"):
+            L.append(f"- fixes issue #{d['linked_issue']['number']}: {d['linked_issue']['title']}")
+        L.append("")
+        if d.get("pr_body"):
+            L += ["**PR description:**", "", d["pr_body"], ""]
+        if d.get("linked_issue") and d["linked_issue"].get("body"):
+            L += [f"**Linked issue #{d['linked_issue']['number']} description:**", "",
+                  d["linked_issue"]["body"], ""]
+        L += ["---", ""]
+
+    changes = ([{"pr": pr, "scope": "", "category": "change",
+                 "title": details[pr]["pr_title"], "noise": False, "fetched": True}
+                for pr in prs]
+               # No PR refs -> still substantive: a stable release happened.
+               or [{"pr": None, "scope": "", "category": "change",
+                    "title": tag, "noise": False, "fetched": False}])
+    return "\n".join(L), {"meta": meta, "changes": changes}
+
+
+# --- "package-batch" style (form / db / ai / virtual / store / pacer) ----------
+
+def _changeset_bullets(body):
+    """Top-level bullets inside `### Patch/Minor/Major Changes` sections, each
+    with its continuation lines joined."""
+    bullets, in_section, cur = [], False, None
+    for line in (body or "").splitlines():
+        if line.startswith("### "):
+            if cur:
+                bullets.append("\n".join(cur).strip())
+                cur = None
+            in_section = bool(CHANGESET_SECTION_RE.match(line.strip()))
+            continue
+        if line.startswith("## "):  # left the changes area entirely
+            if cur:
+                bullets.append("\n".join(cur).strip())
+                cur = None
+            in_section = False
+            continue
+        if not in_section:
+            continue
+        if re.match(r"^[-*]\s+", line):
+            if cur:
+                bullets.append("\n".join(cur).strip())
+            cur = [re.sub(r"^[-*]\s+", "", line)]
+        elif cur is not None:
+            cur.append(line.strip())
+    if cur:
+        bullets.append("\n".join(cur).strip())
+    return [b for b in bullets if b]
+
+
+def _norm_key(text):
+    return re.sub(r"\s+", " ", re.sub(r"\[.*?\]\(.*?\)", "", text)).strip().lower()[:120]
+
+
+def assemble_batch(owner, repo, record, token, source_libs=None):
+    """Context for one publish batch of a changesets repo. Dedupes the same
+    change appearing in several packages' notes (keyed by PR number, falling
+    back to normalised text), drops `Updated dependencies` bullets as noise,
+    and fetches each unique substantive PR once."""
+    releases = record.get("releases", [])
+    excluded = record.get("excluded_tags", [])
+    libs = sorted(source_libs) if source_libs else default_libs(repo)
+    meta = {"tag": record.get("tag", ""), "owner": owner, "repo": repo,
+            "html_url": (releases[0].get("html_url", "") if releases else ""),
+            "libraries": libs, "published_at": record.get("published_at"),
+            "packages": [r["tag_name"] for r in releases],
+            "excluded_count": len(excluded), "format_matched": True}
+
+    unique, order, dep_bullets, parsed_any = {}, [], 0, False
+    for rel in releases:
+        pkg = rel["tag_name"].rsplit("@", 1)[0]
+        for b in _changeset_bullets(rel.get("body", "")):
+            parsed_any = True
+            if DEP_BULLET_RE.match(b):
+                dep_bullets += 1
+                continue
+            prs = _extract_prs(b)
+            key = ("pr", prs[0]) if prs else ("text", _norm_key(b))
+            if key not in unique:
+                unique[key] = {"prs": prs, "packages": [], "text": b}
+                order.append(key)
+            if pkg not in unique[key]["packages"]:
+                unique[key]["packages"].append(pkg)
+
+    if not parsed_any and any((r.get("body") or "").strip() for r in releases):
+        meta["format_matched"] = False
+        reason = "no changesets `### Patch/Minor/Major Changes` bullets found"
+        meta["warning"] = reason
+        raw = "\n\n".join(f"### {r['tag_name']}\n\n{r.get('body') or ''}" for r in releases)
+        return _fallback_context(meta, raw, reason), {
+            "meta": meta, "changes": [], "warning": reason}
+
+    # Fetch each unique substantive PR once.
+    details = {}
+    for key in order:
+        for pr in unique[key]["prs"][:1]:  # first PR ref identifies the change
+            if pr not in details:
+                details[pr] = fetch_pr(owner, repo, pr, token)
+
+    L = [f"# Release batch: {record.get('tag', '')} ({owner}/{repo})", "",
+         f"- Repository: `{owner}/{repo}`",
+         f"- Libraries this repo covers: {', '.join(libs)}",
+         f"- React-relevant packages in this batch: "
+         f"{', '.join(r['tag_name'] for r in releases)}",
+         f"- Other-framework packages filtered out (not shown): {len(excluded)}", "",
+         "This repo publishes one GitHub release per package; the releases below "
+         "were published together as one batch. The SAME underlying change often "
+         "appears in several packages' notes — the deduplicated change list and "
+         "PR details follow the verbatim notes. Write ONE bullet per underlying "
+         "change, never one per package. `Updated dependencies` entries are "
+         "version plumbing, not changes.",
+         "", "---", "", "## Release notes (verbatim, per package)", ""]
+    for rel in releases:
+        L += [f"### {rel['tag_name']}", "", (rel.get("body") or "").strip() or "_(empty)_",
+              "", "---", ""]
+
+    if order:
+        L += ["## Deduplicated changes with pull request details", ""]
+        for key in order:
+            e = unique[key]
+            pr = e["prs"][0] if e["prs"] else None
+            d = details.get(pr)
+            title = d["pr_title"] if d else e["text"].splitlines()[0][:100]
+            L.append(f"### {'#' + str(pr) + ' — ' if pr else ''}{title}")
+            L.append(f"- appears in: {', '.join(e['packages'])}")
+            if d and d.get("linked_issue"):
+                L.append(f"- fixes issue #{d['linked_issue']['number']}: "
+                         f"{d['linked_issue']['title']}")
+            L += ["", "**Changeset note:**", "", e["text"], ""]
+            if d and d.get("pr_body"):
+                L += ["**PR description:**", "", d["pr_body"], ""]
+            if d and d.get("linked_issue") and d["linked_issue"].get("body"):
+                L += [f"**Linked issue #{d['linked_issue']['number']} description:**", "",
+                      d["linked_issue"]["body"], ""]
+            L += ["---", ""]
+
+    changes = [{"pr": (unique[k]["prs"][0] if unique[k]["prs"] else None),
+                "scope": ", ".join(unique[k]["packages"]), "category": "change",
+                "title": unique[k]["text"].splitlines()[0][:120], "noise": False,
+                "fetched": bool(unique[k]["prs"])} for k in order]
+    changes += [{"pr": None, "scope": "", "category": "dependencies",
+                 "title": "Updated dependencies", "noise": True, "fetched": False}] * dep_bullets
+    return "\n".join(L), {"meta": meta, "changes": changes}
 
 
 def build(owner, repo, tag, token, source_libs=None):

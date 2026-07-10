@@ -71,9 +71,17 @@ def process(root, config, token, system):
                 continue  # already enriched in a prior run (self-healing/idempotent)
 
             rel = json.loads(raw_path.read_text())
-            context, inscope = prefetch.assemble(
-                owner, repo, tag, rel.get("body") or "", rel.get("html_url", ""),
-                token, source_libs=libs)
+            style = rel.get("style") if isinstance(rel, dict) else None
+            if style == "package-batch":
+                context, inscope = prefetch.assemble_batch(
+                    owner, repo, rel, token, source_libs=libs)
+            elif style == "single-package":
+                context, inscope = prefetch.assemble_single(
+                    owner, repo, rel["release"], token, source_libs=libs)
+            else:  # legacy/rollup: the raw record IS the GitHub release JSON
+                context, inscope = prefetch.assemble(
+                    owner, repo, tag, rel.get("body") or "", rel.get("html_url", ""),
+                    token, source_libs=libs)
             meta = inscope["meta"]
 
             pf = root / "prefetch" / label / f"{stamp}__{tag}.md"
@@ -89,14 +97,14 @@ def process(root, config, token, system):
                 reportable = False
             else:
                 transcript = [f"# {tag}  model={enrich.MODEL}"]
-                metrics = {"iterations": 0, "doc_calls": 0, "web_calls": 0}
+                metrics = {"iterations": 0, "web_calls": 0}
                 bullets = enrich.run_agent(context, system, transcript, metrics)
                 reportable = (not meta.get("format_matched", True)) or bool(substantive)
                 tdir = root / "transcripts" / label
                 tdir.mkdir(parents=True, exist_ok=True)
                 (tdir / f"{stamp}__{tag}.log").write_text("\n".join(transcript) + "\n")
                 print(f"[{label}] {tag} iterations={metrics['iterations']} "
-                      f"doc_calls={metrics['doc_calls']} web_calls={metrics['web_calls']}")
+                      f"web_calls={metrics['web_calls']}")
 
             noise = sum(1 for c in changes if c["noise"])
             summary = enrich.build_summary(meta, bullets, noise,
