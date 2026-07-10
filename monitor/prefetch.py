@@ -186,8 +186,19 @@ def parse_changes(body):
 # --- PR / issue fetch --------------------------------------------------------
 
 def fetch_pr(owner, repo, pr, token):
-    """PR title/body/author + linked issue (no diff — the agent uses doc/web tools)."""
-    data = api_json(f"{API}/repos/{owner}/{repo}/issues/{pr}", token)
+    """PR title/body/author + linked issue (no diff — the agent has web tools).
+
+    A missing/deleted PR degrades to a stub instead of failing the whole run —
+    the agent still sees the change line from the release notes.
+    """
+    try:
+        data = api_json(f"{API}/repos/{owner}/{repo}/issues/{pr}", token)
+    except urllib.error.HTTPError as e:
+        print(f"  [fetch_pr] #{pr} unavailable (HTTP {e.code}); using stub",
+              file=sys.stderr)
+        return {"pr": pr, "pr_title": "(PR unavailable)", "pr_author": "",
+                "pr_body": f"(PR #{pr} could not be fetched: HTTP {e.code})",
+                "linked_issue": None}
     body = data.get("body") or ""
     out = {
         "pr": pr,

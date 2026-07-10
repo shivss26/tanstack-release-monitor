@@ -35,7 +35,9 @@ PKG_TAG_RE = re.compile(r"^@tanstack/(?P<pkg>[a-z0-9-]+)@\d+\.\d+\.\d+$")  # sta
 # whose first name token is one of these is dropped; unprefixed (core/shared)
 # packages and `react-*` packages are kept.
 OTHER_FRAMEWORKS = {"vue", "svelte", "solid", "preact", "lit", "angular", "marko", "qwik"}
-BATCH_SETTLE_MIN = 30  # a publish batch clusters in ~1 min; wait until it's complete
+# A publish batch clusters in ~1 min; wait until it's complete. Env-overridable
+# so a testbench can shrink the wait; production leaves it at 30.
+BATCH_SETTLE_MIN = int(os.environ.get("BATCH_SETTLE_MIN", "30"))
 PER_PAGE = 100
 MAX_PAGES = 10
 YANK_WATCH_DAYS = 30
