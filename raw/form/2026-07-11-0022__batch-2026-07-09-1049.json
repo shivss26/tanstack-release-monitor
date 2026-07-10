@@ -1,0 +1,72 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-07-09-1049",
+  "published_at": "2026-07-09T10:49:35Z",
+  "releases": [
+    {
+      "id": 330997130,
+      "tag_name": "@tanstack/form-devtools@0.2.29",
+      "published_at": "2026-05-28T17:06:30Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-devtools%400.2.29",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`808f158`](https://github.com/TanStack/form/commit/808f158b62c08f69689a7b652c35989d717f9014)]:\n    -   @tanstack/form-core@1.33.0\n"
+    },
+    {
+      "id": 351473724,
+      "tag_name": "@tanstack/form-devtools@0.2.30",
+      "published_at": "2026-07-09T10:48:59Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-devtools%400.2.30",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a), [`7b3012b`](https://github.com/TanStack/form/commit/7b3012b03e706cc409c2952964145a11a300d7fe), [`741da6b`](https://github.com/TanStack/form/commit/741da6bb659a319acaa55292564999fcbbc90012), [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a), [`6cd477a`](https://github.com/TanStack/form/commit/6cd477a97df9612019d8a2d9c97f2e86b1b59256), [`887a129`](https://github.com/TanStack/form/commit/887a1293375a168452e82b0fb482841ec02ad77f)]:\n    -   @tanstack/form-core@1.33.1\n"
+    },
+    {
+      "id": 351473765,
+      "tag_name": "@tanstack/form-core@1.33.1",
+      "published_at": "2026-07-09T10:49:05Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-core%401.33.1",
+      "body": "### Patch Changes\n\n-   [#2236](https://github.com/TanStack/form/pull/2236) [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a) - Fix TS4023 declaration emit\n\n-   [#2233](https://github.com/TanStack/form/pull/2233) [`7b3012b`](https://github.com/TanStack/form/commit/7b3012b03e706cc409c2952964145a11a300d7fe) - Fix `FormGroupApi.distributeFieldErrors` throwing `TypeError: Cannot read properties of undefined` when a group validator returns errors for a field that is not mounted yet\n\n-   [#2120](https://github.com/TanStack/form/pull/2120) [`741da6b`](https://github.com/TanStack/form/commit/741da6bb659a319acaa55292564999fcbbc90012) - fix(form-core): clear stale onBlur errors on re-submission\n\n-   [#2236](https://github.com/TanStack/form/pull/2236) [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a) - Fix arktype usage typing in validators\n\n-   [#2056](https://github.com/TanStack/form/pull/2056) [`6cd477a`](https://github.com/TanStack/form/commit/6cd477a97df9612019d8a2d9c97f2e86b1b59256) - fix: create fieldMeta on async validation for fields with errors\n\n-   [#2143](https://github.com/TanStack/form/pull/2143) [`887a129`](https://github.com/TanStack/form/commit/887a1293375a168452e82b0fb482841ec02ad77f) - fix race condition when listening to multiple Fields in onChangeListenTo\n"
+    },
+    {
+      "id": 351473817,
+      "tag_name": "@tanstack/react-form-nextjs@1.33.1",
+      "published_at": "2026-07-09T10:49:11Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-nextjs%401.33.1",
+      "body": "### Patch Changes\n\n-   [#2236](https://github.com/TanStack/form/pull/2236) [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a) - Remove peerdep for TanStack Start\n\n-   Updated dependencies \\[[`df52a12`](https://github.com/TanStack/form/commit/df52a12c8772cb025bfba6773c5ff0a488211662)]:\n    -   @tanstack/react-form@1.33.1\n"
+    },
+    {
+      "id": 351473842,
+      "tag_name": "@tanstack/react-form-devtools@0.2.30",
+      "published_at": "2026-07-09T10:49:14Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-devtools%400.2.30",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-devtools@0.2.30\n"
+    },
+    {
+      "id": 351473918,
+      "tag_name": "@tanstack/react-form@1.33.1",
+      "published_at": "2026-07-09T10:49:23Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form%401.33.1",
+      "body": "### Patch Changes\n\n-   [#2206](https://github.com/TanStack/form/pull/2206) [`df52a12`](https://github.com/TanStack/form/commit/df52a12c8772cb025bfba6773c5ff0a488211662) - Re-export `useSelector` from TanStack Store adapters and document migration from deprecated `useStore` (fixes [#2203](https://github.com/TanStack/form/issues/2203)).\n\n-   Updated dependencies \\[[`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a), [`7b3012b`](https://github.com/TanStack/form/commit/7b3012b03e706cc409c2952964145a11a300d7fe), [`741da6b`](https://github.com/TanStack/form/commit/741da6bb659a319acaa55292564999fcbbc90012), [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a), [`6cd477a`](https://github.com/TanStack/form/commit/6cd477a97df9612019d8a2d9c97f2e86b1b59256), [`887a129`](https://github.com/TanStack/form/commit/887a1293375a168452e82b0fb482841ec02ad77f)]:\n    -   @tanstack/form-core@1.33.1\n"
+    },
+    {
+      "id": 351473961,
+      "tag_name": "@tanstack/react-form-start@1.33.1",
+      "published_at": "2026-07-09T10:49:29Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-start%401.33.1",
+      "body": "### Patch Changes\n\n-   [#2236](https://github.com/TanStack/form/pull/2236) [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a) - Replace deprecated inputValidator with validator\n\n-   Updated dependencies \\[[`df52a12`](https://github.com/TanStack/form/commit/df52a12c8772cb025bfba6773c5ff0a488211662)]:\n    -   @tanstack/react-form@1.33.1\n"
+    },
+    {
+      "id": 351474008,
+      "tag_name": "@tanstack/react-form-remix@1.33.1",
+      "published_at": "2026-07-09T10:49:35Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-remix%401.33.1",
+      "body": "### Patch Changes\n\n-   [#2236](https://github.com/TanStack/form/pull/2236) [`3c57f6d`](https://github.com/TanStack/form/commit/3c57f6d4311f823ab39374417edb5fae544ad15a) - Remove peerdep for TanStack Start\n\n-   Updated dependencies \\[[`df52a12`](https://github.com/TanStack/form/commit/df52a12c8772cb025bfba6773c5ff0a488211662)]:\n    -   @tanstack/react-form@1.33.1\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/preact-form@1.30.1",
+    "@tanstack/lit-form@1.25.1",
+    "@tanstack/solid-form@1.33.1",
+    "@tanstack/svelte-form@1.33.1",
+    "@tanstack/solid-form-devtools@0.2.30",
+    "@tanstack/vue-form@1.33.1",
+    "@tanstack/angular-form@1.33.1"
+  ]
+}

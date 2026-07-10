@@ -39,15 +39,20 @@
     }
   },
   "table": {
-    "last_seen_id": 212310580,
+    "last_seen_id": 212310581,
     "yank_watch": {}
   },
   "intent": {
-    "last_seen_id": 348213168,
-    "yank_watch": {}
+    "last_seen_id": 348700328,
+    "yank_watch": {
+      "348700328": {
+        "tag": "v0.3.5",
+        "published_at": "2026-07-03T15:49:22Z"
+      }
+    }
   },
   "form": {
-    "last_seen_id": 330997111
+    "last_seen_id": 351474027
   },
   "db": {
     "last_seen_id": 350694935
