@@ -56,12 +56,12 @@ open("state.json","w").write(json.dumps(s, indent=2) + "\n")
 | table | **212310580** | `v8.21.3` (rollup body, `vX.Y.Z` tag) | ~40 real `v9.0.0-beta.N` prereleases above it must be skipped; `### Docs` category → noise; `@tanstack/angular-table@8.21.4` doesn't match the tag regex |
 | intent | **348213168** | `v0.3.5` (single-package, markdown PR links → PR fetch) | duplicate release `@tanstack/intent@0.3.5` (id 348700319) must be ignored |
 | form | **330997111** | the 2026-07-09 batch: 8 React-relevant releases | 7 framework packages (vue/svelte/solid/preact/lit/angular) → `excluded_tags`; duplicated bullets dedupe to ONE per PR; `Updated dependencies` → noise |
-| db | look up: id just below `@tanstack/db@0.6.14`'s batch (2026-07-02T14:05Z) | the 2026-07-02 batch (~20 releases, core-only substantive) + `query-db-collection@1.0.47` (Jul 8) | vue/svelte/solid/angular-db excluded; adapters dep-only → noise; persistence adapters (expo/tauri/…) INCLUDED by design |
+| db | **346994131** (`@tanstack/vue-db@0.0.124`, 2026-06-30T17:28Z — just below the Jul-2 batch) | the 2026-07-02 batch (~20 releases, core-only substantive) + `query-db-collection@1.0.47` (Jul 8) | vue/svelte/solid/angular-db excluded; adapters dep-only → noise; persistence adapters (expo/tauri/…) INCLUDED by design |
 | ai | **349713000** | the 2026-07-06 batch (31 in / 9 out) | **suffix/mid-token frameworks**: `ai-vue`, `ai-solid-ui`, `solid-ai-devtools`, `preact-ai-devtools` must be excluded; `ai-react`, `react-ai-devtools`, providers/sandboxes included |
 | virtual | **345264699** | the 2026-06-30 batch (core substantive; react dep-only) | `@tanstack/marko-virtual@3.14.0` (Jul 1, **substantive but marko-only**) and `solid-virtual@3.13.32` (Jul 2) must be excluded entirely |
 | store | two-step: (a) rewind to just below `lit-store@0.14.0` (id 341488927 − 1 = **341488926**) | — | (a) expect "non-React release(s) skipped, **nothing emitted**" — the framework-only-batch path |
-| store (b) | look up: id just below the 2026-04-17 batch (`store@0.11.0`, 15:00Z) | the Apr 17 batch (core + react-store, duplicated bullets) | grouped with later lit/preact FP releases into one batch — those land in `excluded_tags` |
-| pacer | look up: id just below the 2026-05-14 batch (02:15Z) | the May 14 batch (pacer, pacer-lite, pacer-devtools, react-pacer(+devtools) in) | solid/preact/angular pacer packages excluded; bullets duplicated across adapters dedupe to one |
+| store (b) | **307364164** (`@tanstack/vue-store@0.10.0`, 2026-04-10 — just below the Apr-17 batch) | the Apr 17 batch (core + react-store, duplicated bullets) | grouped with later lit/preact FP releases into one batch — those land in `excluded_tags` |
+| pacer | **310540474** (`@tanstack/solid-pacer@0.21.0`, 2026-04-17 — just below the May-14 batch; production watermark is the top of that batch, so exactly one batch re-detects) | the May 14 batch (pacer, pacer-lite, pacer-devtools, react-pacer(+devtools) in) | solid/preact/angular pacer packages excluded; bullets duplicated across adapters dedupe to one |
 
 Ids marked "look up" — fetch with:
 `gh api 'repos/TanStack/<repo>/releases?per_page=100' --jq '.[] | [.id, .tag_name, .published_at] | @tsv'`
@@ -131,20 +131,41 @@ owner's call — deleting needs the `delete_repo` gh scope.
 
 ## Production-readiness checklist (exit criteria)
 
-- [ ] All 11 sources trigger correctly in isolation (P1).
-- [ ] All false-positive classes verified: prerelease rollups, beta tags,
+- [x] All 11 sources trigger correctly in isolation (P1).
+- [x] All false-positive classes verified: prerelease rollups, beta tags,
       duplicate tags, framework packages (prefix AND suffix/mid-token),
       framework-only publishes, dep-only bullets, docs/chore categories,
       empty rollups.
-- [ ] Dedupe: one bullet per underlying change across packages.
-- [ ] Append: multi-source digests compose correctly (P2).
-- [ ] Maximal digest + real email formatting verified (P3).
-- [ ] No unintended emails during P0–P2 (send.py skip logged every run).
-- [ ] Failures encountered were fixed on main and re-verified.
-- [ ] Branch deleted; production config/schedule/email confirmed intact.
+- [x] Dedupe: one bullet per underlying change across packages.
+- [x] Append: multi-source digests compose correctly (P2).
+- [x] Maximal digest + real email formatting verified (P3).
+- [x] No unintended emails during P0–P2 (send.py skip logged every run).
+- [x] Failures encountered were fixed on main and re-verified. (None encountered: 15/15 runs passed first time.)
+- [x] Branch deleted; production config/schedule/email confirmed intact.
 
 ## Results log
 
 | Phase | Source(s) | Run | Outcome | Notes |
 |---|---|---|---|---|
-| (append as executed) | | | | |
+| P0 | all (no rewinds) | 29117162934 | PASS | 11× "no new releases"; enrich skipped; "no unsent digests"; no commit |
+| P1 | router | 29117305522 | PASS | stable rollup re-detected, prerelease above skipped (watermark back at 347729321); 2 substantive bullets (PRs 7695/7662), 2 noise; 1 iteration, 0 web calls; digest written; email skip logged |
+| P1 | query | 29117476474 | PASS | 2026-06-27 stable rollup re-detected, 06-26 prerelease not picked up; 6 substantive fix bullets + 2 noise; digest written; 2 digests now unsent; email skip logged |
+| P1 | create-tsrouter-app | 29117618803 | PASS | empty rollup ("No changelog entries"): recorded, deterministic note, reportable=False, NO LLM call (23s run), NO digest, "nothing reportable -> NO EMAIL" |
+| P1 | table | 29117761468 | PASS | only v8.21.3 detected — all v9 betas + angular-table tag skipped; ### Docs (incl. loose-parsed vue-example line) → noise, only #5989 fetched; 1 bullet + 2 noise; published_at fallback shows true 2025-04-15 date |
+| P1 | intent | 29117919474 | PASS | v0.3.5 detected once; duplicate @tanstack/intent@0.3.5 tag ignored; 2 bullets, breaking change flagged; single-package PR fetch worked |
+| P1 | form | 29118084673 | PASS | batch-2026-07-09-1049: 8 in / 7 framework excluded (exact); 8 deduped bullets (one per change); both noise lines ("Plus 7 …" + "7 non-React … filtered out") |
+| P1 | db | 29118232655 | PASS | Jul 2–8 window merged into one batch (20 in / 5 framework excluded); 3 substantive core bullets + 18 noise; persistence adapters included by design; multi-cluster merge only possible under rewind (prod window ≤ 4h) |
+| P1 | ai | 29118387623 | PASS | 31 in / 9 out exact; all suffix/mid-token FPs excluded (ai-vue, ai-vue-ui, ai-solid-ui, solid-ai-devtools, preact-ai-devtools, …); ai-react/react-ai-devtools/providers kept; 2 substantive bullets + 30 noise |
+| P1 | virtual | 29118581019 | PASS | batch-2026-06-30-1522: 2 in / 7 framework excluded (exact: marko-virtual@3.14.0, solid-virtual@3.13.32, plus vue/lit/angular/svelte); framework-only packages correctly excluded from releases array and present only in excluded_tags; 2 substantive core bullets (scroll perf, viewport-drift fix) + noise lines; digest written; email skip logged
+| P2 | table+intent+form (Wave A) | 29118726294 | PASS | 3 sections in one digest (2026-07-11-0109.md): table v8.21.3 (1 substantive + 2 noise), intent v0.3.5 (2 substantive with breaking change), form batch-2026-07-09-1049 (8 substantive + 8 noise/framework); email skip logged; 9 digests unsent total
+| P2 | db+ai+virtual (Wave B) | 29118827660 | PASS | 3 sections in one digest (2026-07-11-0111.md): db batch-2026-07-08-0441 (3 substantive + 18 noise/framework), ai batch-2026-07-06-1739 (2 substantive + 30 noise/framework), virtual batch-2026-06-30-1522 (2 substantive + 7 framework/noise); email skip logged; 10 digests unsent total
+| P2 | query+store+pacer (Wave C) | 29118935914 | PASS | 3 sections in one digest (2026-07-11-0113.md): query release-2026-06-27-2033 (6 substantive fix + 2 noise), store batch-2026-04-17-1500 (1 substantive + 7 framework/noise), pacer batch-2026-05-14-0215 (1 substantive + 15 framework/noise); email skip logged; 11 digests unsent total
+| P1 | store (a) | 29119154908 | PASS | framework-only window (lit-store@0.14.0): "[store] 1 non-React release(s) skipped, nothing emitted"; NO raw record, NO enrich, NO digest; watermark still advanced (only state.json in bot commit) |
+| P3 | ALL 11 (maximal) | 29119357576 | PASS | all 11 detected in one run; 10 reportable sections (cta empty-rollup non-reportable); one 248-line digest; exactly ONE email sent (Resend id 3aecb198-439b-4326-a5fa-dc580d679468); 11 suppressed digests untouched |
+
+## Outcome (2026-07-11)
+
+15/15 runs passed with zero fixes required — the production setup needed no
+changes from the testbench. P4 (sim repo: yank / malformed-body / live settle)
+was optional and skipped; those three paths remain covered only by code review.
+Branch `testbench` deleted after this plan was copied to main as the record.
