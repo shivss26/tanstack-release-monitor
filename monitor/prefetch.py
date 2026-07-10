@@ -262,7 +262,8 @@ def _fallback_context(meta, body, reason):
     )
 
 
-def assemble(owner, repo, tag, body, html_url="", token="", source_libs=None):
+def assemble(owner, repo, tag, body, html_url="", token="", source_libs=None,
+             published_at=None):
     """Body-in context assembler (no release fetch). Reused by the runner + tests.
 
     `source_libs`: the libraries this source covers (e.g. router -> {router, start}).
@@ -271,7 +272,7 @@ def assemble(owner, repo, tag, body, html_url="", token="", source_libs=None):
     """
     libs = sorted(source_libs) if source_libs else default_libs(repo)
     meta = {"tag": tag, "owner": owner, "repo": repo, "html_url": html_url or "",
-            "libraries": libs, "format_matched": True}
+            "libraries": libs, "published_at": published_at, "format_matched": True}
 
     has_header, n_bullets = analyze_format(body)
     changes = parse_changes(body)
@@ -486,7 +487,8 @@ def assemble_batch(owner, repo, record, token, source_libs=None):
 def build(owner, repo, tag, token, source_libs=None):
     rel = api_json(f"{API}/repos/{owner}/{repo}/releases/tags/{tag}", token)
     return assemble(owner, repo, tag, rel.get("body") or "",
-                    rel.get("html_url") or "", token, source_libs=source_libs)
+                    rel.get("html_url") or "", token, source_libs=source_libs,
+                    published_at=rel.get("published_at"))
 
 
 def main():

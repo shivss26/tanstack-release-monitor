@@ -81,7 +81,7 @@ def process(root, config, token, system):
             else:  # legacy/rollup: the raw record IS the GitHub release JSON
                 context, inscope = prefetch.assemble(
                     owner, repo, tag, rel.get("body") or "", rel.get("html_url", ""),
-                    token, source_libs=libs)
+                    token, source_libs=libs, published_at=rel.get("published_at"))
             meta = inscope["meta"]
 
             pf = root / "prefetch" / label / f"{stamp}__{tag}.md"
