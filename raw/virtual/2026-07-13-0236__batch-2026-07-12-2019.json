@@ -1,0 +1,29 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-07-12-2019",
+  "published_at": "2026-07-12T20:19:09Z",
+  "releases": [
+    {
+      "id": 352836195,
+      "tag_name": "@tanstack/react-virtual@3.14.6",
+      "published_at": "2026-07-12T20:19:06Z",
+      "html_url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/react-virtual%403.14.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`6cbecd8`](https://github.com/TanStack/virtual/commit/6cbecd887df56faaee3b6a81a1aae8049de0671e), [`d49cc52`](https://github.com/TanStack/virtual/commit/d49cc526fe248be7b5ad97ec6ac814db8271b0d0), [`cf7834d`](https://github.com/TanStack/virtual/commit/cf7834daade953fea5dfd2ab5685c15771ca300a)]:\n    -   @tanstack/virtual-core@3.17.4\n"
+    },
+    {
+      "id": 352836204,
+      "tag_name": "@tanstack/virtual-core@3.17.4",
+      "published_at": "2026-07-12T20:19:09Z",
+      "html_url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/virtual-core%403.17.4",
+      "body": "### Patch Changes\n\n-   [#1224](https://github.com/TanStack/virtual/pull/1224) [`6cbecd8`](https://github.com/TanStack/virtual/commit/6cbecd887df56faaee3b6a81a1aae8049de0671e) - Improve multi-lane virtualization performance: replace the backward scan in getMeasurements with an incremental per-lane argmin (O(lanes) shortest-lane lookup). Placement output is unchanged and the single-lane fast path is untouched.\n\n-   [#1223](https://github.com/TanStack/virtual/pull/1223) [`d49cc52`](https://github.com/TanStack/virtual/commit/d49cc526fe248be7b5ad97ec6ac814db8271b0d0) - Made gap option changes invalidate measurements\n\n-   [#1220](https://github.com/TanStack/virtual/pull/1220) [`cf7834d`](https://github.com/TanStack/virtual/commit/cf7834daade953fea5dfd2ab5685c15771ca300a) - Reset iOS gesture/deferral state in `cleanup()` so it no longer leaks across scroll element swaps.\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/solid-virtual@3.13.33",
+    "@tanstack/lit-virtual@3.13.33",
+    "@tanstack/vue-virtual@3.13.32",
+    "@tanstack/marko-virtual@3.14.1",
+    "@tanstack/angular-virtual@5.0.8",
+    "@tanstack/svelte-virtual@3.13.32"
+  ]
+}
