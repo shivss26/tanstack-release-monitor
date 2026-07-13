@@ -1,0 +1,65 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-07-13-0424",
+  "published_at": "2026-07-13T04:24:48Z",
+  "releases": [
+    {
+      "id": 352927417,
+      "tag_name": "@tanstack/form-core@1.33.2",
+      "published_at": "2026-07-13T04:24:24Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-core%401.33.2",
+      "body": "\n"
+    },
+    {
+      "id": 352927425,
+      "tag_name": "@tanstack/react-form-nextjs@1.33.2",
+      "published_at": "2026-07-13T04:24:27Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-nextjs%401.33.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d756476`](https://github.com/TanStack/form/commit/d756476b3ce5e6618a062b929a4a256fa0f4d683)]:\n    -   @tanstack/react-form@1.33.2\n"
+    },
+    {
+      "id": 352927437,
+      "tag_name": "@tanstack/react-form-devtools@0.2.31",
+      "published_at": "2026-07-13T04:24:30Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-devtools%400.2.31",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-devtools@0.2.31\n"
+    },
+    {
+      "id": 352927460,
+      "tag_name": "@tanstack/react-form-start@1.33.2",
+      "published_at": "2026-07-13T04:24:36Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-start%401.33.2",
+      "body": "### Patch Changes\n\n-   [#2241](https://github.com/TanStack/form/pull/2241) [`a101fad`](https://github.com/TanStack/form/commit/a101faddaa5d6f2b181b3f13843fe91eb23b6974) - Fix `createServerValidate` second parameter type to use `FormDataInfo` instead of `Parameters<typeof decode>[1]`, matching `@tanstack/react-form-nextjs` and fixing TypeScript errors when passing `booleans`, `dates`, etc.\n\n    Fixes [#2239](https://github.com/TanStack/form/issues/2239)\n\n-   Updated dependencies \\[[`d756476`](https://github.com/TanStack/form/commit/d756476b3ce5e6618a062b929a4a256fa0f4d683)]:\n    -   @tanstack/react-form@1.33.2\n"
+    },
+    {
+      "id": 352927472,
+      "tag_name": "@tanstack/form-devtools@0.2.31",
+      "published_at": "2026-07-13T04:24:39Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-devtools%400.2.31",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-core@1.33.2\n"
+    },
+    {
+      "id": 352927487,
+      "tag_name": "@tanstack/react-form@1.33.2",
+      "published_at": "2026-07-13T04:24:42Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form%401.33.2",
+      "body": "### Patch Changes\n\n-   [#2240](https://github.com/TanStack/form/pull/2240) [`d756476`](https://github.com/TanStack/form/commit/d756476b3ce5e6618a062b929a4a256fa0f4d683) - Use fresh FieldApi in current render on name change\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-core@1.33.2\n"
+    },
+    {
+      "id": 352927511,
+      "tag_name": "@tanstack/react-form-remix@1.33.2",
+      "published_at": "2026-07-13T04:24:48Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-remix%401.33.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d756476`](https://github.com/TanStack/form/commit/d756476b3ce5e6618a062b929a4a256fa0f4d683)]:\n    -   @tanstack/react-form@1.33.2\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/lit-form@1.25.2",
+    "@tanstack/angular-form@1.33.2",
+    "@tanstack/svelte-form@1.33.2",
+    "@tanstack/solid-form@1.33.2",
+    "@tanstack/solid-form-devtools@0.2.31",
+    "@tanstack/vue-form@1.33.2",
+    "@tanstack/preact-form@1.30.2"
+  ]
+}
