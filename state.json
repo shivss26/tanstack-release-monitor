@@ -47,11 +47,15 @@
     "yank_watch": {}
   },
   "intent": {
-    "last_seen_id": 348700328,
+    "last_seen_id": 353561199,
     "yank_watch": {
       "348700328": {
         "tag": "v0.3.5",
         "published_at": "2026-07-03T15:49:22Z"
+      },
+      "353561199": {
+        "tag": "v0.3.6",
+        "published_at": "2026-07-14T03:57:56Z"
       }
     }
   },
