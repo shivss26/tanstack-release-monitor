@@ -1,0 +1,5 @@
+# batch-2026-07-31-2045  model=claude-sonnet-5
+
+=== iteration 1 (stop=end_turn) ===
+[thinking]
+This is octane-store, not the standard TanStack Store React adapter, though I'm treating it as React-relevant. The key difference is that it no longer ships with precompiled distribution files—instead, applications need to compile it themselves using the Octane compiler, which could break existing consumers who depend on the prebuilt output.

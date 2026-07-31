@@ -1,0 +1,15 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-07-31-2045",
+  "published_at": "2026-07-31T20:45:21Z",
+  "releases": [
+    {
+      "id": 363317406,
+      "tag_name": "@tanstack/octane-store@0.12.1",
+      "published_at": "2026-07-31T20:45:21Z",
+      "html_url": "https://github.com/TanStack/store/releases/tag/%40tanstack/octane-store%400.12.1",
+      "body": "### Patch Changes\n\n-   Ship the authored TypeScript source so applications compile the adapter with their Octane compiler and runtime. ([#347](https://github.com/TanStack/store/pull/347))\n"
+    }
+  ],
+  "excluded_tags": []
+}
