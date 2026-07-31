@@ -1,0 +1,15 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-07-31-1252",
+  "published_at": "2026-07-31T12:52:23Z",
+  "releases": [
+    {
+      "id": 363064257,
+      "tag_name": "@tanstack/octane-store@0.12.0",
+      "published_at": "2026-07-31T12:52:23Z",
+      "html_url": "https://github.com/TanStack/store/releases/tag/%40tanstack/octane-store%400.12.0",
+      "body": "### Minor Changes\n\n-   Add the Octane adapter for TanStack Store with tests, TSRX examples, and ([#345](https://github.com/TanStack/store/pull/345))\n    documentation.\n"
+    }
+  ],
+  "excluded_tags": []
+}
