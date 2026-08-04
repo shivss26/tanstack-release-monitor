@@ -1,0 +1,132 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-04-1712",
+  "published_at": "2026-08-04T17:12:30Z",
+  "releases": [
+    {
+      "id": 365030688,
+      "tag_name": "@tanstack/ai-anthropic@0.16.4",
+      "published_at": "2026-08-04T17:10:36Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.16.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n"
+    },
+    {
+      "id": 365030740,
+      "tag_name": "@tanstack/ai-bedrock@0.1.5",
+      "published_at": "2026-08-04T17:10:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.1.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/openai-base@0.9.10\n"
+    },
+    {
+      "id": 365030782,
+      "tag_name": "@tanstack/ai-code-mode-skills@0.3.12",
+      "published_at": "2026-08-04T17:10:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-skills%400.3.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-code-mode@0.3.9\n"
+    },
+    {
+      "id": 365030847,
+      "tag_name": "@tanstack/ai-groq@0.5.4",
+      "published_at": "2026-08-04T17:10:54Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.5.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n    -   @tanstack/openai-base@0.9.10\n"
+    },
+    {
+      "id": 365030907,
+      "tag_name": "@tanstack/ai-code-mode@0.3.9",
+      "published_at": "2026-08-04T17:11:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.3.9",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n"
+    },
+    {
+      "id": 365030968,
+      "tag_name": "@tanstack/ai-elevenlabs@0.2.35",
+      "published_at": "2026-08-04T17:11:12Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.2.35",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n"
+    },
+    {
+      "id": 365030999,
+      "tag_name": "@tanstack/ai-gemini@0.21.0",
+      "published_at": "2026-08-04T17:11:15Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.21.0",
+      "body": "### Minor Changes\n\n-   [#1041](https://github.com/TanStack/ai/pull/1041) [`399b4b1`](https://github.com/TanStack/ai/commit/399b4b1855a5fb93dfc37a2afa71cedb092ac36e) - Add Gemini 3.6 Flash (`gemini-3.6-flash`) and Gemini 3.5 Flash-Lite (`gemini-3.5-flash-lite`) chat models.\n\n    Both are stable GA text models with full multimodal input, thinking, structured output, batch/caching, and the native combined tools + `responseSchema` path. Tool surface includes code execution, file search, Google Search, Google Maps, and URL context. Computer Use (Preview) is listed for 3.6 Flash (and corrected onto existing 3.5 Flash); 3.5 Flash-Lite does not support Computer Use.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n"
+    },
+    {
+      "id": 365031026,
+      "tag_name": "@tanstack/ai-grok@0.14.10",
+      "published_at": "2026-08-04T17:11:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.14.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n    -   @tanstack/openai-base@0.9.10\n"
+    },
+    {
+      "id": 365031098,
+      "tag_name": "@tanstack/ai-isolate-node@0.1.48",
+      "published_at": "2026-08-04T17:11:27Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-node%400.1.48",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.9\n"
+    },
+    {
+      "id": 365031141,
+      "tag_name": "@tanstack/ai-fal@0.9.13",
+      "published_at": "2026-08-04T17:11:33Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.9.13",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n"
+    },
+    {
+      "id": 365031238,
+      "tag_name": "@tanstack/ai-react-ui@0.8.16",
+      "published_at": "2026-08-04T17:11:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.8.16",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai-client@0.23.0\n    -   @tanstack/ai-react@0.19.0\n"
+    },
+    {
+      "id": 365031292,
+      "tag_name": "@tanstack/ai-openai@0.18.0",
+      "published_at": "2026-08-04T17:11:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.18.0",
+      "body": "### Minor Changes\n\n-   [#1040](https://github.com/TanStack/ai/pull/1040) [`421439d`](https://github.com/TanStack/ai/commit/421439da5026b453307030a73451a9c41f69ec31) - Add OpenAI GPT-5.6 family models: `gpt-5.6` (alias \u2192 Sol), `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`.\n"
+    },
+    {
+      "id": 365031365,
+      "tag_name": "@tanstack/ai-isolate-quickjs@0.1.48",
+      "published_at": "2026-08-04T17:12:00Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-quickjs%400.1.48",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.9\n"
+    },
+    {
+      "id": 365031403,
+      "tag_name": "@tanstack/ai-ollama@0.8.17",
+      "published_at": "2026-08-04T17:12:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.8.17",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n    -   @tanstack/ai-utils@0.4.0\n"
+    },
+    {
+      "id": 365031449,
+      "tag_name": "@tanstack/ai-isolate-cloudflare@0.2.39",
+      "published_at": "2026-08-04T17:12:09Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-cloudflare%400.2.39",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.9\n"
+    },
+    {
+      "id": 365031524,
+      "tag_name": "@tanstack/ai-mistral@0.2.4",
+      "published_at": "2026-08-04T17:12:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai@0.43.0\n"
+    },
+    {
+      "id": 365031619,
+      "tag_name": "@tanstack/react-ai-devtools@0.2.68",
+      "published_at": "2026-08-04T17:12:30Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/react-ai-devtools%400.2.68",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`7499171`](https://github.com/TanStack/ai/commit/74991716aea4d90a5d0363676a1e3349689a48e8)]:\n    -   @tanstack/ai-devtools-core@0.5.0\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/preact-ai-devtools@0.1.68",
+    "@tanstack/ai-solid-ui@0.7.15",
+    "@tanstack/ai-vue-ui@0.2.35",
+    "@tanstack/solid-ai-devtools@0.2.68"
+  ]
+}
