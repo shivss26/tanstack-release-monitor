@@ -1,0 +1,36 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-05-1829",
+  "published_at": "2026-08-05T18:29:40Z",
+  "releases": [
+    {
+      "id": 365735286,
+      "tag_name": "@tanstack/store@0.11.1",
+      "published_at": "2026-08-05T18:29:19Z",
+      "html_url": "https://github.com/TanStack/store/releases/tag/%40tanstack/store%400.11.1",
+      "body": "### Patch Changes\n\n-   Inline reactive flag constants in generated builds to improve tree-shaking. ([#350](https://github.com/TanStack/store/pull/350))\n"
+    },
+    {
+      "id": 365735394,
+      "tag_name": "@tanstack/octane-store@0.12.2",
+      "published_at": "2026-08-05T18:29:31Z",
+      "html_url": "https://github.com/TanStack/store/releases/tag/%40tanstack/octane-store%400.12.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1d7c87e`](https://github.com/TanStack/store/commit/1d7c87e9a3e465fbc88d1a57c46e7b454ee3eb65)]:\n    -   @tanstack/store@0.11.1\n"
+    },
+    {
+      "id": 365735483,
+      "tag_name": "@tanstack/react-store@0.11.1",
+      "published_at": "2026-08-05T18:29:40Z",
+      "html_url": "https://github.com/TanStack/store/releases/tag/%40tanstack/react-store%400.11.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1d7c87e`](https://github.com/TanStack/store/commit/1d7c87e9a3e465fbc88d1a57c46e7b454ee3eb65)]:\n    -   @tanstack/store@0.11.1\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/svelte-store@0.12.1",
+    "@tanstack/vue-store@0.11.1",
+    "@tanstack/preact-store@0.13.2",
+    "@tanstack/angular-store@0.11.1",
+    "@tanstack/solid-store@0.11.1",
+    "@tanstack/lit-store@0.14.1"
+  ]
+}
