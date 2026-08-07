@@ -1,0 +1,115 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-07-0636",
+  "published_at": "2026-08-07T06:36:25Z",
+  "releases": [
+    {
+      "id": 366561608,
+      "tag_name": "@tanstack/ai-bedrock@0.1.6",
+      "published_at": "2026-08-07T06:35:22Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.1.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n    -   @tanstack/openai-base@0.9.10\n"
+    },
+    {
+      "id": 366561619,
+      "tag_name": "@tanstack/ai-mcp@0.2.7",
+      "published_at": "2026-08-07T06:35:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.2.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n"
+    },
+    {
+      "id": 366561647,
+      "tag_name": "@tanstack/ai-code-mode@0.3.10",
+      "published_at": "2026-08-07T06:35:28Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.3.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n"
+    },
+    {
+      "id": 366561718,
+      "tag_name": "@tanstack/ai-react@0.19.1",
+      "published_at": "2026-08-07T06:35:37Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.19.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n    -   @tanstack/ai-client@0.23.1\n"
+    },
+    {
+      "id": 366561735,
+      "tag_name": "@tanstack/ai-fal@0.9.14",
+      "published_at": "2026-08-07T06:35:40Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.9.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n"
+    },
+    {
+      "id": 366561762,
+      "tag_name": "@tanstack/react-ai-devtools@0.2.69",
+      "published_at": "2026-08-07T06:35:43Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/react-ai-devtools%400.2.69",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-devtools-core@0.5.1\n"
+    },
+    {
+      "id": 366561777,
+      "tag_name": "@tanstack/ai-isolate-node@0.1.49",
+      "published_at": "2026-08-07T06:35:46Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-node%400.1.49",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.10\n"
+    },
+    {
+      "id": 366561846,
+      "tag_name": "@tanstack/ai-persistence@0.1.1",
+      "published_at": "2026-08-07T06:35:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n"
+    },
+    {
+      "id": 366561907,
+      "tag_name": "@tanstack/ai-devtools-core@0.5.1",
+      "published_at": "2026-08-07T06:36:04Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n"
+    },
+    {
+      "id": 366561922,
+      "tag_name": "@tanstack/ai@0.43.1",
+      "published_at": "2026-08-07T06:36:07Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.43.1",
+      "body": "### Patch Changes\n\n-   [#1055](https://github.com/TanStack/ai/pull/1055) [`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a) - fix(otelMiddleware): open an iteration span for structured-output finalization ([#1054](https://github.com/TanStack/ai/issues/1054))\n\n    No-tools + `outputSchema` calls skip the agent loop and only run the structured-output finalization request. That path previously emitted only a root `chat` span \u2014 no generation record, and `captureContent` was a silent no-op. `onConfig` now also opens an iteration span when `phase === 'structuredOutput'`, so each provider model call is observable. Native-combined mode is unaffected (it never fires that phase).\n"
+    },
+    {
+      "id": 366561936,
+      "tag_name": "@tanstack/ai-isolate-quickjs@0.2.0",
+      "published_at": "2026-08-07T06:36:10Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-quickjs%400.2.0",
+      "body": "### Minor Changes\n\n-   [#948](https://github.com/TanStack/ai/pull/948) [`7299b38`](https://github.com/TanStack/ai/commit/7299b38ec585fa712a5ba9031e847180207abc60) - Replace asyncify-suspended host functions with promise-based bridging in the QuickJS isolate driver. Sequential awaits of the same async tool binding previously corrupted QuickJS refcounts and could abort the WASM module (<https://github.com/justjake/quickjs-emscripten/issues/258>) \u2014 the passing tests relied on an incidental heap-layout effect of the injected `console` global. Tool bindings now return QuickJS promises resolved from the host, which never suspend the WASM stack, and the driver uses the plain (non-asyncify) QuickJS build. Concurrent tool calls via `Promise.all` in sandboxed code are now supported, and execution timeouts are enforced with a host-side deadline in addition to the QuickJS interrupt handler.\n\n    **Migration notes:**\n\n    -   **WASM variant changed.** The driver now loads the sync QuickJS build. If you bundle or self-host the wasm binary, ship `@jitl/quickjs-wasmfile-release-sync/wasm` instead of `@jitl/quickjs-wasmfile-release-asyncify/wasm` \u2014 the sync glue cannot instantiate the asyncify binary.\n    -   **Timeouts are now terminal for the context.** After a `TimeoutError` (previously surfaced as `InternalError: interrupted`), outstanding tool calls are cancelled with a timeout error inside the sandbox, the context is disposed, and subsequent `execute()` calls return `DisposedError` \u2014 the timed-out program's interrupted jobs stay queued in the VM and must not run inside a later execution. Create a new context after a timeout; `@tanstack/ai-code-mode` already creates a context per execution, so typical Code Mode usage is unaffected.\n\n### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.10\n"
+    },
+    {
+      "id": 366561975,
+      "tag_name": "@tanstack/ai-client@0.23.1",
+      "published_at": "2026-08-07T06:36:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.23.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n"
+    },
+    {
+      "id": 366561996,
+      "tag_name": "@tanstack/ai-code-mode-skills@0.3.13",
+      "published_at": "2026-08-07T06:36:19Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-skills%400.3.13",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ed44467`](https://github.com/TanStack/ai/commit/ed44467c5e701f0a4fcc1c9f5639d036de35d26a)]:\n    -   @tanstack/ai@0.43.1\n    -   @tanstack/ai-code-mode@0.3.10\n"
+    },
+    {
+      "id": 366562038,
+      "tag_name": "@tanstack/ai-isolate-cloudflare@0.2.40",
+      "published_at": "2026-08-07T06:36:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-cloudflare%400.2.40",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.10\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/preact-ai-devtools@0.1.69",
+    "@tanstack/ai-solid@0.16.1",
+    "@tanstack/ai-angular@0.4.1",
+    "@tanstack/ai-svelte@0.16.1",
+    "@tanstack/solid-ai-devtools@0.2.69",
+    "@tanstack/ai-vue-ui@0.2.36",
+    "@tanstack/ai-vue@0.16.1",
+    "@tanstack/ai-preact@0.12.1"
+  ]
+}
