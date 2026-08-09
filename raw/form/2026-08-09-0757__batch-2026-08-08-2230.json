@@ -1,0 +1,67 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-08-2230",
+  "published_at": "2026-08-08T22:30:50Z",
+  "releases": [
+    {
+      "id": 367318849,
+      "tag_name": "@tanstack/form-core@1.33.4",
+      "published_at": "2026-08-08T22:30:14Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-core%401.33.4",
+      "body": "\n"
+    },
+    {
+      "id": 367318854,
+      "tag_name": "@tanstack/form-devtools@0.2.33",
+      "published_at": "2026-08-08T22:30:17Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-devtools%400.2.33",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-core@1.33.4\n"
+    },
+    {
+      "id": 367318890,
+      "tag_name": "@tanstack/react-form-nextjs@1.33.4",
+      "published_at": "2026-08-08T22:30:26Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-nextjs%401.33.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-form@1.33.4\n"
+    },
+    {
+      "id": 367318921,
+      "tag_name": "@tanstack/react-form-remix@1.33.4",
+      "published_at": "2026-08-08T22:30:35Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-remix%401.33.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-form@1.33.4\n"
+    },
+    {
+      "id": 367318932,
+      "tag_name": "@tanstack/react-form-devtools@0.2.33",
+      "published_at": "2026-08-08T22:30:38Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-devtools%400.2.33",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-devtools@0.2.33\n"
+    },
+    {
+      "id": 367318955,
+      "tag_name": "@tanstack/react-form-start@1.33.4",
+      "published_at": "2026-08-08T22:30:44Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-start%401.33.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-form@1.33.4\n"
+    },
+    {
+      "id": 367318971,
+      "tag_name": "@tanstack/react-form@1.33.4",
+      "published_at": "2026-08-08T22:30:50Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form%401.33.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-core@1.33.4\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/lit-form@1.33.3",
+    "@tanstack/preact-form@1.30.4",
+    "@tanstack/solid-form-devtools@0.2.33",
+    "@tanstack/solid-form@1.33.4",
+    "@tanstack/angular-form@1.33.4",
+    "@tanstack/vue-form@1.33.4",
+    "@tanstack/svelte-form@1.33.4",
+    "@tanstack/lit-form@1.25.4",
+    "@tanstack/preact-form@1.33.3"
+  ]
+}
