@@ -1,0 +1,65 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-11-1245",
+  "published_at": "2026-08-11T12:45:10Z",
+  "releases": [
+    {
+      "id": 368563599,
+      "tag_name": "@tanstack/react-form@1.33.5",
+      "published_at": "2026-08-11T12:44:40Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form%401.33.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`146ba25`](https://github.com/TanStack/form/commit/146ba25205afe46c2a8bfc1f2ef82609255772dc)]:\n    -   @tanstack/form-core@1.33.5\n"
+    },
+    {
+      "id": 368563627,
+      "tag_name": "@tanstack/form-devtools@0.2.34",
+      "published_at": "2026-08-11T12:44:43Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-devtools%400.2.34",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`146ba25`](https://github.com/TanStack/form/commit/146ba25205afe46c2a8bfc1f2ef82609255772dc)]:\n    -   @tanstack/form-core@1.33.5\n"
+    },
+    {
+      "id": 368563668,
+      "tag_name": "@tanstack/react-form-nextjs@1.33.5",
+      "published_at": "2026-08-11T12:44:46Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-nextjs%401.33.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-form@1.33.5\n"
+    },
+    {
+      "id": 368563726,
+      "tag_name": "@tanstack/react-form-devtools@0.2.34",
+      "published_at": "2026-08-11T12:44:52Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-devtools%400.2.34",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/form-devtools@0.2.34\n"
+    },
+    {
+      "id": 368563761,
+      "tag_name": "@tanstack/form-core@1.33.5",
+      "published_at": "2026-08-11T12:44:55Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/form-core%401.33.5",
+      "body": "### Patch Changes\n\n-   [#2318](https://github.com/TanStack/form/pull/2318) [`146ba25`](https://github.com/TanStack/form/commit/146ba25205afe46c2a8bfc1f2ef82609255772dc) - Preserve sibling fields whose names share a prefix when deleting a field.\n"
+    },
+    {
+      "id": 368563788,
+      "tag_name": "@tanstack/react-form-remix@1.33.5",
+      "published_at": "2026-08-11T12:44:58Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-remix%401.33.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-form@1.33.5\n"
+    },
+    {
+      "id": 368563920,
+      "tag_name": "@tanstack/react-form-start@1.33.5",
+      "published_at": "2026-08-11T12:45:10Z",
+      "html_url": "https://github.com/TanStack/form/releases/tag/%40tanstack/react-form-start%401.33.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-form@1.33.5\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/svelte-form@1.33.5",
+    "@tanstack/lit-form@1.25.5",
+    "@tanstack/vue-form@1.33.5",
+    "@tanstack/solid-form-devtools@0.2.34",
+    "@tanstack/angular-form@1.33.5",
+    "@tanstack/solid-form@1.33.5",
+    "@tanstack/preact-form@1.30.5"
+  ]
+}
