@@ -1,0 +1,71 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-12-1508",
+  "published_at": "2026-08-12T15:08:30Z",
+  "releases": [
+    {
+      "id": 369329893,
+      "tag_name": "@tanstack/ai-claude-code@0.3.2",
+      "published_at": "2026-08-12T15:08:06Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.3.2",
+      "body": "### Patch Changes\n\n-   [#1094](https://github.com/TanStack/ai/pull/1094) [`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5) - fix: make default Daytona + Grok/Codex sandbox runs work without extra wrappers\n\n    Headless Grok and Codex stay permissive when policy is deny-only plus default allow. Daytona remaps `/workspace`, starts stopped sandboxes on resume, keeps secrets out of create-time envVars and command strings, and uses native fs/git plus session stdin. Nested skills project by name. Durable Grok journals when durability is wired.\n\n-   Updated dependencies \\[[`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5), [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc)]:\n    -   @tanstack/ai-sandbox@0.3.2\n"
+    },
+    {
+      "id": 369329923,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.1.0",
+      "published_at": "2026-08-12T15:08:09Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.1.0",
+      "body": "### Minor Changes\n\n-   [#1093](https://github.com/TanStack/ai/pull/1093) [`45b67d7`](https://github.com/TanStack/ai/commit/45b67d720831c10284b7acaf3c7e3f5af307a7ae) - Add `@tanstack/ai-vercel-gateway` for Vercel AI Gateway chat, embeddings, and image generation.\n"
+    },
+    {
+      "id": 369329946,
+      "tag_name": "@tanstack/ai-acp@0.2.6",
+      "published_at": "2026-08-12T15:08:11Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.2.6",
+      "body": "### Patch Changes\n\n-   [#1094](https://github.com/TanStack/ai/pull/1094) [`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5) - fix: make default Daytona + Grok/Codex sandbox runs work without extra wrappers\n\n    Headless Grok and Codex stay permissive when policy is deny-only plus default allow. Daytona remaps `/workspace`, starts stopped sandboxes on resume, keeps secrets out of create-time envVars and command strings, and uses native fs/git plus session stdin. Nested skills project by name. Durable Grok journals when durability is wired.\n\n-   Updated dependencies \\[[`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5), [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc)]:\n    -   @tanstack/ai-sandbox@0.3.2\n"
+    },
+    {
+      "id": 369329988,
+      "tag_name": "@tanstack/ai-sandbox-docker@0.3.0",
+      "published_at": "2026-08-12T15:08:15Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-docker%400.3.0",
+      "body": "### Minor Changes\n\n-   [#1079](https://github.com/TanStack/ai/pull/1079) [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc) - Add `sbxSandbox()` for Docker Sandboxes microVMs, and optional `adapterName` on sandbox ensure/create so network policy can allow the model API host.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5), [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc)]:\n    -   @tanstack/ai-sandbox@0.3.2\n"
+    },
+    {
+      "id": 369330021,
+      "tag_name": "@tanstack/ai-sandbox@0.3.2",
+      "published_at": "2026-08-12T15:08:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.3.2",
+      "body": "### Patch Changes\n\n-   [#1094](https://github.com/TanStack/ai/pull/1094) [`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5) - fix: make default Daytona + Grok/Codex sandbox runs work without extra wrappers\n\n    Headless Grok and Codex stay permissive when policy is deny-only plus default allow. Daytona remaps `/workspace`, starts stopped sandboxes on resume, keeps secrets out of create-time envVars and command strings, and uses native fs/git plus session stdin. Nested skills project by name. Durable Grok journals when durability is wired.\n\n-   [#1079](https://github.com/TanStack/ai/pull/1079) [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc) - Add `sbxSandbox()` for Docker Sandboxes microVMs, and optional `adapterName` on sandbox ensure/create so network policy can allow the model API host.\n"
+    },
+    {
+      "id": 369330056,
+      "tag_name": "@tanstack/ai-sandbox-daytona@0.3.0",
+      "published_at": "2026-08-12T15:08:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-daytona%400.3.0",
+      "body": "### Minor Changes\n\n-   [#1094](https://github.com/TanStack/ai/pull/1094) [`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5) - fix: make default Daytona + Grok/Codex sandbox runs work without extra wrappers\n\n    Headless Grok and Codex stay permissive when policy is deny-only plus default allow. Daytona remaps `/workspace`, starts stopped sandboxes on resume, keeps secrets out of create-time envVars and command strings, and uses native fs/git plus session stdin. Nested skills project by name. Durable Grok journals when durability is wired.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5), [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc)]:\n    -   @tanstack/ai-sandbox@0.3.2\n"
+    },
+    {
+      "id": 369330088,
+      "tag_name": "@tanstack/ai-persistence@0.1.3",
+      "published_at": "2026-08-12T15:08:23Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.1.3",
+      "body": "### Patch Changes\n\n-   [#1090](https://github.com/TanStack/ai/pull/1090) [`24622c7`](https://github.com/TanStack/ai/commit/24622c7927c734bf493cfc332b6baecc4483f366) - `withPersistence` now maps cancelled client-tool and approval resume entries\n    into `cancelledToolCallIds`. A resume batch that is only cancellations still\n    produces a `resumeToolState`, so the engine can complete the turn instead of\n    emitting another `client_tool_*` interrupt.\n"
+    },
+    {
+      "id": 369330117,
+      "tag_name": "@tanstack/ai-grok-build@0.3.2",
+      "published_at": "2026-08-12T15:08:27Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.3.2",
+      "body": "### Patch Changes\n\n-   [#1094](https://github.com/TanStack/ai/pull/1094) [`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5) - fix: make default Daytona + Grok/Codex sandbox runs work without extra wrappers\n\n    Headless Grok and Codex stay permissive when policy is deny-only plus default allow. Daytona remaps `/workspace`, starts stopped sandboxes on resume, keeps secrets out of create-time envVars and command strings, and uses native fs/git plus session stdin. Nested skills project by name. Durable Grok journals when durability is wired.\n\n-   Updated dependencies \\[[`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5), [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc)]:\n    -   @tanstack/ai-sandbox@0.3.2\n    -   @tanstack/ai-acp@0.2.6\n"
+    },
+    {
+      "id": 369330152,
+      "tag_name": "@tanstack/ai-codex@0.3.2",
+      "published_at": "2026-08-12T15:08:30Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.3.2",
+      "body": "### Patch Changes\n\n-   [#1094](https://github.com/TanStack/ai/pull/1094) [`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5) - fix: make default Daytona + Grok/Codex sandbox runs work without extra wrappers\n\n    Headless Grok and Codex stay permissive when policy is deny-only plus default allow. Daytona remaps `/workspace`, starts stopped sandboxes on resume, keeps secrets out of create-time envVars and command strings, and uses native fs/git plus session stdin. Nested skills project by name. Durable Grok journals when durability is wired.\n\n-   Updated dependencies \\[[`d5bdc36`](https://github.com/TanStack/ai/commit/d5bdc367413d5bf9718729de46b4e1405ec0b8f5), [`9424acd`](https://github.com/TanStack/ai/commit/9424acd9cc9b96ccf9f4a24ad49d3fc327f114fc)]:\n    -   @tanstack/ai-sandbox@0.3.2\n"
+    }
+  ],
+  "excluded_tags": []
+}
