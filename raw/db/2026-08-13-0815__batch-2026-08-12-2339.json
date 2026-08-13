@@ -1,0 +1,132 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-12-2339",
+  "published_at": "2026-08-12T23:39:51Z",
+  "releases": [
+    {
+      "id": 369585655,
+      "tag_name": "@tanstack/powersync-db-collection@0.1.56",
+      "published_at": "2026-08-12T23:38:52Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.1.56",
+      "body": "### Patch Changes\n\n-   Fixed `no such table` errors logged by the `on-demand` sync handler. Records are no longer flushed before the `diffTrigger` has been set up, and the tracking state is now cleared as part of disposal so unloading a subset or cleaning up the collection no longer flushes the dropped tracking table. ([#1585](https://github.com/TanStack/db/pull/1585))\n\n-   Fix: applyTransaction hangs forever when a transaction mixes delete+insert on one collection for a same-millisecond tie. ([#1649](https://github.com/TanStack/db/pull/1649))\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585672,
+      "tag_name": "@tanstack/capacitor-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:38:54Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585692,
+      "tag_name": "@tanstack/offline-transactions@1.0.43",
+      "published_at": "2026-08-12T23:38:57Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.0.43",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585707,
+      "tag_name": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:39:00Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585725,
+      "tag_name": "@tanstack/node-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:39:04Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585743,
+      "tag_name": "@tanstack/db-sqlite-persistence-core@0.2.10",
+      "published_at": "2026-08-12T23:39:07Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585756,
+      "tag_name": "@tanstack/react-db@0.1.96",
+      "published_at": "2026-08-12T23:39:09Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.1.96",
+      "body": "### Patch Changes\n\n-   Add an internal shared live-query observer and migrate all five framework adapters to it ([#1642](https://github.com/TanStack/db/pull/1642))\n\n    Introduces `createLiveQueryObserver` in `@tanstack/db`: given a resolved live-query collection (or `null` for a disabled query) it owns the subscription lifecycle every adapter used to re-implement \u2014 change and status subscriptions, a snapshot with stable identity per state revision for wholesale consumers, and delivery of the raw `ChangeMessage[]` for granular consumers. React, Vue, Svelte, Solid, and Angular's live-query hooks now materialize from the observer instead of their own hand-rolled subscription/status/snapshot machinery, keeping each adapter's native reactivity and each adapter's data-loading policy (wholesale adapters subscribe without initial state; granular adapters seed from it).\n\n    The observer is an **internal, unstable contract** for TanStack DB's official adapters \u2014 it is exported so the adapter packages can consume it, but it is not a public extension point yet and its API may change in any release.\n\n    The migration also fixes several live-query lifecycle defects: status-only transitions (`error`, `cleaned-up`) now reach mounted consumers; snapshot identity is stable across unsubscribe/resubscribe and stays fresh while detached; dispatch is FIFO and non-reentrant with subscriptions identified by record rather than callback; disposing during the synchronous initial replay no longer leaks the collection subscription; subscribing after dispose throws instead of registering a dead listener; Solid guards its async resource continuations against superseded collections; and constructing an observer no longer activates sync. Observers activate on their first committed subscription unless an adapter has already started a pre-created collection supplied directly or returned from a callback.\n\n-   Add the unstable, internal `createLiveQueryWindowController` primitive for ([#1675](https://github.com/TanStack/db/pull/1675))\n    forward pagination. It coordinates collection-scoped window leases, commits\n    pages only after subset loads succeed, restores windows after failures and\n    cleanup, and lets React's `useLiveInfiniteQuery` become a thin binding without\n    changing its public API or resetting pages for structurally equal dependencies.\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585769,
+      "tag_name": "@tanstack/trailbase-db-collection@0.1.96",
+      "published_at": "2026-08-12T23:39:12Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.96",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585783,
+      "tag_name": "@tanstack/electric-db-collection@0.3.16",
+      "published_at": "2026-08-12T23:39:15Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.3.16",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585798,
+      "tag_name": "@tanstack/db@0.7.0",
+      "published_at": "2026-08-12T23:39:19Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.7.0",
+      "body": "### Minor Changes\n\n-   Add an internal shared live-query observer and migrate all five framework adapters to it ([#1642](https://github.com/TanStack/db/pull/1642))\n\n    Introduces `createLiveQueryObserver` in `@tanstack/db`: given a resolved live-query collection (or `null` for a disabled query) it owns the subscription lifecycle every adapter used to re-implement \u2014 change and status subscriptions, a snapshot with stable identity per state revision for wholesale consumers, and delivery of the raw `ChangeMessage[]` for granular consumers. React, Vue, Svelte, Solid, and Angular's live-query hooks now materialize from the observer instead of their own hand-rolled subscription/status/snapshot machinery, keeping each adapter's native reactivity and each adapter's data-loading policy (wholesale adapters subscribe without initial state; granular adapters seed from it).\n\n    The observer is an **internal, unstable contract** for TanStack DB's official adapters \u2014 it is exported so the adapter packages can consume it, but it is not a public extension point yet and its API may change in any release.\n\n    The migration also fixes several live-query lifecycle defects: status-only transitions (`error`, `cleaned-up`) now reach mounted consumers; snapshot identity is stable across unsubscribe/resubscribe and stays fresh while detached; dispatch is FIFO and non-reentrant with subscriptions identified by record rather than callback; disposing during the synchronous initial replay no longer leaks the collection subscription; subscribing after dispose throws instead of registering a dead listener; Solid guards its async resource continuations against superseded collections; and constructing an observer no longer activates sync. Observers activate on their first committed subscription unless an adapter has already started a pre-created collection supplied directly or returned from a callback.\n\n### Patch Changes\n\n-   fix(db): republish ordered live queries on an order-only move ([#1669](https://github.com/TanStack/db/pull/1669))\n\n    An `orderBy` live query that reordered its rows without changing any projected\n    row value (an \"order-only move\") previously emitted nothing, so `useLiveQuery`\n    kept rendering the stale order. The live-query collection now publishes an\n    explicit layout-change notification when this happens, and the shared live-query\n    observer snapshot exposes a `layoutRevision` that increments on any visible\n    membership, ordering, or order-only-move change. All five framework adapters\n    pick this up via their existing wholesale re-read.\n\n-   Add the unstable, internal `createLiveQueryWindowController` primitive for ([#1675](https://github.com/TanStack/db/pull/1675))\n    forward pagination. It coordinates collection-scoped window leases, commits\n    pages only after subset loads succeed, restores windows after failures and\n    cleanup, and lets React's `useLiveInfiniteQuery` become a thin binding without\n    changing its public API or resetting pages for structurally equal dependencies.\n"
+    },
+    {
+      "id": 369585815,
+      "tag_name": "@tanstack/rxdb-db-collection@0.1.84",
+      "published_at": "2026-08-12T23:39:21Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.84",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585838,
+      "tag_name": "@tanstack/query-db-collection@1.2.2",
+      "published_at": "2026-08-12T23:39:27Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.2.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ad88d07`](https://github.com/TanStack/db/commit/ad88d0751db9723dfb9f164ebfcef88d52b6efa3), [`7e7abda`](https://github.com/TanStack/db/commit/7e7abda73a7ab313f9ec6a413fad00f300e79fb3), [`dc53f0e`](https://github.com/TanStack/db/commit/dc53f0ecbc38e173af68d829ff2de97531494722)]:\n    -   @tanstack/db@0.7.0\n"
+    },
+    {
+      "id": 369585859,
+      "tag_name": "@tanstack/expo-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:39:30Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585895,
+      "tag_name": "@tanstack/electron-db-sqlite-persistence@0.1.22",
+      "published_at": "2026-08-12T23:39:37Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.1.22",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585908,
+      "tag_name": "@tanstack/react-native-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:39:39Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585944,
+      "tag_name": "@tanstack/browser-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:39:48Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    },
+    {
+      "id": 369585962,
+      "tag_name": "@tanstack/tauri-db-sqlite-persistence@0.2.10",
+      "published_at": "2026-08-12T23:39:51Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.10\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/angular-db@0.1.78",
+    "@tanstack/svelte-db@0.2.0",
+    "@tanstack/solid-db@0.2.32",
+    "@tanstack/vue-db@0.0.129"
+  ]
+}
