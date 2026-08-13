@@ -1,0 +1,255 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-13-1851",
+  "published_at": "2026-08-13T18:51:51Z",
+  "releases": [
+    {
+      "id": 370069019,
+      "tag_name": "@tanstack/electron-db-sqlite-persistence@0.1.23",
+      "published_at": "2026-08-13T16:49:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.1.23",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069043,
+      "tag_name": "@tanstack/browser-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:49:41Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069115,
+      "tag_name": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:49:47Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069152,
+      "tag_name": "@tanstack/capacitor-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:49:50Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069195,
+      "tag_name": "@tanstack/rxdb-db-collection@0.1.85",
+      "published_at": "2026-08-13T16:49:53Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.85",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069377,
+      "tag_name": "@tanstack/trailbase-db-collection@0.1.97",
+      "published_at": "2026-08-13T16:49:56Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.97",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069403,
+      "tag_name": "@tanstack/db-sqlite-persistence-core@0.2.11",
+      "published_at": "2026-08-13T16:49:59Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069428,
+      "tag_name": "@tanstack/db@0.7.1",
+      "published_at": "2026-08-13T16:50:02Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.7.1",
+      "body": "### Patch Changes\n\n-   Add `useLiveInfiniteQuery` as a Vue binding over the shared live-query window controller. Align infinite-query behavior across React, Vue, and Svelte, including awaitable page fetches, safe page sizes, reactive page-depth preservation, ordered collection validation, shared input resolution, and shared-window cleanup. ([#1724](https://github.com/TanStack/db/pull/1724))\n"
+    },
+    {
+      "id": 370069485,
+      "tag_name": "@tanstack/tauri-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:50:08Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069548,
+      "tag_name": "@tanstack/electric-db-collection@0.3.17",
+      "published_at": "2026-08-13T16:50:14Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.3.17",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069575,
+      "tag_name": "@tanstack/react-native-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:50:17Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069606,
+      "tag_name": "@tanstack/offline-transactions@1.0.44",
+      "published_at": "2026-08-13T16:50:20Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.0.44",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069663,
+      "tag_name": "@tanstack/query-db-collection@1.2.3",
+      "published_at": "2026-08-13T16:50:26Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.2.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069697,
+      "tag_name": "@tanstack/expo-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:50:29Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069730,
+      "tag_name": "@tanstack/react-db@0.2.0",
+      "published_at": "2026-08-13T16:50:32Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.2.0",
+      "body": "### Minor Changes\n\n-   Add `useLiveInfiniteQuery` as a Vue binding over the shared live-query window controller. Align infinite-query behavior across React, Vue, and Svelte, including awaitable page fetches, safe page sizes, reactive page-depth preservation, ordered collection validation, shared input resolution, and shared-window cleanup. ([#1724](https://github.com/TanStack/db/pull/1724))\n\n### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370069762,
+      "tag_name": "@tanstack/node-db-sqlite-persistence@0.2.11",
+      "published_at": "2026-08-13T16:50:35Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.11\n"
+    },
+    {
+      "id": 370069786,
+      "tag_name": "@tanstack/powersync-db-collection@0.1.57",
+      "published_at": "2026-08-13T16:50:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.1.57",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`424382b`](https://github.com/TanStack/db/commit/424382b3a80c6b3556701b433c26c8a60fc8d1af)]:\n    -   @tanstack/db@0.7.1\n"
+    },
+    {
+      "id": 370135259,
+      "tag_name": "@tanstack/browser-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:50:51Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135287,
+      "tag_name": "@tanstack/electron-db-sqlite-persistence@0.1.24",
+      "published_at": "2026-08-13T18:50:54Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.1.24",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135320,
+      "tag_name": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:50:57Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135346,
+      "tag_name": "@tanstack/capacitor-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:51:00Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135377,
+      "tag_name": "@tanstack/react-db@0.2.1",
+      "published_at": "2026-08-13T18:51:03Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.2.1",
+      "body": "### Patch Changes\n\n-   Update agent skills to match current APIs and behavior. ([#1696](https://github.com/TanStack/db/pull/1696))\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135398,
+      "tag_name": "@tanstack/rxdb-db-collection@0.1.86",
+      "published_at": "2026-08-13T18:51:06Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.86",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135429,
+      "tag_name": "@tanstack/node-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:51:09Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135458,
+      "tag_name": "@tanstack/db@0.7.2",
+      "published_at": "2026-08-13T18:51:12Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.7.2",
+      "body": "### Patch Changes\n\n-   Update agent skills to match current APIs and behavior. ([#1696](https://github.com/TanStack/db/pull/1696))\n"
+    },
+    {
+      "id": 370135520,
+      "tag_name": "@tanstack/tauri-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:51:18Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135576,
+      "tag_name": "@tanstack/electric-db-collection@0.3.18",
+      "published_at": "2026-08-13T18:51:24Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.3.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135604,
+      "tag_name": "@tanstack/powersync-db-collection@0.1.58",
+      "published_at": "2026-08-13T18:51:27Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.1.58",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135631,
+      "tag_name": "@tanstack/expo-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:51:30Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135656,
+      "tag_name": "@tanstack/trailbase-db-collection@0.1.98",
+      "published_at": "2026-08-13T18:51:33Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.98",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135676,
+      "tag_name": "@tanstack/db-sqlite-persistence-core@0.2.12",
+      "published_at": "2026-08-13T18:51:36Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135755,
+      "tag_name": "@tanstack/react-native-db-sqlite-persistence@0.2.12",
+      "published_at": "2026-08-13T18:51:45Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.12\n"
+    },
+    {
+      "id": 370135783,
+      "tag_name": "@tanstack/query-db-collection@1.2.4",
+      "published_at": "2026-08-13T18:51:48Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    },
+    {
+      "id": 370135809,
+      "tag_name": "@tanstack/offline-transactions@1.0.45",
+      "published_at": "2026-08-13T18:51:51Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.0.45",
+      "body": "### Patch Changes\n\n-   Update agent skills to match current APIs and behavior. ([#1696](https://github.com/TanStack/db/pull/1696))\n\n-   Updated dependencies \\[[`5f63996`](https://github.com/TanStack/db/commit/5f63996b0febd4775fb641f50975f8f0d442dc00)]:\n    -   @tanstack/db@0.7.2\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/angular-db@0.1.79",
+    "@tanstack/solid-db@0.2.33",
+    "@tanstack/svelte-db@0.2.1",
+    "@tanstack/vue-db@0.1.0",
+    "@tanstack/angular-db@0.1.80",
+    "@tanstack/svelte-db@0.2.2",
+    "@tanstack/vue-db@0.1.1",
+    "@tanstack/solid-db@0.2.34"
+  ]
+}
