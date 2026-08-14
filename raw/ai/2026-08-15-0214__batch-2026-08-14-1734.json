@@ -1,0 +1,50 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-14-1734",
+  "published_at": "2026-08-14T17:34:40Z",
+  "releases": [
+    {
+      "id": 370726761,
+      "tag_name": "@tanstack/ai-openrouter@0.17.0",
+      "published_at": "2026-08-14T17:34:26Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.17.0",
+      "body": "### Minor Changes\n\n-   [#740](https://github.com/TanStack/ai/pull/740) [`efe3b07`](https://github.com/TanStack/ai/commit/efe3b07688a29960a4b3e25c44219a253bb75a00) - Add `openRouterVideo`, a video generation adapter for OpenRouter's dedicated async API (`POST /api/v1/videos`) \u2014 Seedance, Veo 3.1, Wan, Kling, and Sora 2 Pro through one API key. Follows the jobs/polling architecture (`generateVideo()` \u2192 `getVideoJobStatus()`), with per-model `size` / `duration` / provider-option types generated from OpenRouter's `GET /api/v1/videos/models` metadata and validated before submit. `duration` is typed per model on the shared typed-duration contract \u2014 the adapter implements `availableDurations()` and `snapDuration(seconds)` (matching the Veo adapter) to enumerate the valid set and coerce raw UI seconds to the closest supported value. Image-conditioned prompts map `metadata.role` onto the wire: `start_frame` / `end_frame` \u2192 `frame_images[]` (`first_frame` / `last_frame`), `reference` / `character` \u2192 `input_references[]`; frame roles are validated against each model's `supported_frame_images`. Completed videos are downloaded server-side and returned as `data:` URLs (OpenRouter's download URLs require the API key), and the gateway-reported cost is surfaced as `usage.cost`.\n\n    Image adapter fixes from the [#624](https://github.com/TanStack/ai/issues/624) review: requested `size` is now validated (the `WIDTHxHEIGHT` union previously used a Unicode `\u00d7`, so every size except `1024x1024` silently dropped its aspect ratio; unsupported sizes now throw with the supported list), `numberOfImages > 1` throws instead of silently returning one image (verified live: the gateway ignores all count keys in `image_config`), and `image_config.strength` (0.0\u20131.0 image-to-image influence) is exposed via `modelOptions.strength`.\n\n### Patch Changes\n\n-   [#1096](https://github.com/TanStack/ai/pull/1096) [`a987581`](https://github.com/TanStack/ai/commit/a987581f5a62e6ffc37b80c9b8c16125c608aa11) - Refresh MiniMax M2.7 and M3 context and pricing metadata.\n\n-   Updated dependencies \\[[`99fb2b7`](https://github.com/TanStack/ai/commit/99fb2b7b113548b20afa894e014bd03773815a41)]:\n    -   @tanstack/ai@0.44.1\n"
+    },
+    {
+      "id": 370726784,
+      "tag_name": "@tanstack/ai-gemini@0.23.0",
+      "published_at": "2026-08-14T17:34:29Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.23.0",
+      "body": "### Minor Changes\n\n-   [#1105](https://github.com/TanStack/ai/pull/1105) [`03f0f5d`](https://github.com/TanStack/ai/commit/03f0f5dde47f92219a4e23b2d81f0b631a74b4ec) - Add Gemini 3.7 Flash (`gemini-3.7-flash`) with full multimodal input, thinking, structured output, caching, and the same built-in tools as Gemini 3.6 Flash.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`99fb2b7`](https://github.com/TanStack/ai/commit/99fb2b7b113548b20afa894e014bd03773815a41)]:\n    -   @tanstack/ai@0.44.1\n"
+    },
+    {
+      "id": 370726816,
+      "tag_name": "@tanstack/ai@0.44.1",
+      "published_at": "2026-08-14T17:34:32Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.44.1",
+      "body": "### Patch Changes\n\n-   [#1101](https://github.com/TanStack/ai/pull/1101) [`99fb2b7`](https://github.com/TanStack/ai/commit/99fb2b7b113548b20afa894e014bd03773815a41) - Preserve stable IDs and creation timestamps for server-generated assistant messages across persistence and hydration.\n"
+    },
+    {
+      "id": 370726832,
+      "tag_name": "@tanstack/ai-perplexity@0.2.0",
+      "published_at": "2026-08-14T17:34:35Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.0",
+      "body": "### Minor Changes\n\n-   [#516](https://github.com/TanStack/ai/pull/516) [`4d5ec57`](https://github.com/TanStack/ai/commit/4d5ec57ea1e6fc053a6a4b5695c8494bbc468b2e) - Add `@tanstack/ai-perplexity` with a Perplexity Search API client and `perplexitySearchTool`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`99fb2b7`](https://github.com/TanStack/ai/commit/99fb2b7b113548b20afa894e014bd03773815a41)]:\n    -   @tanstack/ai@0.44.1\n"
+    },
+    {
+      "id": 370726855,
+      "tag_name": "@tanstack/ai-isolate-quickjs@0.3.0",
+      "published_at": "2026-08-14T17:34:38Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-quickjs%400.3.0",
+      "body": "### Minor Changes\n\n-   [#1099](https://github.com/TanStack/ai/pull/1099) [`44a3848`](https://github.com/TanStack/ai/commit/44a384830858b3913edfbe562d390e65bea0ef92) - Add a `wasmLocation` driver option for loading the QuickJS WASM binary from a custom URL or path, such as a public directory or CDN.\n\n### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-code-mode@0.3.11\n"
+    },
+    {
+      "id": 370726886,
+      "tag_name": "@tanstack/ai-persistence@0.1.4",
+      "published_at": "2026-08-14T17:34:40Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.1.4",
+      "body": "### Patch Changes\n\n-   [#1101](https://github.com/TanStack/ai/pull/1101) [`99fb2b7`](https://github.com/TanStack/ai/commit/99fb2b7b113548b20afa894e014bd03773815a41) - Preserve stable IDs and creation timestamps for server-generated assistant messages across persistence and hydration.\n\n-   Updated dependencies \\[[`99fb2b7`](https://github.com/TanStack/ai/commit/99fb2b7b113548b20afa894e014bd03773815a41)]:\n    -   @tanstack/ai@0.44.1\n"
+    }
+  ],
+  "excluded_tags": []
+}

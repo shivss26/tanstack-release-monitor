@@ -88,10 +88,6 @@
   "create-tsrouter-app": {
     "last_seen_id": 367030067,
     "yank_watch": {
-      "354665159": {
-        "tag": "release-2026-07-15-1929",
-        "published_at": "2026-07-15T19:29:48Z"
-      },
       "357614687": {
         "tag": "release-2026-07-21-2018",
         "published_at": "2026-07-21T20:18:07Z"
@@ -121,7 +117,7 @@
     "last_seen_id": 370135809
   },
   "ai": {
-    "last_seen_id": 369330152
+    "last_seen_id": 370726886
   },
   "virtual": {
     "last_seen_id": 361357867
