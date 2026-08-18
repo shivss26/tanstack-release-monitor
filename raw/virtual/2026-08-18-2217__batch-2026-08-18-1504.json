@@ -1,0 +1,29 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-18-1504",
+  "published_at": "2026-08-18T15:04:17Z",
+  "releases": [
+    {
+      "id": 372439695,
+      "tag_name": "@tanstack/react-virtual@3.14.10",
+      "published_at": "2026-08-18T15:04:14Z",
+      "html_url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/react-virtual%403.14.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`a0a411e`](https://github.com/TanStack/virtual/commit/a0a411e06f7334a063422de35d59b12b264b3573), [`d2cf98b`](https://github.com/TanStack/virtual/commit/d2cf98beea1696c7187c06b57c9e724d1957963c)]:\n    -   @tanstack/virtual-core@3.17.8\n"
+    },
+    {
+      "id": 372439743,
+      "tag_name": "@tanstack/virtual-core@3.17.8",
+      "published_at": "2026-08-18T15:04:17Z",
+      "html_url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/virtual-core%403.17.8",
+      "body": "### Patch Changes\n\n-   [#1256](https://github.com/TanStack/virtual/pull/1256) [`a0a411e`](https://github.com/TanStack/virtual/commit/a0a411e06f7334a063422de35d59b12b264b3573) - Cancel the pending `isScrolling` reset when a scroll observer is torn down, and reset `isScrolling` and `scrollDirection` in `cleanup()` so they don't stay stuck after the scroll element changes or is removed.\n\n-   [#1246](https://github.com/TanStack/virtual/pull/1246) [`d2cf98b`](https://github.com/TanStack/virtual/commit/d2cf98beea1696c7187c06b57c9e724d1957963c) - Ignore connected measurement nodes whose indexes are outside the current item count.\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/solid-virtual@3.13.37",
+    "@tanstack/vue-virtual@3.13.36",
+    "@tanstack/svelte-virtual@3.13.36",
+    "@tanstack/lit-virtual@3.13.37",
+    "@tanstack/marko-virtual@3.15.1",
+    "@tanstack/angular-virtual@6.0.3"
+  ]
+}
