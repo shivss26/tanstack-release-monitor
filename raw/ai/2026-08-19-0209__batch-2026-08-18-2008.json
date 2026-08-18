@@ -1,0 +1,301 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-18-2008",
+  "published_at": "2026-08-18T20:08:04Z",
+  "releases": [
+    {
+      "id": 372535928,
+      "tag_name": "@tanstack/ai@0.45.0",
+      "published_at": "2026-08-18T17:44:49Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.45.0",
+      "body": "### Minor Changes\n\n-   [#1110](https://github.com/TanStack/ai/pull/1110) [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad) - Harness adapters honor `chat({ outputSchema })` on the same turn.\n\n    Claude Code and Codex pass a native schema flag. OpenCode, Grok Build, and `acpCompatible` parse JSON from the final assistant text. The engine reads a `structured-output.complete` event so harness prose is not parsed as JSON.\n\n-   [#1114](https://github.com/TanStack/ai/pull/1114) [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d) - Rename Code Mode \"skills\" to \"snippets\" to disambiguate them from agent skills (the `SKILL.md` packaging system).\n\n    **Breaking \u2014 package rename.** `@tanstack/ai-code-mode-skills` is now published as **`@tanstack/ai-code-mode-snippets`**. Update your dependency and imports. The `/storage` subpath is unchanged.\n\n    **Breaking \u2014 API rename.** Every `Skill`/`skill` identifier in the package public API becomes `Snippet`/`snippet`, for example:\n\n    -   `codeModeWithSkills()` \u2192 `codeModeWithSnippets()`\n    -   `skillsToTools()` / `skillToTool()` \u2192 `snippetsToTools()` / `snippetToTool()`\n    -   `skillsToBindings()` / `skillsToSimpleBindings()` \u2192 `snippetsToBindings()` / `snippetsToSimpleBindings()`\n    -   `selectRelevantSkills()` \u2192 `selectRelevantSnippets()`\n    -   `createSkillManagementTools()` \u2192 `createSnippetManagementTools()`\n    -   `createSkillsSystemPrompt()` \u2192 `createSnippetsSystemPrompt()`\n    -   `generateSkillTypes()` \u2192 `generateSnippetTypes()`\n    -   `createFileSkillStorage()` / `createMemorySkillStorage()` \u2192 `createFileSnippetStorage()` / `createMemorySnippetStorage()`\n    -   Types: `Skill`, `SkillStorage`, `SkillIndexEntry`, `SkillStats`, `SkillBinding`, `SkillsConfig`, `CodeModeWithSkillsOptions`/`Result` \u2192 the `Snippet\u2026` equivalents\n    -   Options: `skills` \u2192 `snippets`, `skillsAsTools` \u2192 `snippetsAsTools`, `maxSkillsInContext` \u2192 `maxSnippetsInContext`\n    -   Runtime tools: `search_skills` / `get_skill` / `register_skill` \u2192 `search_snippets` / `get_snippet` / `register_snippet`\n    -   Sandbox bindings are now exposed with the `snippet_` prefix (was `skill_`)\n\n    **Breaking \u2014 sandbox hook (`@tanstack/ai-code-mode`).** The `createCodeModeTool` config option `getSkillBindings` is renamed to **`getSnippetBindings`** (same signature \u2014 an optional `() => Promise<Record<string, ToolBinding>>` returning dynamic bindings merged at execution time).\n\n    **Breaking \u2014 wire contract (`@tanstack/ai`).** The Code Mode custom events are renamed: `code_mode:skill_call` / `_result` / `_error` \u2192 `code_mode:snippet_*` (payload field `skill` \u2192 `snippet`), and `skill:registered` \u2192 `snippet:registered`. The exported event types `CodeModeSkillCallEvent` / `CodeModeSkillResultEvent` / `CodeModeSkillErrorEvent` / `SkillRegisteredEvent` are renamed to their `Snippet` equivalents.\n\n### Patch Changes\n\n-   [#1116](https://github.com/TanStack/ai/pull/1116) [`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37) - Preserve existing message IDs on interrupt `MESSAGES_SNAPSHOT` events.\n\n-   [#1132](https://github.com/TanStack/ai/pull/1132) [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b) - Timestamp native and fallback structured-output events when they are emitted so their lifecycle remains chronologically ordered.\n\n-   [#1134](https://github.com/TanStack/ai/pull/1134) [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8) - Return malformed tool arguments to the model as an error result so the agent loop can repair them.\n"
+    },
+    {
+      "id": 372535952,
+      "tag_name": "@tanstack/ai-byteplus@0.1.2",
+      "published_at": "2026-08-18T17:44:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.1.2",
+      "body": "### Patch Changes\n\n-   [#1132](https://github.com/TanStack/ai/pull/1132) [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b) - Timestamp native and fallback structured-output events when they are emitted so their lifecycle remains chronologically ordered.\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/openai-base@0.9.13\n"
+    },
+    {
+      "id": 372535988,
+      "tag_name": "@tanstack/ai-bedrock@0.2.2",
+      "published_at": "2026-08-18T17:44:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.2.2",
+      "body": "### Patch Changes\n\n-   [#1132](https://github.com/TanStack/ai/pull/1132) [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b) - Timestamp native and fallback structured-output events when they are emitted so their lifecycle remains chronologically ordered.\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/openai-base@0.9.13\n"
+    },
+    {
+      "id": 372536010,
+      "tag_name": "@tanstack/ai-isolate-quickjs@0.3.1",
+      "published_at": "2026-08-18T17:44:58Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-quickjs%400.3.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai-code-mode@0.4.0\n"
+    },
+    {
+      "id": 372536041,
+      "tag_name": "@tanstack/ai-elevenlabs@0.2.37",
+      "published_at": "2026-08-18T17:45:01Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.2.37",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536068,
+      "tag_name": "@tanstack/ai-isolate-quickjs-bun@0.1.1",
+      "published_at": "2026-08-18T17:45:04Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-quickjs-bun%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai-code-mode@0.4.0\n"
+    },
+    {
+      "id": 372536092,
+      "tag_name": "@tanstack/ai-openai@0.19.1",
+      "published_at": "2026-08-18T17:45:07Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.19.1",
+      "body": "### Patch Changes\n\n-   [#1048](https://github.com/TanStack/ai/pull/1048) [`bc8c5e8`](https://github.com/TanStack/ai/commit/bc8c5e8684da159b08e63aba7cfc51b01289d4eb) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/openai-base@0.9.13\n"
+    },
+    {
+      "id": 372536111,
+      "tag_name": "@tanstack/ai-code-mode-snippets@0.4.0",
+      "published_at": "2026-08-18T17:45:10Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-snippets%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1114](https://github.com/TanStack/ai/pull/1114) [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d) - Rename Code Mode \"skills\" to \"snippets\" to disambiguate them from agent skills (the `SKILL.md` packaging system).\n\n    **Breaking \u2014 package rename.** `@tanstack/ai-code-mode-skills` is now published as **`@tanstack/ai-code-mode-snippets`**. Update your dependency and imports. The `/storage` subpath is unchanged.\n\n    **Breaking \u2014 API rename.** Every `Skill`/`skill` identifier in the package public API becomes `Snippet`/`snippet`, for example:\n\n    -   `codeModeWithSkills()` \u2192 `codeModeWithSnippets()`\n    -   `skillsToTools()` / `skillToTool()` \u2192 `snippetsToTools()` / `snippetToTool()`\n    -   `skillsToBindings()` / `skillsToSimpleBindings()` \u2192 `snippetsToBindings()` / `snippetsToSimpleBindings()`\n    -   `selectRelevantSkills()` \u2192 `selectRelevantSnippets()`\n    -   `createSkillManagementTools()` \u2192 `createSnippetManagementTools()`\n    -   `createSkillsSystemPrompt()` \u2192 `createSnippetsSystemPrompt()`\n    -   `generateSkillTypes()` \u2192 `generateSnippetTypes()`\n    -   `createFileSkillStorage()` / `createMemorySkillStorage()` \u2192 `createFileSnippetStorage()` / `createMemorySnippetStorage()`\n    -   Types: `Skill`, `SkillStorage`, `SkillIndexEntry`, `SkillStats`, `SkillBinding`, `SkillsConfig`, `CodeModeWithSkillsOptions`/`Result` \u2192 the `Snippet\u2026` equivalents\n    -   Options: `skills` \u2192 `snippets`, `skillsAsTools` \u2192 `snippetsAsTools`, `maxSkillsInContext` \u2192 `maxSnippetsInContext`\n    -   Runtime tools: `search_skills` / `get_skill` / `register_skill` \u2192 `search_snippets` / `get_snippet` / `register_snippet`\n    -   Sandbox bindings are now exposed with the `snippet_` prefix (was `skill_`)\n\n    **Breaking \u2014 sandbox hook (`@tanstack/ai-code-mode`).** The `createCodeModeTool` config option `getSkillBindings` is renamed to **`getSnippetBindings`** (same signature \u2014 an optional `() => Promise<Record<string, ToolBinding>>` returning dynamic bindings merged at execution time).\n\n    **Breaking \u2014 wire contract (`@tanstack/ai`).** The Code Mode custom events are renamed: `code_mode:skill_call` / `_result` / `_error` \u2192 `code_mode:snippet_*` (payload field `skill` \u2192 `snippet`), and `skill:registered` \u2192 `snippet:registered`. The exported event types `CodeModeSkillCallEvent` / `CodeModeSkillResultEvent` / `CodeModeSkillErrorEvent` / `SkillRegisteredEvent` are renamed to their `Snippet` equivalents.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-code-mode@0.4.0\n"
+    },
+    {
+      "id": 372536137,
+      "tag_name": "@tanstack/ai-cohere@0.1.1",
+      "published_at": "2026-08-18T17:45:13Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536165,
+      "tag_name": "@tanstack/ai-openrouter@0.17.1",
+      "published_at": "2026-08-18T17:45:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.17.1",
+      "body": "### Patch Changes\n\n-   [#1135](https://github.com/TanStack/ai/pull/1135) [`fe42d82`](https://github.com/TanStack/ai/commit/fe42d8255d89f4b087caff5e1f52ea4f98acf77b) - Exclude the `prediction` parameter from the generated OpenRouter model options. The OpenRouter API newly reports it as a supported parameter, but `@openrouter/sdk`'s `ChatRequest` does not declare it (its outbound schema would strip it), so the generated `Pick<OpenRouterBaseOptions, ... | 'prediction'>` types failed to compile.\n\n-   [#1132](https://github.com/TanStack/ai/pull/1132) [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b) - Timestamp native and fallback structured-output events when they are emitted so their lifecycle remains chronologically ordered.\n\n-   [#1048](https://github.com/TanStack/ai/pull/1048) [`bc8c5e8`](https://github.com/TanStack/ai/commit/bc8c5e8684da159b08e63aba7cfc51b01289d4eb) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536228,
+      "tag_name": "@tanstack/ai-code-mode@0.4.0",
+      "published_at": "2026-08-18T17:45:22Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1114](https://github.com/TanStack/ai/pull/1114) [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d) - Rename Code Mode \"skills\" to \"snippets\" to disambiguate them from agent skills (the `SKILL.md` packaging system).\n\n    **Breaking \u2014 package rename.** `@tanstack/ai-code-mode-skills` is now published as **`@tanstack/ai-code-mode-snippets`**. Update your dependency and imports. The `/storage` subpath is unchanged.\n\n    **Breaking \u2014 API rename.** Every `Skill`/`skill` identifier in the package public API becomes `Snippet`/`snippet`, for example:\n\n    -   `codeModeWithSkills()` \u2192 `codeModeWithSnippets()`\n    -   `skillsToTools()` / `skillToTool()` \u2192 `snippetsToTools()` / `snippetToTool()`\n    -   `skillsToBindings()` / `skillsToSimpleBindings()` \u2192 `snippetsToBindings()` / `snippetsToSimpleBindings()`\n    -   `selectRelevantSkills()` \u2192 `selectRelevantSnippets()`\n    -   `createSkillManagementTools()` \u2192 `createSnippetManagementTools()`\n    -   `createSkillsSystemPrompt()` \u2192 `createSnippetsSystemPrompt()`\n    -   `generateSkillTypes()` \u2192 `generateSnippetTypes()`\n    -   `createFileSkillStorage()` / `createMemorySkillStorage()` \u2192 `createFileSnippetStorage()` / `createMemorySnippetStorage()`\n    -   Types: `Skill`, `SkillStorage`, `SkillIndexEntry`, `SkillStats`, `SkillBinding`, `SkillsConfig`, `CodeModeWithSkillsOptions`/`Result` \u2192 the `Snippet\u2026` equivalents\n    -   Options: `skills` \u2192 `snippets`, `skillsAsTools` \u2192 `snippetsAsTools`, `maxSkillsInContext` \u2192 `maxSnippetsInContext`\n    -   Runtime tools: `search_skills` / `get_skill` / `register_skill` \u2192 `search_snippets` / `get_snippet` / `register_snippet`\n    -   Sandbox bindings are now exposed with the `snippet_` prefix (was `skill_`)\n\n    **Breaking \u2014 sandbox hook (`@tanstack/ai-code-mode`).** The `createCodeModeTool` config option `getSkillBindings` is renamed to **`getSnippetBindings`** (same signature \u2014 an optional `() => Promise<Record<string, ToolBinding>>` returning dynamic bindings merged at execution time).\n\n    **Breaking \u2014 wire contract (`@tanstack/ai`).** The Code Mode custom events are renamed: `code_mode:skill_call` / `_result` / `_error` \u2192 `code_mode:snippet_*` (payload field `skill` \u2192 `snippet`), and `skill:registered` \u2192 `snippet:registered`. The exported event types `CodeModeSkillCallEvent` / `CodeModeSkillResultEvent` / `CodeModeSkillErrorEvent` / `SkillRegisteredEvent` are renamed to their `Snippet` equivalents.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536263,
+      "tag_name": "@tanstack/ai-codex@0.4.0",
+      "published_at": "2026-08-18T17:45:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1110](https://github.com/TanStack/ai/pull/1110) [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad) - Harness adapters honor `chat({ outputSchema })` on the same turn.\n\n    Claude Code and Codex pass a native schema flag. OpenCode, Grok Build, and `acpCompatible` parse JSON from the final assistant text. The engine reads a `structured-output.complete` event so harness prose is not parsed as JSON.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-sandbox@0.3.3\n"
+    },
+    {
+      "id": 372536292,
+      "tag_name": "@tanstack/ai-groq@0.6.1",
+      "published_at": "2026-08-18T17:45:28Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.6.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/openai-base@0.9.13\n"
+    },
+    {
+      "id": 372536321,
+      "tag_name": "@tanstack/ai-react@0.19.3",
+      "published_at": "2026-08-18T17:45:31Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.19.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`f492bc9`](https://github.com/TanStack/ai/commit/f492bc9d6c2848bebbaea03303df0640e80e6e5a), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-client@0.23.3\n"
+    },
+    {
+      "id": 372536351,
+      "tag_name": "@tanstack/ai-devtools-core@0.5.3",
+      "published_at": "2026-08-18T17:45:34Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536382,
+      "tag_name": "@tanstack/ai-ollama@0.9.1",
+      "published_at": "2026-08-18T17:45:37Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.9.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536432,
+      "tag_name": "@tanstack/ai-perplexity@0.2.1",
+      "published_at": "2026-08-18T17:45:43Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536453,
+      "tag_name": "@tanstack/ai-client@0.23.3",
+      "published_at": "2026-08-18T17:45:46Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.23.3",
+      "body": "### Patch Changes\n\n-   [#1122](https://github.com/TanStack/ai/pull/1122) [`f492bc9`](https://github.com/TanStack/ai/commit/f492bc9d6c2848bebbaea03303df0640e80e6e5a) - Keep native interrupt ownership across sequential client-tool resumes.\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536475,
+      "tag_name": "@tanstack/ai-grok@0.15.0",
+      "published_at": "2026-08-18T17:45:49Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.15.0",
+      "body": "### Minor Changes\n\n-   [#1136](https://github.com/TanStack/ai/pull/1136) [`b7928f2`](https://github.com/TanStack/ai/commit/b7928f2fe75f8e329989ded720927375eae7aee3) - Catch up with the current xAI Imagine / Voice catalog:\n    -   **Image**: add `grok-imagine-image-2.0` (xAI's recommended model, $0.04/image) with its 2.0-only `quality: 'low' | 'medium'` provider option.\n    -   **Video**: `grok-imagine-video-1.5` now supports text-to-video (the stale image-to-video-only guard is removed). Reference-to-video lands via image prompt parts with `metadata.role: 'reference' | 'character'` (\u2192 `reference_images`) and preset voices via `modelOptions.reference_audios` (max 3) \u2014 1.5-only, typed per model and gated at runtime. Image-to-video and reference-to-video cannot be combined. Video editing and extension land on `grok-imagine-video` only, via a source `video` prompt part plus `modelOptions.mode: 'edit' | 'extend'` (`/v1/videos/edits` / `/v1/videos/extensions`; in extend mode `duration` is the added tail, not the total). Because edit/extend outputs inherit the source clip's properties, the adapter rejects `size` / `aspect_ratio` / `resolution` (and `duration` in edit mode) in those modes instead of sending fields the API ignores.\n    -   **Voice**: add `grok-voice-think-fast-2.0` (current recommended) and the `grok-voice-latest` alias to the realtime models; the realtime token and adapter defaults move off the deprecated 1.0 ids to `grok-voice-think-fast-2.0`.\n\n### Patch Changes\n\n-   [#1048](https://github.com/TanStack/ai/pull/1048) [`bc8c5e8`](https://github.com/TanStack/ai/commit/bc8c5e8684da159b08e63aba7cfc51b01289d4eb) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/openai-base@0.9.13\n"
+    },
+    {
+      "id": 372536501,
+      "tag_name": "@tanstack/ai-claude-code@0.4.0",
+      "published_at": "2026-08-18T17:45:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1110](https://github.com/TanStack/ai/pull/1110) [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad) - Harness adapters honor `chat({ outputSchema })` on the same turn.\n\n    Claude Code and Codex pass a native schema flag. OpenCode, Grok Build, and `acpCompatible` parse JSON from the final assistant text. The engine reads a `structured-output.complete` event so harness prose is not parsed as JSON.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-sandbox@0.3.3\n"
+    },
+    {
+      "id": 372536524,
+      "tag_name": "@tanstack/ai-grok-build@0.4.0",
+      "published_at": "2026-08-18T17:45:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1110](https://github.com/TanStack/ai/pull/1110) [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad) - Harness adapters honor `chat({ outputSchema })` on the same turn.\n\n    Claude Code and Codex pass a native schema flag. OpenCode, Grok Build, and `acpCompatible` parse JSON from the final assistant text. The engine reads a `structured-output.complete` event so harness prose is not parsed as JSON.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-acp@0.3.0\n    -   @tanstack/ai-sandbox@0.3.3\n"
+    },
+    {
+      "id": 372536556,
+      "tag_name": "@tanstack/ai-persistence@0.1.5",
+      "published_at": "2026-08-18T17:45:58Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.1.5",
+      "body": "### Patch Changes\n\n-   [#1117](https://github.com/TanStack/ai/pull/1117) [`3e94871`](https://github.com/TanStack/ai/commit/3e94871c5a27113bab59c0f514dfe1010e686b3e) - Ignore empty `TEXT_MESSAGE_START` message IDs so tool-call `parentMessageId` can be used.\n\n-   [#1129](https://github.com/TanStack/ai/pull/1129) [`302c9f6`](https://github.com/TanStack/ai/commit/302c9f692041e1b351fe780f85a03d261a0b4c87) - Persist cumulative usage for chat runs that make multiple model calls, interrupt, fail, or abort.\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536598,
+      "tag_name": "@tanstack/ai-isolate-daytona@0.1.1",
+      "published_at": "2026-08-18T17:46:04Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-daytona%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai-code-mode@0.4.0\n"
+    },
+    {
+      "id": 372536622,
+      "tag_name": "@tanstack/ai-mcp@0.3.1",
+      "published_at": "2026-08-18T17:46:07Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536644,
+      "tag_name": "@tanstack/openai-base@0.9.13",
+      "published_at": "2026-08-18T17:46:10Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.9.13",
+      "body": "### Patch Changes\n\n-   [#1132](https://github.com/TanStack/ai/pull/1132) [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b) - Timestamp native and fallback structured-output events when they are emitted so their lifecycle remains chronologically ordered.\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536690,
+      "tag_name": "@tanstack/ai-mistral@0.3.2",
+      "published_at": "2026-08-18T17:46:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536717,
+      "tag_name": "@tanstack/ai-memory@0.1.2",
+      "published_at": "2026-08-18T17:46:19Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-memory%400.1.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536765,
+      "tag_name": "@tanstack/ai-opencode@0.3.0",
+      "published_at": "2026-08-18T17:46:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.3.0",
+      "body": "### Minor Changes\n\n-   [#1110](https://github.com/TanStack/ai/pull/1110) [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad) - Harness adapters honor `chat({ outputSchema })` on the same turn.\n\n    Claude Code and Codex pass a native schema flag. OpenCode, Grok Build, and `acpCompatible` parse JSON from the final assistant text. The engine reads a `structured-output.complete` event so harness prose is not parsed as JSON.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-sandbox@0.3.3\n"
+    },
+    {
+      "id": 372536790,
+      "tag_name": "@tanstack/ai-gemini@0.24.0",
+      "published_at": "2026-08-18T17:46:28Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.24.0",
+      "body": "### Minor Changes\n\n-   [#1104](https://github.com/TanStack/ai/pull/1104) [`a8454a7`](https://github.com/TanStack/ai/commit/a8454a7c90b04e4a68b9b3f26de23ed55d391525) - Add the GA Gemini native image model ids and give each native image model its own size type.\n\n    `gemini-3.1-flash-image-preview` and `gemini-3-pro-image-preview` were shut down on 2026-06-25 and now 404. Their GA replacements \u2014 `gemini-3.1-flash-image` and `gemini-3-pro-image` \u2014 are now the primary ids. The `-preview` ids remain in the model union as aliases so existing code keeps compiling; `gemini-2.5-flash-image` stays fully supported ahead of its 2026-10-02 shutdown.\n\n    Sizes were a single flat union (`{8 ratios}_{1K|2K|4K}`) applied to every native model. Google documents four different sets, so each model now maps to its own:\n\n    | model                                   | aspect ratios | resolutions                      |\n    | --------------------------------------- | ------------- | -------------------------------- |\n    | `gemini-3.1-flash-image` (+ `-preview`) | 14            | `512` `1K` `2K` `4K`             |\n    | `gemini-3.1-flash-lite-image`           | 14            | `1K`                             |\n    | `gemini-3-pro-image` (+ `-preview`)     | 10            | `1K` `2K` `4K`                   |\n    | `gemini-2.5-flash-image`                | 10            | none \u2014 bare ratio, e.g. `'16:9'` |\n\n    `4:5` and `5:4` are now accepted on every native model (Google lists them for all four; the old union omitted them). `9:21` is deliberately still rejected \u2014 it exists on Vertex/Cloud only and the Gemini API rejects it.\n\n    **Runtime behaviour changes in two places.** The rest of the change is types-only, but these two are real wire-format deltas:\n\n    -   `parseNativeImageSize()` now accepts a bare aspect ratio. Previously `'16:9'` failed to parse, so the adapter omitted `imageConfig` entirely and the model picked its own aspect ratio; it now parses to `{ aspectRatio: '16:9' }` and the adapter sends `imageConfig.aspectRatio = '16:9'`. A JavaScript caller \u2014 or a TypeScript caller whose `size` is computed at runtime and widened to `string` \u2014 that already passed a bare ratio will get a differently-framed image after upgrading, with no compile or runtime error.\n    -   Migrating a `gemini-2.5-flash-image` call from `'16:9_1K'` to the now-required bare `'16:9'` drops `imageSize` from the `generateContent` request. That is intended: Google publishes no `image_size` value or default for this model, so the adapter no longer guesses a tier the API never documented.\n\n    **BREAKING (types only):** size combinations the selected model never supported no longer compile. No model id was removed.\n\n    -   `gemini-3.1-flash-lite-image`: `2K` and `4K` are rejected (the model only emits 1K). Use `'<ratio>_1K'`.\n    -   `gemini-3-pro-image` / `gemini-3-pro-image-preview`: the extreme banner ratios `1:4` `4:1` `1:8` `8:1` are rejected (Gemini 3.1 Flash Image only), as is the `512` tier.\n    -   `gemini-2.5-flash-image`: any `_1K` / `_2K` / `_4K` suffix is rejected \u2014 pass the bare ratio (`'16:9'`, not `'16:9_1K'`) \u2014 as are the four extreme banner ratios.\n    -   `GeminiNativeImageSize` is now the union of the per-model types rather than one flat template literal. It was not previously reachable from the package entry point, so this is a new export rather than a changed one.\n\n    **New type exports**, so the per-model narrowing is nameable and not just inferred at the call site: `GeminiImageModelSizeByName`, `GeminiStandardImageAspectRatio`, `GeminiExtendedImageAspectRatio`, `Gemini31FlashImageSize`, `Gemini31FlashLiteImageSize`, `Gemini3ProImageSize`, `Gemini25FlashImageSize`, `GeminiNativeImageSize`.\n\n    **Two caveats worth knowing before you rely on this.**\n\n    -   _No in-editor deprecation warning on the dead `-preview` ids._ The `@deprecated` tags live on module-private model-metadata consts, and `GeminiImageModels` is projected out of a const array (`(typeof GEMINI_IMAGE_MODELS)[number]`), which collapses to bare string literals \u2014 JSDoc does not survive that projection. So `geminiImage('gemini-3-pro-image-preview')` still compiles cleanly with no strikethrough and no hint, and fails only at request time. Grep your codebase for `-image-preview` rather than expecting the compiler to flag it.\n    -   _`gemini-3.1-flash-lite-image`'s four extreme ratios (`1:4` `4:1` `1:8` `8:1`) are partially inferred._ Unlike the other three native models, Flash Lite has no per-model ratio table on the Gemini API guide. The 14-value set rests on the Cloud model page's explicit enumeration plus `ai.google.dev`'s bare \"a discrete set of 14 aspect ratios\" assertion; the only Gemini-API enumeration for this model is a 10-item bullet prefixed \"New aspect ratios\", read here as a what's-new list rather than an exhaustive set. If the API rejects those four in practice, this type over-accepts and should narrow to the 10-ratio set.\n\n-   [#1103](https://github.com/TanStack/ai/pull/1103) [`4f02789`](https://github.com/TanStack/ai/commit/4f027898a8e957353c29dcf423e59daa54868aee) - Type Gemini-native image models with their own provider options. `GeminiImageModelProviderOptionsByName` mapped **every** image model to the Imagen-shaped `GeminiImageProviderOptions`, so `modelOptions: { safetySettings, thinkingConfig, imageConfig, systemInstruction }` was a compile error on `gemini-3.1-flash-image-preview`, `gemini-3.1-flash-lite-image`, `gemini-3-pro-image-preview`, and `gemini-2.5-flash-image` \u2014 even though those models are served by `generateContent`, whose `GenerateContentConfig` accepts all of them. The adapter compensated by forwarding only `seed`, silently dropping anything else.\n\n    The map now splits native vs Imagen, mirroring the split already used by `GeminiImageModelSizeByName` and `GeminiImageModelInputModalitiesByName`: native models get the new `GeminiNativeImageProviderOptions` (`seed`, `safetySettings`, `thinkingConfig`, `imageConfig`, `systemInstruction`), Imagen models keep `GeminiImageProviderOptions`. Both API paths now pick their config fields by name \u2014 never a wholesale spread \u2014 so neither shape's fields can reach the other's endpoint. Runtime routing moves the same way, off a `gemini-` prefix test onto membership in `GEMINI_NATIVE_IMAGE_MODELS`: a `gemini-*` image model not present in that list now routes to `generateImages` instead of `generateContent`, so it fails against that endpoint rather than silently taking the native path.\n\n    `responseModalities` stays a protected adapter default (`['TEXT', 'IMAGE']`) and is deliberately absent from the new type. `modelOptions.imageConfig` merges **over** the `imageConfig` derived from the portable `size` option, per field \u2014 passing only `imageConfig.imageSize` keeps the `aspectRatio` that `size` implied. `HarmCategory` and `HarmBlockThreshold` are now re-exported so `safetySettings` can be written without adding `@google/genai` to your own dependencies.\n\n    `GEMINI_NATIVE_IMAGE_MODELS` and `isGeminiNativeImageModel` are exported so callers can read the same list the adapter uses for routing.\n\n    Native `imageConfig` is now `GeminiNativeImageConfig`: only `aspectRatio` and `imageSize`. Other `@google/genai` `ImageConfig` keys type-checked and then threw on the Gemini Developer API.\n\n    **BREAKING (types only):** Imagen fields no longer compile on Gemini-native image models \u2014 `aspectRatio`, `negativePrompt`, `personGeneration`, `safetyFilterLevel`, `addWatermark`, `language`, `outputMimeType`, `outputCompressionQuality`, `guidanceScale`, `enhancePrompt`, `includeSafetyAttributes`, `includeRaiReason`, `outputGcsUri`, `labels`. They previously type-checked but were already dropped at runtime (only `seed` was ever forwarded to `generateContent`), so no request behaviour changes. The compiler now reports what was already happening. Migrate `aspectRatio` to the portable `size` option (`'16:9_4K'`) or to `modelOptions.imageConfig`, and drop the rest. Native `imageConfig` also no longer accepts Vertex-only SDK keys such as `personGeneration` and `outputMimeType`. `GeminiImageAdapter.generateImages` (and its `~types.providerOptions`) also widens from `ImageGenerationOptions<GeminiImageProviderOptions>` to `ImageGenerationOptions<GeminiAnyImageProviderOptions>`, which affects code structurally annotated against the old signature.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536820,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.1.1",
+      "published_at": "2026-08-18T17:46:31Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.1.1",
+      "body": "### Patch Changes\n\n-   [#1048](https://github.com/TanStack/ai/pull/1048) [`bc8c5e8`](https://github.com/TanStack/ai/commit/bc8c5e8684da159b08e63aba7cfc51b01289d4eb) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/openai-base@0.9.13\n"
+    },
+    {
+      "id": 372536837,
+      "tag_name": "@tanstack/ai-sandbox@0.3.3",
+      "published_at": "2026-08-18T17:46:34Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.3.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536864,
+      "tag_name": "@tanstack/ai-fal@0.10.1",
+      "published_at": "2026-08-18T17:46:37Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.10.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372536891,
+      "tag_name": "@tanstack/ai-acp@0.3.0",
+      "published_at": "2026-08-18T17:46:40Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.0",
+      "body": "### Minor Changes\n\n-   [#1110](https://github.com/TanStack/ai/pull/1110) [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad) - Harness adapters honor `chat({ outputSchema })` on the same turn.\n\n    Claude Code and Codex pass a native schema flag. OpenCode, Grok Build, and `acpCompatible` parse JSON from the final assistant text. The engine reads a `structured-output.complete` event so harness prose is not parsed as JSON.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-sandbox@0.3.3\n"
+    },
+    {
+      "id": 372536916,
+      "tag_name": "@tanstack/ai-isolate-cloudflare@0.2.42",
+      "published_at": "2026-08-18T17:46:43Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-cloudflare%400.2.42",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai-code-mode@0.4.0\n"
+    },
+    {
+      "id": 372536942,
+      "tag_name": "@tanstack/ai-sandbox-cloudflare@0.3.2",
+      "published_at": "2026-08-18T17:46:46Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n    -   @tanstack/ai-sandbox@0.3.3\n    -   @tanstack/ai-sandbox-local-process@0.2.1\n"
+    },
+    {
+      "id": 372536971,
+      "tag_name": "@tanstack/ai-isolate-node@0.1.51",
+      "published_at": "2026-08-18T17:46:49Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-isolate-node%400.1.51",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai-code-mode@0.4.0\n"
+    },
+    {
+      "id": 372537002,
+      "tag_name": "@tanstack/ai-durable-stream@0.1.2",
+      "published_at": "2026-08-18T17:46:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372537033,
+      "tag_name": "@tanstack/ai-anthropic@0.16.6",
+      "published_at": "2026-08-18T17:46:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.16.6",
+      "body": "### Patch Changes\n\n-   [#1136](https://github.com/TanStack/ai/pull/1136) [`b7928f2`](https://github.com/TanStack/ai/commit/b7928f2fe75f8e329989ded720927375eae7aee3) - Register `claude-opus-5` and `claude-opus-5-fast` on the per-model tool-capabilities map so they match `ANTHROPIC_MODELS`.\n\n-   [#1048](https://github.com/TanStack/ai/pull/1048) [`bc8c5e8`](https://github.com/TanStack/ai/commit/bc8c5e8684da159b08e63aba7cfc51b01289d4eb) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`d10dfe6`](https://github.com/TanStack/ai/commit/d10dfe6eca788ae52631d45e5599aa0c45e9ba37), [`eda82cc`](https://github.com/TanStack/ai/commit/eda82cc8a86923afd604a663d050c6edfa6b829b), [`c63319e`](https://github.com/TanStack/ai/commit/c63319e34a2ca2f1d56b90addf28784f7c3e13ad), [`b09e010`](https://github.com/TanStack/ai/commit/b09e010b32932c812e65b1e14f6faa2b0e6d5cb8), [`0fb8263`](https://github.com/TanStack/ai/commit/0fb826321c9ba7bd5d8ba0062be2a00b6178726d)]:\n    -   @tanstack/ai@0.45.0\n"
+    },
+    {
+      "id": 372613345,
+      "tag_name": "@tanstack/openai-base@0.9.14",
+      "published_at": "2026-08-18T20:07:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.9.14",
+      "body": "### Patch Changes\n\n-   [#1139](https://github.com/TanStack/ai/pull/1139) [`b97a11b`](https://github.com/TanStack/ai/commit/b97a11beaea57bd675b5646074d15c0041f4763a) - Return recoverable Groq `tool_use_failed` responses to the model as non-executable tool errors so the agent loop can repair them.\n\n-   Updated dependencies \\[[`b97a11b`](https://github.com/TanStack/ai/commit/b97a11beaea57bd675b5646074d15c0041f4763a)]:\n    -   @tanstack/ai@0.45.1\n"
+    },
+    {
+      "id": 372613377,
+      "tag_name": "@tanstack/ai@0.45.1",
+      "published_at": "2026-08-18T20:08:01Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.45.1",
+      "body": "### Patch Changes\n\n-   [#1139](https://github.com/TanStack/ai/pull/1139) [`b97a11b`](https://github.com/TanStack/ai/commit/b97a11beaea57bd675b5646074d15c0041f4763a) - Return recoverable Groq `tool_use_failed` responses to the model as non-executable tool errors so the agent loop can repair them.\n"
+    },
+    {
+      "id": 372613397,
+      "tag_name": "@tanstack/ai-groq@0.6.2",
+      "published_at": "2026-08-18T20:08:04Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.6.2",
+      "body": "### Patch Changes\n\n-   [#1139](https://github.com/TanStack/ai/pull/1139) [`b97a11b`](https://github.com/TanStack/ai/commit/b97a11beaea57bd675b5646074d15c0041f4763a) - Return recoverable Groq `tool_use_failed` responses to the model as non-executable tool errors so the agent loop can repair them.\n\n-   Updated dependencies \\[[`b97a11b`](https://github.com/TanStack/ai/commit/b97a11beaea57bd675b5646074d15c0041f4763a)]:\n    -   @tanstack/ai@0.45.1\n    -   @tanstack/openai-base@0.9.14\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/ai-svelte@0.16.3",
+    "@tanstack/ai-angular@0.4.3",
+    "@tanstack/ai-solid@0.16.3",
+    "@tanstack/ai-preact@0.12.3",
+    "@tanstack/ai-vue@0.16.3"
+  ]
+}
