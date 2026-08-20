@@ -1,0 +1,139 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-20-1703",
+  "published_at": "2026-08-20T17:03:38Z",
+  "releases": [
+    {
+      "id": 373896477,
+      "tag_name": "@tanstack/capacitor-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:02:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373896509,
+      "tag_name": "@tanstack/node-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:02:41Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373896535,
+      "tag_name": "@tanstack/browser-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:02:44Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373896604,
+      "tag_name": "@tanstack/electric-db-collection@0.4.1",
+      "published_at": "2026-08-20T17:02:50Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.4.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896640,
+      "tag_name": "@tanstack/db-ivm@0.1.19",
+      "published_at": "2026-08-20T17:02:53Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-ivm%400.1.19",
+      "body": "### Patch Changes\n\n-   Rebuild correlated include materialization as one D2 graph, fixing stale or missing nested results across route changes, batching, lazy loading, optimistic updates, and layered queries. Add canonical structural relation keys, abortable subset demand, and coherent publication for Collection-valued includes. Dispose delayed PowerSync subset hooks after cleanup, and prevent released Query Collection cache results from reaching the collection. ([#1740](https://github.com/TanStack/db/pull/1740))\n"
+    },
+    {
+      "id": 373896661,
+      "tag_name": "@tanstack/db@0.8.1",
+      "published_at": "2026-08-20T17:02:56Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.8.1",
+      "body": "### Patch Changes\n\n-   Rebuild correlated include materialization as one D2 graph, fixing stale or missing nested results across route changes, batching, lazy loading, optimistic updates, and layered queries. Add canonical structural relation keys, abortable subset demand, and coherent publication for Collection-valued includes. Dispose delayed PowerSync subset hooks after cleanup, and prevent released Query Collection cache results from reaching the collection. ([#1740](https://github.com/TanStack/db/pull/1740))\n\n-   Support Temporal values in the `gt`/`gte`/`lt`/`lte` query operators. Comparisons now dispatch to the Temporal types' static `compare()` instead of the native relational operators, which throw on Temporal objects (`valueOf()` is designed to throw). `orderBy` uses the same logic, so filtering and ordering now agree \u2014 previously `orderBy` compared Temporal values lexicographically by their `toString()`, which mis-ordered equivalent `Duration` forms (`PT60M` vs `PT1H`) and same-instant `ZonedDateTime` values in different zones. ([#1519](https://github.com/TanStack/db/pull/1519))\n\n    Note two intentional behavior changes for `orderBy` over Temporal columns:\n\n    -   Ordering `Temporal.PlainMonthDay` values now throws a `TypeError`, since the type has no defined ordering (previously they were silently ordered by string).\n    -   Ordering mixed Temporal types (e.g. `PlainDate` vs `PlainDateTime`) now throws a `TypeError` instead of comparing their string forms.\n\n    Equality (`eq`) is unchanged: `ZonedDateTime` equality still treats the zone as part of identity, and equivalent `Duration` forms remain unequal, mirroring Temporal's `.equals()` vs `.compare()` semantics.\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827)]:\n    -   @tanstack/db-ivm@0.1.19\n"
+    },
+    {
+      "id": 373896684,
+      "tag_name": "@tanstack/react-native-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:02:59Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373896702,
+      "tag_name": "@tanstack/powersync-db-collection@0.1.60",
+      "published_at": "2026-08-20T17:03:02Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.1.60",
+      "body": "### Patch Changes\n\n-   Rebuild correlated include materialization as one D2 graph, fixing stale or missing nested results across route changes, batching, lazy loading, optimistic updates, and layered queries. Add canonical structural relation keys, abortable subset demand, and coherent publication for Collection-valued includes. Dispose delayed PowerSync subset hooks after cleanup, and prevent released Query Collection cache results from reaching the collection. ([#1740](https://github.com/TanStack/db/pull/1740))\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896720,
+      "tag_name": "@tanstack/rxdb-db-collection@0.1.88",
+      "published_at": "2026-08-20T17:03:05Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.88",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896740,
+      "tag_name": "@tanstack/electron-db-sqlite-persistence@0.1.26",
+      "published_at": "2026-08-20T17:03:08Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.1.26",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373896766,
+      "tag_name": "@tanstack/expo-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:03:11Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373896792,
+      "tag_name": "@tanstack/react-db@0.3.1",
+      "published_at": "2026-08-20T17:03:14Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.3.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896880,
+      "tag_name": "@tanstack/db-sqlite-persistence-core@0.2.14",
+      "published_at": "2026-08-20T17:03:23Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896917,
+      "tag_name": "@tanstack/offline-transactions@1.0.47",
+      "published_at": "2026-08-20T17:03:26Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.0.47",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896942,
+      "tag_name": "@tanstack/query-db-collection@1.2.6",
+      "published_at": "2026-08-20T17:03:29Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.2.6",
+      "body": "### Patch Changes\n\n-   Rebuild correlated include materialization as one D2 graph, fixing stale or missing nested results across route changes, batching, lazy loading, optimistic updates, and layered queries. Add canonical structural relation keys, abortable subset demand, and coherent publication for Collection-valued includes. Dispose delayed PowerSync subset hooks after cleanup, and prevent released Query Collection cache results from reaching the collection. ([#1740](https://github.com/TanStack/db/pull/1740))\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373896976,
+      "tag_name": "@tanstack/tauri-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:03:32Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    },
+    {
+      "id": 373897015,
+      "tag_name": "@tanstack/trailbase-db-collection@0.1.100",
+      "published_at": "2026-08-20T17:03:35Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.100",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5d9335d`](https://github.com/TanStack/db/commit/5d9335d0d42c1cc1ec2b92be8ce40ae8abe42827), [`a20352a`](https://github.com/TanStack/db/commit/a20352a9a7b64c9708bef9a1dfb90c96426b6730)]:\n    -   @tanstack/db@0.8.1\n"
+    },
+    {
+      "id": 373897044,
+      "tag_name": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.14",
+      "published_at": "2026-08-20T17:03:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.14",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.14\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/angular-db@0.1.82",
+    "@tanstack/vue-db@0.1.3",
+    "@tanstack/svelte-db@0.3.1",
+    "@tanstack/solid-db@0.2.36"
+  ]
+}

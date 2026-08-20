@@ -1,0 +1,289 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-20-1652",
+  "published_at": "2026-08-20T16:52:08Z",
+  "releases": [
+    {
+      "id": 373889797,
+      "tag_name": "@tanstack/ai-openrouter@0.18.1",
+      "published_at": "2026-08-20T16:49:53Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.18.1",
+      "body": "### Patch Changes\n\n-   [#1164](https://github.com/TanStack/ai/pull/1164) [`366b2ee`](https://github.com/TanStack/ai/commit/366b2ee956f056db4eb7cea91dec6f901567e1ae) - Restore `OPENROUTER_COMBINED_TOOLS_AND_SCHEMA_MODELS`, which the model-metadata sync dropped from the generated `model-meta.ts`. The set is now generated from OpenRouter's catalog (chat models whose `supported_parameters` include `structured_outputs`, `tools` and `tool_choice`) instead of being hand-maintained, so combined tools + `outputSchema` mode now covers every model OpenRouter flags as supporting it.\n\n-   [#1014](https://github.com/TanStack/ai/pull/1014) [`c092231`](https://github.com/TanStack/ai/commit/c092231d974bc1f5869d4abc56b5bc54c84245d1) - Honor `modelOptions.responseFormat: { type: 'json_object' }` during structured\n    output generation while preserving strict `json_schema` as the default.\n\n-   [#1158](https://github.com/TanStack/ai/pull/1158) [`583ad22`](https://github.com/TanStack/ai/commit/583ad2235ab4a4c7a9d5cdcc3d94e0463366b42f) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373889814,
+      "tag_name": "@tanstack/ai-memory@0.1.4",
+      "published_at": "2026-08-20T16:49:56Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-memory%400.1.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373889837,
+      "tag_name": "@tanstack/ai-mcp@0.3.3",
+      "published_at": "2026-08-20T16:49:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373889887,
+      "tag_name": "@tanstack/ai@0.47.1",
+      "published_at": "2026-08-20T16:50:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.47.1",
+      "body": "### Patch Changes\n\n-   [#1126](https://github.com/TanStack/ai/pull/1126) [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d) - Persist completed structured outputs as structured-output message parts and restore them during chat hydration.\n"
+    },
+    {
+      "id": 373889904,
+      "tag_name": "@tanstack/ai-perplexity@0.2.3",
+      "published_at": "2026-08-20T16:50:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373889927,
+      "tag_name": "@tanstack/ai-elevenlabs@0.2.39",
+      "published_at": "2026-08-20T16:50:11Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.2.39",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373889969,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.1.5",
+      "published_at": "2026-08-20T16:50:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.1.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/openai-base@0.10.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890006,
+      "tag_name": "@tanstack/ai-devtools-core@0.5.5",
+      "published_at": "2026-08-20T16:50:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890032,
+      "tag_name": "@tanstack/ai-sandbox-sprites@0.2.3",
+      "published_at": "2026-08-20T16:50:20Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-sprites%400.2.3",
+      "body": "### Patch Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Support filesystem metadata needed by portable sandbox snapshots.\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9)]:\n    -   @tanstack/ai-sandbox@0.4.0\n"
+    },
+    {
+      "id": 373890059,
+      "tag_name": "@tanstack/ai-claude-code@0.4.3",
+      "published_at": "2026-08-20T16:50:23Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.4.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-sandbox@0.4.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890081,
+      "tag_name": "@tanstack/ai-code-mode-snippets@0.4.2",
+      "published_at": "2026-08-20T16:50:26Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-snippets%400.4.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n    -   @tanstack/ai-code-mode@0.4.2\n"
+    },
+    {
+      "id": 373890099,
+      "tag_name": "@tanstack/ai-openai@0.21.0",
+      "published_at": "2026-08-20T16:50:29Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.21.0",
+      "body": "### Minor Changes\n\n-   [#977](https://github.com/TanStack/ai/pull/977) [`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75) - feat(ai-openai): support PDF `document` content parts in the Responses adapter.\n\n    `openaiText`'s Responses adapter now accepts PDF `document` content parts, for any model whose `model-meta` entry declares the `document` input modality. Base64 data sources are sent as `input_file` with a `file_data` data URL and a `filename` (from `metadata.filename`, defaulting to `document.pdf`). URL sources are sent as `input_file` with `file_url`.\n\n    ```ts\n    const adapter = openaiText('gpt-5.5')\n\n    const message = {\n      role: 'user',\n      content: [\n        { type: 'text', content: 'Summarize this document' },\n        {\n          type: 'document',\n          source: { type: 'data', value: pdfBase64, mimeType: 'application/pdf' },\n          metadata: { filename: 'report.pdf' },\n        },\n      ],\n    }\n    ```\n\n    Non-PDF MIME types are rejected before the request is sent \u2014 including pre-wrapped `data:` URLs whose media type disagrees with `mimeType` \u2014 so callers get an actionable message instead of an opaque provider `400`. Inline base64 payloads are also checked for the `%PDF` magic bytes, so non-PDF data mislabeled (or sent without) a PDF `mimeType` is rejected locally. `OpenAIDocumentMetadata` gains `filename` and `detail`. The Chat Completions adapter throws a document-specific error pointing here, since documents are Responses-only.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/openai-base@0.10.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890119,
+      "tag_name": "@tanstack/ai-acp@0.3.3",
+      "published_at": "2026-08-20T16:50:32Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-sandbox@0.4.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890156,
+      "tag_name": "@tanstack/ai-mistral@0.3.4",
+      "published_at": "2026-08-20T16:50:38Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.3.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890183,
+      "tag_name": "@tanstack/ai-cohere@0.2.1",
+      "published_at": "2026-08-20T16:50:41Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.2.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890206,
+      "tag_name": "@tanstack/ai-groq@0.6.5",
+      "published_at": "2026-08-20T16:50:44Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.6.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/openai-base@0.10.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890233,
+      "tag_name": "@tanstack/ai-sandbox-local-process@0.2.3",
+      "published_at": "2026-08-20T16:50:47Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-local-process%400.2.3",
+      "body": "### Patch Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Support filesystem metadata needed by portable sandbox snapshots.\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9)]:\n    -   @tanstack/ai-sandbox@0.4.0\n"
+    },
+    {
+      "id": 373890264,
+      "tag_name": "@tanstack/ai-code-mode@0.4.2",
+      "published_at": "2026-08-20T16:50:50Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.4.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890292,
+      "tag_name": "@tanstack/ai-grok-build@0.4.3",
+      "published_at": "2026-08-20T16:50:53Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.4.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-sandbox@0.4.0\n    -   @tanstack/ai@0.47.1\n    -   @tanstack/ai-acp@0.3.3\n"
+    },
+    {
+      "id": 373890321,
+      "tag_name": "@tanstack/openai-base@0.10.0",
+      "published_at": "2026-08-20T16:50:56Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.0",
+      "body": "### Minor Changes\n\n-   [#977](https://github.com/TanStack/ai/pull/977) [`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75) - feat(ai-openai): support PDF `document` content parts in the Responses adapter.\n\n    `openaiText`'s Responses adapter now accepts PDF `document` content parts, for any model whose `model-meta` entry declares the `document` input modality. Base64 data sources are sent as `input_file` with a `file_data` data URL and a `filename` (from `metadata.filename`, defaulting to `document.pdf`). URL sources are sent as `input_file` with `file_url`.\n\n    ```ts\n    const adapter = openaiText('gpt-5.5')\n\n    const message = {\n      role: 'user',\n      content: [\n        { type: 'text', content: 'Summarize this document' },\n        {\n          type: 'document',\n          source: { type: 'data', value: pdfBase64, mimeType: 'application/pdf' },\n          metadata: { filename: 'report.pdf' },\n        },\n      ],\n    }\n    ```\n\n    Non-PDF MIME types are rejected before the request is sent \u2014 including pre-wrapped `data:` URLs whose media type disagrees with `mimeType` \u2014 so callers get an actionable message instead of an opaque provider `400`. Inline base64 payloads are also checked for the `%PDF` magic bytes, so non-PDF data mislabeled (or sent without) a PDF `mimeType` is rejected locally. `OpenAIDocumentMetadata` gains `filename` and `detail`. The Chat Completions adapter throws a document-specific error pointing here, since documents are Responses-only.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890367,
+      "tag_name": "@tanstack/ai-react@0.21.1",
+      "published_at": "2026-08-20T16:50:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.21.1",
+      "body": "### Patch Changes\n\n-   [#1121](https://github.com/TanStack/ai/pull/1121) [`bd221d9`](https://github.com/TanStack/ai/commit/bd221d986433fdf460d9dfc2a9e96ff9fa0f3342) - `onInterruptStateChange` now identifies snapshot restoration (`hydrate`) separately from streamed or client-initiated interrupt updates (`live`). The source follows each state publication, so cancelling a restored batch from the callback produces subsequent `live` updates without re-entering hydration. Client-tool interrupts remain hidden from the public list in both cases; `hydrate` lets an app cancel a restored batch without cancelling one that is still running.\n\n-   Updated dependencies \\[[`bd221d9`](https://github.com/TanStack/ai/commit/bd221d986433fdf460d9dfc2a9e96ff9fa0f3342), [`8bd6f70`](https://github.com/TanStack/ai/commit/8bd6f7054248ddf9bda2929bb105a8aa5054b9d2), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-client@0.25.1\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890382,
+      "tag_name": "@tanstack/ai-sandbox-daytona@0.3.1",
+      "published_at": "2026-08-20T16:51:02Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-daytona%400.3.1",
+      "body": "### Patch Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Support filesystem metadata needed by portable sandbox snapshots.\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9)]:\n    -   @tanstack/ai-sandbox@0.4.0\n"
+    },
+    {
+      "id": 373890405,
+      "tag_name": "@tanstack/ai-fal@0.12.0",
+      "published_at": "2026-08-20T16:51:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.12.0",
+      "body": "### Minor Changes\n\n-   [#641](https://github.com/TanStack/ai/pull/641) [`90d22ad`](https://github.com/TanStack/ai/commit/90d22ad0543e71e14867d55b0fc9e7c869f01955) - Add per-model typed durations for fal video generation.\n\n    `generateVideo({ duration })` is now typed from `@fal-ai/client`'s\n    `EndpointTypeMap` for the selected model (e.g. `'5' | '10'` on Kling,\n    `'4s' | '6s' | '8s'` on Veo 3.1). Popular models also implement\n    `availableDurations()` / `snapDuration()`.\n\n    **Breaking:** callers passing `duration: <number>` to fal video models must\n    either pass the model's duration union directly or call\n    `adapter.snapDuration(seconds)`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890431,
+      "tag_name": "@tanstack/ai-sandbox-vercel@0.2.3",
+      "published_at": "2026-08-20T16:51:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-vercel%400.2.3",
+      "body": "### Patch Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Write files in 32KB base64 chunks so snapshot restore no longer hits Linux `MAX_ARG_STRLEN`.\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Support filesystem metadata needed by portable sandbox snapshots.\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9)]:\n    -   @tanstack/ai-sandbox@0.4.0\n"
+    },
+    {
+      "id": 373890462,
+      "tag_name": "@tanstack/ai-client@0.25.1",
+      "published_at": "2026-08-20T16:51:11Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.25.1",
+      "body": "### Patch Changes\n\n-   [#1121](https://github.com/TanStack/ai/pull/1121) [`bd221d9`](https://github.com/TanStack/ai/commit/bd221d986433fdf460d9dfc2a9e96ff9fa0f3342) - `onInterruptStateChange` now identifies snapshot restoration (`hydrate`) separately from streamed or client-initiated interrupt updates (`live`). The source follows each state publication, so cancelling a restored batch from the callback produces subsequent `live` updates without re-entering hydration. Client-tool interrupts remain hidden from the public list in both cases; `hydrate` lets an app cancel a restored batch without cancelling one that is still running.\n\n-   [#1169](https://github.com/TanStack/ai/pull/1169) [`8bd6f70`](https://github.com/TanStack/ai/commit/8bd6f7054248ddf9bda2929bb105a8aa5054b9d2) - Drain queued post-stream actions after a `joinRun` replay so a client-tool result from a rejoin is sent back to the server.\n\n-   Updated dependencies \\[[`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890499,
+      "tag_name": "@tanstack/ai-bedrock@0.2.5",
+      "published_at": "2026-08-20T16:51:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.2.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/openai-base@0.10.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890531,
+      "tag_name": "@tanstack/ai-sandbox-docker@0.3.1",
+      "published_at": "2026-08-20T16:51:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-docker%400.3.1",
+      "body": "### Patch Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Write files in 32KB base64 chunks so snapshot restore no longer hits Linux `MAX_ARG_STRLEN`.\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Support filesystem metadata needed by portable sandbox snapshots.\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9)]:\n    -   @tanstack/ai-sandbox@0.4.0\n"
+    },
+    {
+      "id": 373890552,
+      "tag_name": "@tanstack/ai-persistence@0.4.0",
+      "published_at": "2026-08-20T16:51:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Add complete thread artifact history for portable sandbox snapshots.\n\n### Patch Changes\n\n-   [#1126](https://github.com/TanStack/ai/pull/1126) [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d) - Persist completed structured outputs as structured-output message parts and restore them during chat hydration.\n\n-   Updated dependencies \\[[`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890580,
+      "tag_name": "@tanstack/ai-sandbox-cloudflare@0.3.5",
+      "published_at": "2026-08-20T16:51:26Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.3.5",
+      "body": "### Patch Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Support filesystem metadata needed by portable sandbox snapshots.\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Write files in 32KB base64 chunks so snapshot restore no longer hits Linux `MAX_ARG_STRLEN`.\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-sandbox-local-process@0.2.3\n    -   @tanstack/ai-sandbox@0.4.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890612,
+      "tag_name": "@tanstack/ai-byteplus@0.2.2",
+      "published_at": "2026-08-20T16:51:29Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.2.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/openai-base@0.10.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890635,
+      "tag_name": "@tanstack/ai-anthropic@0.16.9",
+      "published_at": "2026-08-20T16:51:32Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.16.9",
+      "body": "### Patch Changes\n\n-   [#1080](https://github.com/TanStack/ai/pull/1080) [`3bb55f3`](https://github.com/TanStack/ai/commit/3bb55f33524ccb52ee8262a06a3f90154a7db23a) - Fix `modelOptions.context_management` by attaching the required\n    `context-management-2025-06-27` beta. The option was typed and forwarded on the\n    request body, but Anthropic rejects context editing without the beta header \u2014\n    so the feature typechecked and could not work (issue [#1074](https://github.com/TanStack/ai/issues/1074)).\n-   Updated dependencies \\[[`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890661,
+      "tag_name": "@tanstack/ai-grok@0.16.2",
+      "published_at": "2026-08-20T16:51:35Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.16.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`11c988b`](https://github.com/TanStack/ai/commit/11c988b8ea2153e0ee0f86ba58083f42c343fd75), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/openai-base@0.10.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890733,
+      "tag_name": "@tanstack/ai-react-ui@0.8.18",
+      "published_at": "2026-08-20T16:51:44Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.8.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai-client@0.25.0\n    -   @tanstack/ai-react@0.21.0\n"
+    },
+    {
+      "id": 373890797,
+      "tag_name": "@tanstack/ai-codex@0.4.3",
+      "published_at": "2026-08-20T16:51:50Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.4.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-sandbox@0.4.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890827,
+      "tag_name": "@tanstack/ai-opencode@0.3.3",
+      "published_at": "2026-08-20T16:51:53Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.3.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9), [`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d)]:\n    -   @tanstack/ai-sandbox@0.4.0\n    -   @tanstack/ai@0.47.1\n"
+    },
+    {
+      "id": 373890859,
+      "tag_name": "@tanstack/ai-ollama@0.9.3",
+      "published_at": "2026-08-20T16:51:56Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.9.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890891,
+      "tag_name": "@tanstack/ai-sandbox@0.4.0",
+      "published_at": "2026-08-20T16:51:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1108](https://github.com/TanStack/ai/pull/1108) [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9) - Add portable sandbox checkpoints. `createSandboxSnapshots` and `memorySandboxSnapshots` return one object with `save`, `fork`, and `readArtifact`. `createSnapshotTools` turns those methods into host tools bound to the route `threadId`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`47699ed`](https://github.com/TanStack/ai/commit/47699ed1bf0c21a3835f012fe95f9dd8f089e41d), [`9b5f841`](https://github.com/TanStack/ai/commit/9b5f841127743ed73fbdaa96038c9b45314e0db9)]:\n    -   @tanstack/ai@0.47.1\n    -   @tanstack/ai-persistence@0.4.0\n"
+    },
+    {
+      "id": 373890941,
+      "tag_name": "@tanstack/ai-gemini@0.24.2",
+      "published_at": "2026-08-20T16:52:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.24.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    },
+    {
+      "id": 373890973,
+      "tag_name": "@tanstack/ai-durable-stream@0.1.4",
+      "published_at": "2026-08-20T16:52:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5f68cbc`](https://github.com/TanStack/ai/commit/5f68cbccf3621b48dae73cedcb1e59cb4cbe72b4), [`32e62ab`](https://github.com/TanStack/ai/commit/32e62ab8b7dc6a8a13ca3851c8925ab806e08f29)]:\n    -   @tanstack/ai@0.47.0\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/ai-angular@0.6.1",
+    "@tanstack/ai-preact@0.13.1",
+    "@tanstack/ai-solid@0.18.1",
+    "@tanstack/ai-solid-ui@0.7.17",
+    "@tanstack/ai-vue-ui@0.2.39",
+    "@tanstack/ai-svelte@0.18.1",
+    "@tanstack/ai-vue@0.18.1"
+  ]
+}
