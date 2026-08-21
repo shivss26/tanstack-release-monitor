@@ -1,0 +1,132 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-21-1702",
+  "published_at": "2026-08-21T17:02:17Z",
+  "releases": [
+    {
+      "id": 374550777,
+      "tag_name": "@tanstack/electric-db-collection@0.4.2",
+      "published_at": "2026-08-21T17:01:17Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.4.2",
+      "body": "### Patch Changes\n\n-   Propagate initial query sync failures through dependent live queries and readiness promises, including recovery and late subscribers, while preserving a ready cached snapshot on later refetch failures. Let sync adapters pass the original failure to `markError(error)` so readiness promises reject with that cause. Isolate adapter callbacks by sync session, preserve synchronous startup errors, and prevent rejected deduplicated subset requests from creating detached promise rejections. ([#1751](https://github.com/TanStack/db/pull/1751))\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374550805,
+      "tag_name": "@tanstack/db-sqlite-persistence-core@0.2.15",
+      "published_at": "2026-08-21T17:01:20Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374550826,
+      "tag_name": "@tanstack/browser-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:01:23Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374550850,
+      "tag_name": "@tanstack/capacitor-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:01:26Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374550885,
+      "tag_name": "@tanstack/electron-db-sqlite-persistence@0.1.27",
+      "published_at": "2026-08-21T17:01:29Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.1.27",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374550910,
+      "tag_name": "@tanstack/db@0.8.2",
+      "published_at": "2026-08-21T17:01:32Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.8.2",
+      "body": "### Patch Changes\n\n-   Propagate initial query sync failures through dependent live queries and readiness promises, including recovery and late subscribers, while preserving a ready cached snapshot on later refetch failures. Let sync adapters pass the original failure to `markError(error)` so readiness promises reject with that cause. Isolate adapter callbacks by sync session, preserve synchronous startup errors, and prevent rejected deduplicated subset requests from creating detached promise rejections. ([#1751](https://github.com/TanStack/db/pull/1751))\n"
+    },
+    {
+      "id": 374550953,
+      "tag_name": "@tanstack/offline-transactions@1.0.48",
+      "published_at": "2026-08-21T17:01:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.0.48",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374550982,
+      "tag_name": "@tanstack/expo-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:01:41Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374551016,
+      "tag_name": "@tanstack/node-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:01:44Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374551063,
+      "tag_name": "@tanstack/rxdb-db-collection@0.1.89",
+      "published_at": "2026-08-21T17:01:50Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.89",
+      "body": "### Patch Changes\n\n-   Propagate initial query sync failures through dependent live queries and readiness promises, including recovery and late subscribers, while preserving a ready cached snapshot on later refetch failures. Let sync adapters pass the original failure to `markError(error)` so readiness promises reject with that cause. Isolate adapter callbacks by sync session, preserve synchronous startup errors, and prevent rejected deduplicated subset requests from creating detached promise rejections. ([#1751](https://github.com/TanStack/db/pull/1751))\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374551086,
+      "tag_name": "@tanstack/trailbase-db-collection@0.1.101",
+      "published_at": "2026-08-21T17:01:53Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.101",
+      "body": "### Patch Changes\n\n-   Propagate initial query sync failures through dependent live queries and readiness promises, including recovery and late subscribers, while preserving a ready cached snapshot on later refetch failures. Let sync adapters pass the original failure to `markError(error)` so readiness promises reject with that cause. Isolate adapter callbacks by sync session, preserve synchronous startup errors, and prevent rejected deduplicated subset requests from creating detached promise rejections. ([#1751](https://github.com/TanStack/db/pull/1751))\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374551116,
+      "tag_name": "@tanstack/powersync-db-collection@0.1.61",
+      "published_at": "2026-08-21T17:01:56Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.1.61",
+      "body": "### Patch Changes\n\n-   Propagate initial query sync failures through dependent live queries and readiness promises, including recovery and late subscribers, while preserving a ready cached snapshot on later refetch failures. Let sync adapters pass the original failure to `markError(error)` so readiness promises reject with that cause. Isolate adapter callbacks by sync session, preserve synchronous startup errors, and prevent rejected deduplicated subset requests from creating detached promise rejections. ([#1751](https://github.com/TanStack/db/pull/1751))\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374551145,
+      "tag_name": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:01:59Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374551192,
+      "tag_name": "@tanstack/tauri-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:02:05Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374551240,
+      "tag_name": "@tanstack/query-db-collection@1.2.7",
+      "published_at": "2026-08-21T17:02:11Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.2.7",
+      "body": "### Patch Changes\n\n-   Propagate initial query sync failures through dependent live queries and readiness promises, including recovery and late subscribers, while preserving a ready cached snapshot on later refetch failures. Let sync adapters pass the original failure to `markError(error)` so readiness promises reject with that cause. Isolate adapter callbacks by sync session, preserve synchronous startup errors, and prevent rejected deduplicated subset requests from creating detached promise rejections. ([#1751](https://github.com/TanStack/db/pull/1751))\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    },
+    {
+      "id": 374551271,
+      "tag_name": "@tanstack/react-native-db-sqlite-persistence@0.2.15",
+      "published_at": "2026-08-21T17:02:14Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.15",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.15\n"
+    },
+    {
+      "id": 374551291,
+      "tag_name": "@tanstack/react-db@0.3.2",
+      "published_at": "2026-08-21T17:02:17Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`c521b5d`](https://github.com/TanStack/db/commit/c521b5d6503d8fdf03574b9f9791143e59d34204)]:\n    -   @tanstack/db@0.8.2\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/angular-db@0.1.83",
+    "@tanstack/vue-db@0.1.4",
+    "@tanstack/svelte-db@0.3.2",
+    "@tanstack/solid-db@0.2.37"
+  ]
+}
