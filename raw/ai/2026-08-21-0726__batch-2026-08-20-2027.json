@@ -1,0 +1,36 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-20-2027",
+  "published_at": "2026-08-20T20:27:24Z",
+  "releases": [
+    {
+      "id": 374011174,
+      "tag_name": "@tanstack/ai@0.47.2",
+      "published_at": "2026-08-20T20:27:15Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.47.2",
+      "body": "### Patch Changes\n\n-   [#1175](https://github.com/TanStack/ai/pull/1175) [`17b4c60`](https://github.com/TanStack/ai/commit/17b4c60c8d237df53a63dcda18c43d8017d45449) - Route adapter-emitted `RUN_ERROR` events through middleware `onError` hooks and preserve provider error codes in persisted run failures.\n"
+    },
+    {
+      "id": 374011197,
+      "tag_name": "@tanstack/ai-groq@0.6.6",
+      "published_at": "2026-08-20T20:27:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.6.6",
+      "body": "### Patch Changes\n\n-   [#1176](https://github.com/TanStack/ai/pull/1176) [`0f77dca`](https://github.com/TanStack/ai/commit/0f77dcadf16e076d1e81d75abde352f5e0c2713e) - Recover Groq tool calls rejected after streaming begins so agent loops can repair them.\n\n-   Updated dependencies \\[[`17b4c60`](https://github.com/TanStack/ai/commit/17b4c60c8d237df53a63dcda18c43d8017d45449), [`0f77dca`](https://github.com/TanStack/ai/commit/0f77dcadf16e076d1e81d75abde352f5e0c2713e)]:\n    -   @tanstack/ai@0.47.2\n    -   @tanstack/openai-base@0.10.1\n"
+    },
+    {
+      "id": 374011228,
+      "tag_name": "@tanstack/ai-persistence@0.4.1",
+      "published_at": "2026-08-20T20:27:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.4.1",
+      "body": "### Patch Changes\n\n-   [#1175](https://github.com/TanStack/ai/pull/1175) [`17b4c60`](https://github.com/TanStack/ai/commit/17b4c60c8d237df53a63dcda18c43d8017d45449) - Route adapter-emitted `RUN_ERROR` events through middleware `onError` hooks and preserve provider error codes in persisted run failures.\n\n-   Updated dependencies \\[[`17b4c60`](https://github.com/TanStack/ai/commit/17b4c60c8d237df53a63dcda18c43d8017d45449)]:\n    -   @tanstack/ai@0.47.2\n"
+    },
+    {
+      "id": 374011246,
+      "tag_name": "@tanstack/openai-base@0.10.1",
+      "published_at": "2026-08-20T20:27:24Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.1",
+      "body": "### Patch Changes\n\n-   [#1176](https://github.com/TanStack/ai/pull/1176) [`0f77dca`](https://github.com/TanStack/ai/commit/0f77dcadf16e076d1e81d75abde352f5e0c2713e) - Recover Groq tool calls rejected after streaming begins so agent loops can repair them.\n\n-   Updated dependencies \\[[`17b4c60`](https://github.com/TanStack/ai/commit/17b4c60c8d237df53a63dcda18c43d8017d45449)]:\n    -   @tanstack/ai@0.47.2\n"
+    }
+  ],
+  "excluded_tags": []
+}
