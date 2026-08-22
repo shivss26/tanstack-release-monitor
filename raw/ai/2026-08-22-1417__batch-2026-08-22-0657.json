@@ -1,0 +1,316 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-22-0657",
+  "published_at": "2026-08-22T06:57:06Z",
+  "releases": [
+    {
+      "id": 374855804,
+      "tag_name": "@tanstack/ai-elevenlabs@0.2.40",
+      "published_at": "2026-08-22T06:54:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.2.40",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855814,
+      "tag_name": "@tanstack/ai-byteplus@0.2.3",
+      "published_at": "2026-08-22T06:54:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.2.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374855822,
+      "tag_name": "@tanstack/ai-acp@0.3.4",
+      "published_at": "2026-08-22T06:54:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374855830,
+      "tag_name": "@tanstack/ai-cohere@0.2.2",
+      "published_at": "2026-08-22T06:54:51Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.2.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855838,
+      "tag_name": "@tanstack/ai-codex@0.4.4",
+      "published_at": "2026-08-22T06:54:54Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.4.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374855848,
+      "tag_name": "@tanstack/ai-durable-stream@0.1.5",
+      "published_at": "2026-08-22T06:54:57Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855862,
+      "tag_name": "@tanstack/ai-anthropic@0.17.1",
+      "published_at": "2026-08-22T06:55:00Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.17.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855877,
+      "tag_name": "@tanstack/ai-grok-build@0.4.4",
+      "published_at": "2026-08-22T06:55:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.4.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-sandbox@0.5.0\n    -   @tanstack/ai-acp@0.3.4\n"
+    },
+    {
+      "id": 374855887,
+      "tag_name": "@tanstack/ai-code-mode@0.4.3",
+      "published_at": "2026-08-22T06:55:06Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.4.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855898,
+      "tag_name": "@tanstack/ai-bedrock@0.2.6",
+      "published_at": "2026-08-22T06:55:09Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.2.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374855913,
+      "tag_name": "@tanstack/ai-devtools-core@0.5.6",
+      "published_at": "2026-08-22T06:55:12Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-event-client@0.10.0\n"
+    },
+    {
+      "id": 374855927,
+      "tag_name": "@tanstack/ai-gemini@0.25.1",
+      "published_at": "2026-08-22T06:55:15Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.25.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855940,
+      "tag_name": "@tanstack/ai-client@0.26.0",
+      "published_at": "2026-08-22T06:55:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.26.0",
+      "body": "### Minor Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-event-client@0.10.0\n"
+    },
+    {
+      "id": 374855953,
+      "tag_name": "@tanstack/ai-grok@0.17.1",
+      "published_at": "2026-08-22T06:55:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.17.1",
+      "body": "### Patch Changes\n\n-   [#1185](https://github.com/TanStack/ai/pull/1185) [`e7a194c`](https://github.com/TanStack/ai/commit/e7a194cabbac51a0b451b4f9c621801a5a03c1f9) - Fix grok video `fetch` so Cloudflare Workers no longer throw `Illegal invocation` (issue [#1184](https://github.com/TanStack/ai/issues/1184)).\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374855962,
+      "tag_name": "@tanstack/ai-code-mode-snippets@0.4.3",
+      "published_at": "2026-08-22T06:55:24Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-snippets%400.4.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-code-mode@0.4.3\n"
+    },
+    {
+      "id": 374855971,
+      "tag_name": "@tanstack/ai@0.48.0",
+      "published_at": "2026-08-22T06:55:27Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.48.0",
+      "body": "### Minor Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-event-client@0.10.0\n"
+    },
+    {
+      "id": 374855983,
+      "tag_name": "@tanstack/ai-mistral@0.4.1",
+      "published_at": "2026-08-22T06:55:30Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.4.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374855996,
+      "tag_name": "@tanstack/ai-mcp@0.3.4",
+      "published_at": "2026-08-22T06:55:33Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374856010,
+      "tag_name": "@tanstack/ai-event-client@0.10.0",
+      "published_at": "2026-08-22T06:55:36Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-event-client%400.10.0",
+      "body": "### Minor Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n"
+    },
+    {
+      "id": 374856018,
+      "tag_name": "@tanstack/ai-opencode@0.3.4",
+      "published_at": "2026-08-22T06:55:39Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.3.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856030,
+      "tag_name": "@tanstack/ai-llmgateway@0.1.1",
+      "published_at": "2026-08-22T06:55:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-llmgateway%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374856050,
+      "tag_name": "@tanstack/ai-groq@0.6.7",
+      "published_at": "2026-08-22T06:55:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.6.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374856057,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.1.7",
+      "published_at": "2026-08-22T06:55:51Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.1.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374856070,
+      "tag_name": "@tanstack/ai-memory@0.1.5",
+      "published_at": "2026-08-22T06:55:54Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-memory%400.1.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-event-client@0.10.0\n"
+    },
+    {
+      "id": 374856078,
+      "tag_name": "@tanstack/ai-octane@0.1.1",
+      "published_at": "2026-08-22T06:55:57Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-octane%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-client@0.26.0\n"
+    },
+    {
+      "id": 374856085,
+      "tag_name": "@tanstack/ai-openai@0.21.1",
+      "published_at": "2026-08-22T06:56:00Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.21.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/openai-base@0.10.3\n"
+    },
+    {
+      "id": 374856098,
+      "tag_name": "@tanstack/ai-perplexity@0.2.4",
+      "published_at": "2026-08-22T06:56:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374856112,
+      "tag_name": "@tanstack/ai-claude-code@0.4.4",
+      "published_at": "2026-08-22T06:56:06Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.4.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856130,
+      "tag_name": "@tanstack/ai-openrouter@0.18.3",
+      "published_at": "2026-08-22T06:56:12Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.18.3",
+      "body": "### Patch Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374856140,
+      "tag_name": "@tanstack/ai-persistence@0.5.0",
+      "published_at": "2026-08-22T06:56:15Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.5.0",
+      "body": "### Minor Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374856148,
+      "tag_name": "@tanstack/ai-ollama@0.9.4",
+      "published_at": "2026-08-22T06:56:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.9.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374856159,
+      "tag_name": "@tanstack/ai-sandbox-daytona@0.3.2",
+      "published_at": "2026-08-22T06:56:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-daytona%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856167,
+      "tag_name": "@tanstack/ai-sandbox-vercel@0.2.4",
+      "published_at": "2026-08-22T06:56:24Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-vercel%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856178,
+      "tag_name": "@tanstack/ai-react@0.21.3",
+      "published_at": "2026-08-22T06:56:27Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.21.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-client@0.26.0\n"
+    },
+    {
+      "id": 374856190,
+      "tag_name": "@tanstack/ai-sandbox-local-process@0.2.4",
+      "published_at": "2026-08-22T06:56:30Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-local-process%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856201,
+      "tag_name": "@tanstack/ai-sandbox-sprites@0.2.4",
+      "published_at": "2026-08-22T06:56:33Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-sprites%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856218,
+      "tag_name": "@tanstack/ai-sandbox-docker@0.3.2",
+      "published_at": "2026-08-22T06:56:36Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-docker%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-sandbox@0.5.0\n"
+    },
+    {
+      "id": 374856229,
+      "tag_name": "@tanstack/ai-sandbox@0.5.0",
+      "published_at": "2026-08-22T06:56:39Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.5.0",
+      "body": "### Minor Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-persistence@0.5.0\n"
+    },
+    {
+      "id": 374856238,
+      "tag_name": "@tanstack/ai-vertex@0.2.1",
+      "published_at": "2026-08-22T06:56:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-gemini@0.25.1\n"
+    },
+    {
+      "id": 374856244,
+      "tag_name": "@tanstack/ai-react-ui@0.8.19",
+      "published_at": "2026-08-22T06:56:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.8.19",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai-client@0.26.0\n    -   @tanstack/ai-react@0.21.3\n"
+    },
+    {
+      "id": 374856255,
+      "tag_name": "@tanstack/ai-sandbox-cloudflare@0.3.6",
+      "published_at": "2026-08-22T06:56:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.3.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n    -   @tanstack/ai-sandbox@0.5.0\n    -   @tanstack/ai-sandbox-local-process@0.2.4\n"
+    },
+    {
+      "id": 374856295,
+      "tag_name": "@tanstack/openai-base@0.10.3",
+      "published_at": "2026-08-22T06:57:00Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.3",
+      "body": "### Patch Changes\n\n-   [#1174](https://github.com/TanStack/ai/pull/1174) [`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46) - Put AG-UI extras under `metadata.tanstack`. SSE/HTTP wire events are spec-only.\n\n    `sendMessage({ content, metadata })` stamps user metadata on the user message.\n    In-process `chat()` still yields `toolName`, `TOOL_CALL_END.input`, and TanStack `TokenUsage`.\n    Thinking signatures round-trip on `REASONING_ENCRYPTED_VALUE`.\n    Wire messages use `content` / `toolCalls` / fan-out roles, not `parts`.\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    },
+    {
+      "id": 374856309,
+      "tag_name": "@tanstack/ai-fal@0.12.1",
+      "published_at": "2026-08-22T06:57:06Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.12.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`1c0415b`](https://github.com/TanStack/ai/commit/1c0415bec4bbefcd3abf784d0209af05aca5db46)]:\n    -   @tanstack/ai@0.48.0\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/ai-angular@0.6.3",
+    "@tanstack/ai-solid@0.18.3",
+    "@tanstack/ai-preact@0.13.2",
+    "@tanstack/ai-solid-ui@0.7.18",
+    "@tanstack/ai-svelte@0.18.3",
+    "@tanstack/ai-vue@0.18.3"
+  ]
+}
