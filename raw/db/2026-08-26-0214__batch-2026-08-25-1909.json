@@ -1,0 +1,132 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-25-1909",
+  "published_at": "2026-08-25T19:09:38Z",
+  "releases": [
+    {
+      "id": 376642962,
+      "tag_name": "@tanstack/browser-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:08:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376642986,
+      "tag_name": "@tanstack/node-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:08:41Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643050,
+      "tag_name": "@tanstack/powersync-db-collection@0.1.64",
+      "published_at": "2026-08-25T19:08:50Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.1.64",
+      "body": "### Patch Changes\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643074,
+      "tag_name": "@tanstack/trailbase-db-collection@0.1.104",
+      "published_at": "2026-08-25T19:08:53Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.104",
+      "body": "### Patch Changes\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643098,
+      "tag_name": "@tanstack/capacitor-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:08:56Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643120,
+      "tag_name": "@tanstack/electric-db-collection@0.4.5",
+      "published_at": "2026-08-25T19:08:59Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.4.5",
+      "body": "### Patch Changes\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643151,
+      "tag_name": "@tanstack/electron-db-sqlite-persistence@0.1.30",
+      "published_at": "2026-08-25T19:09:02Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.1.30",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643207,
+      "tag_name": "@tanstack/db@0.8.5",
+      "published_at": "2026-08-25T19:09:05Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.8.5",
+      "body": "### Patch Changes\n\n-   Canonicalize equivalent loadSubset queries to one demand identity while preserving observable output aliases, exact projected values, and distinct ordered windows. Query DB now reuses the same canonical identity for its on-demand cache keys. ([#1768](https://github.com/TanStack/db/pull/1768))\n\n-   Reuse materialized collections when new collection descriptors have the same id. This lets callers recreate dynamic descriptors without creating duplicate collections. ([#1770](https://github.com/TanStack/db/pull/1770))\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n"
+    },
+    {
+      "id": 376643238,
+      "tag_name": "@tanstack/react-native-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:09:08Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643307,
+      "tag_name": "@tanstack/tauri-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:09:14Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643418,
+      "tag_name": "@tanstack/rxdb-db-collection@0.1.92",
+      "published_at": "2026-08-25T19:09:17Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.92",
+      "body": "### Patch Changes\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643448,
+      "tag_name": "@tanstack/react-db@0.3.5",
+      "published_at": "2026-08-25T19:09:20Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.3.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643475,
+      "tag_name": "@tanstack/expo-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:09:23Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643506,
+      "tag_name": "@tanstack/query-db-collection@1.2.10",
+      "published_at": "2026-08-25T19:09:26Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.2.10",
+      "body": "### Patch Changes\n\n-   Canonicalize equivalent loadSubset queries to one demand identity while preserving observable output aliases, exact projected values, and distinct ordered windows. Query DB now reuses the same canonical identity for its on-demand cache keys. ([#1768](https://github.com/TanStack/db/pull/1768))\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643535,
+      "tag_name": "@tanstack/db-sqlite-persistence-core@0.2.18",
+      "published_at": "2026-08-25T19:09:29Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.2.18",
+      "body": "### Patch Changes\n\n-   Settle subset loads only after their committed rows and events are visible. A ([#1769](https://github.com/TanStack/db/pull/1769))\n    commit receipt now rejects with `AbortError` when cancellation wins before\n    application and ignores later aborts. Preserve causal publication,\n    cancellation, persistence, and error handling across the affected sync\n    adapters.\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    },
+    {
+      "id": 376643569,
+      "tag_name": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.18",
+      "published_at": "2026-08-25T19:09:32Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.18",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db-sqlite-persistence-core@0.2.18\n"
+    },
+    {
+      "id": 376643642,
+      "tag_name": "@tanstack/offline-transactions@1.0.51",
+      "published_at": "2026-08-25T19:09:38Z",
+      "html_url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.0.51",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`d8defd2`](https://github.com/TanStack/db/commit/d8defd2a8eb96162cbd4e24970d519eac217bb95), [`9ad882f`](https://github.com/TanStack/db/commit/9ad882f71872aa2210b93ea93d084bd08bedb6a4), [`8c5838d`](https://github.com/TanStack/db/commit/8c5838ddd5f08b3c298d4458cae1ce599af80624)]:\n    -   @tanstack/db@0.8.5\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/angular-db@0.1.86",
+    "@tanstack/solid-db@0.2.40",
+    "@tanstack/svelte-db@0.3.5",
+    "@tanstack/vue-db@0.1.7"
+  ]
+}
