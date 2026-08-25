@@ -1,0 +1,22 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-25-1215",
+  "published_at": "2026-08-25T12:15:38Z",
+  "releases": [
+    {
+      "id": 376378228,
+      "tag_name": "@tanstack/ai-claude-code@0.6.0",
+      "published_at": "2026-08-25T12:15:35Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.6.0",
+      "body": "### Minor Changes\n\n-   [#1153](https://github.com/TanStack/ai/pull/1153) [`257213b`](https://github.com/TanStack/ai/commit/257213b110601c4e09cd33501ce06240eab0fd4d) - Expose Claude Code setting sources and loaded skills in session metadata.\n\n    `settingSources` defaults to `['project']`. Workspace projections (instructions, skills, MCP config) now load, and a local-process run no longer picks up the host's `~/.claude`. Pass `['user', 'project', 'local']` for CLI-equivalent behavior. Plugin projection installs at project scope.\n"
+    },
+    {
+      "id": 376378259,
+      "tag_name": "@tanstack/ai-lovable@0.2.0",
+      "published_at": "2026-08-25T12:15:38Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-lovable%400.2.0",
+      "body": "### Minor Changes\n\n-   [#1240](https://github.com/TanStack/ai/pull/1240) [`d0843c6`](https://github.com/TanStack/ai/commit/d0843c6b4d388e7f26036230f6ecbff112090e96) - `LovableModelId` is now the curated `LovableChatModel` union. The `(string & {})` escape hatch is removed, so TypeScript rejects uncurated model ids in `lovableText`, `createLovableText`, `lovableResponsesText`, `createLovableResponsesText`, and the summarize factories. The other modalities (image, video, embedding, TTS, transcription) were already limited to their curated lists.\n"
+    }
+  ],
+  "excluded_tags": []
+}
