@@ -1,0 +1,470 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-08-27-1801",
+  "published_at": "2026-08-27T18:01:37Z",
+  "releases": [
+    {
+      "id": 377763906,
+      "tag_name": "@tanstack/ai-codex@0.5.1",
+      "published_at": "2026-08-27T11:21:02Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.5.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-sandbox@0.5.2\n"
+    },
+    {
+      "id": 377763926,
+      "tag_name": "@tanstack/ai-acp@0.3.6",
+      "published_at": "2026-08-27T11:21:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-sandbox@0.5.2\n"
+    },
+    {
+      "id": 377763959,
+      "tag_name": "@tanstack/ai-gemini@0.26.2",
+      "published_at": "2026-08-27T11:21:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.26.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377763984,
+      "tag_name": "@tanstack/ai-openai@0.22.1",
+      "published_at": "2026-08-27T11:21:11Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.22.1",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/openai-base@0.10.6\n"
+    },
+    {
+      "id": 377764002,
+      "tag_name": "@tanstack/ai-react-ui@0.8.22",
+      "published_at": "2026-08-27T11:21:14Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.8.22",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`4e9c5d2`](https://github.com/TanStack/ai/commit/4e9c5d2887dc9a3d64fce6ed424aa68f451e20f6), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai-client@0.29.0\n    -   @tanstack/ai-react@0.22.2\n"
+    },
+    {
+      "id": 377764023,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.2.3",
+      "published_at": "2026-08-27T11:21:17Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.3",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/openai-base@0.10.6\n"
+    },
+    {
+      "id": 377764047,
+      "tag_name": "@tanstack/ai-claude-code@0.6.1",
+      "published_at": "2026-08-27T11:21:20Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.6.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-sandbox@0.5.2\n"
+    },
+    {
+      "id": 377764076,
+      "tag_name": "@tanstack/ai-ollama@0.10.1",
+      "published_at": "2026-08-27T11:21:23Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.10.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764105,
+      "tag_name": "@tanstack/ai-mistral@0.5.1",
+      "published_at": "2026-08-27T11:21:26Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.5.1",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764131,
+      "tag_name": "@tanstack/ai-react@0.22.2",
+      "published_at": "2026-08-27T11:21:29Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.22.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`4e9c5d2`](https://github.com/TanStack/ai/commit/4e9c5d2887dc9a3d64fce6ed424aa68f451e20f6), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-client@0.29.0\n"
+    },
+    {
+      "id": 377764156,
+      "tag_name": "@tanstack/ai-elevenlabs@0.3.1",
+      "published_at": "2026-08-27T11:21:32Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.3.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764194,
+      "tag_name": "@tanstack/ai@0.50.0",
+      "published_at": "2026-08-27T11:21:35Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.50.0",
+      "body": "### Minor Changes\n\n-   [#1204](https://github.com/TanStack/ai/pull/1204) [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b) - Preserve tool-result identity, metadata, multimodal content, and timestamps across message conversions and hydration.\n\n    Correct the public `WireMessage` type. System and user messages now require content, and the union no longer includes outbound activity messages.\n\n    Keep structured multimodal content compatible with the AI devtools message store.\n\n### Patch Changes\n\n-   [#1204](https://github.com/TanStack/ai/pull/1204) [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b) - Preserve AG-UI message fields and UI state across serialization, snapshots, and persistence.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai-event-client@0.11.0\n"
+    },
+    {
+      "id": 377764214,
+      "tag_name": "@tanstack/ai-event-client@0.11.0",
+      "published_at": "2026-08-27T11:21:38Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-event-client%400.11.0",
+      "body": "### Minor Changes\n\n-   [#1204](https://github.com/TanStack/ai/pull/1204) [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b) - Preserve tool-result identity, metadata, multimodal content, and timestamps across message conversions and hydration.\n\n    Correct the public `WireMessage` type. System and user messages now require content, and the union no longer includes outbound activity messages.\n\n    Keep structured multimodal content compatible with the AI devtools message store.\n"
+    },
+    {
+      "id": 377764240,
+      "tag_name": "@tanstack/ai-vertex@0.2.3",
+      "published_at": "2026-08-27T11:21:41Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-gemini@0.26.2\n"
+    },
+    {
+      "id": 377764261,
+      "tag_name": "@tanstack/ai-persistence@0.5.2",
+      "published_at": "2026-08-27T11:21:44Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.5.2",
+      "body": "### Patch Changes\n\n-   [#1204](https://github.com/TanStack/ai/pull/1204) [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b) - Preserve AG-UI message fields and UI state across serialization, snapshots, and persistence.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764293,
+      "tag_name": "@tanstack/ai-grok-build@0.5.1",
+      "published_at": "2026-08-27T11:21:47Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.5.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-acp@0.3.6\n    -   @tanstack/ai-sandbox@0.5.2\n"
+    },
+    {
+      "id": 377764318,
+      "tag_name": "@tanstack/ai-fal@0.13.1",
+      "published_at": "2026-08-27T11:21:50Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.13.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764352,
+      "tag_name": "@tanstack/ai-opencode@0.4.1",
+      "published_at": "2026-08-27T11:21:53Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.4.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-sandbox@0.5.2\n"
+    },
+    {
+      "id": 377764364,
+      "tag_name": "@tanstack/ai-mcp@0.3.6",
+      "published_at": "2026-08-27T11:21:56Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764392,
+      "tag_name": "@tanstack/ai-llmgateway@0.1.3",
+      "published_at": "2026-08-27T11:21:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-llmgateway%400.1.3",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/openai-base@0.10.6\n"
+    },
+    {
+      "id": 377764416,
+      "tag_name": "@tanstack/ai-bedrock@0.3.1",
+      "published_at": "2026-08-27T11:22:02Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.1",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/openai-base@0.10.6\n"
+    },
+    {
+      "id": 377764432,
+      "tag_name": "@tanstack/ai-cohere@0.3.1",
+      "published_at": "2026-08-27T11:22:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.3.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 377764465,
+      "tag_name": "@tanstack/ai-octane@0.1.4",
+      "published_at": "2026-08-27T11:22:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-octane%400.1.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`4e9c5d2`](https://github.com/TanStack/ai/commit/4e9c5d2887dc9a3d64fce6ed424aa68f451e20f6), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/ai-client@0.29.0\n"
+    },
+    {
+      "id": 377764516,
+      "tag_name": "@tanstack/ai-byteplus@0.3.1",
+      "published_at": "2026-08-27T11:22:14Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.3.1",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n    -   @tanstack/openai-base@0.10.6\n"
+    },
+    {
+      "id": 377764548,
+      "tag_name": "@tanstack/ai-anthropic@0.18.1",
+      "published_at": "2026-08-27T11:22:17Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.18.1",
+      "body": "### Patch Changes\n\n-   [#1253](https://github.com/TanStack/ai/pull/1253) [`8147e66`](https://github.com/TanStack/ai/commit/8147e6680996fc6f6c2d73294135ee0ccd5d1697) - Stop requiring Zod as a peer dependency when the adapters do not import it at runtime.\n\n-   Updated dependencies \\[[`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b), [`62c19ed`](https://github.com/TanStack/ai/commit/62c19edce7a814d868491ca920003899ec4c486b)]:\n    -   @tanstack/ai@0.50.0\n"
+    },
+    {
+      "id": 378021075,
+      "tag_name": "@tanstack/ai-cohere@0.3.2",
+      "published_at": "2026-08-27T17:59:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021094,
+      "tag_name": "@tanstack/ai-durable-stream@0.1.8",
+      "published_at": "2026-08-27T17:59:28Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.8",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021133,
+      "tag_name": "@tanstack/ai-gemini@0.26.3",
+      "published_at": "2026-08-27T17:59:31Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.26.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021157,
+      "tag_name": "@tanstack/ai-mistral@0.5.2",
+      "published_at": "2026-08-27T17:59:34Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.5.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021194,
+      "tag_name": "@tanstack/ai-persistence@0.5.3",
+      "published_at": "2026-08-27T17:59:37Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.5.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021231,
+      "tag_name": "@tanstack/ai-llmgateway@0.1.4",
+      "published_at": "2026-08-27T17:59:40Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-llmgateway%400.1.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021263,
+      "tag_name": "@tanstack/ai-grok@0.18.2",
+      "published_at": "2026-08-27T17:59:43Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.18.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021284,
+      "tag_name": "@tanstack/ai-bedrock@0.3.2",
+      "published_at": "2026-08-27T17:59:46Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021314,
+      "tag_name": "@tanstack/ai-lovable@0.2.2",
+      "published_at": "2026-08-27T17:59:49Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-lovable%400.2.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021345,
+      "tag_name": "@tanstack/ai-openrouter@0.19.4",
+      "published_at": "2026-08-27T17:59:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021376,
+      "tag_name": "@tanstack/ai-perplexity@0.2.7",
+      "published_at": "2026-08-27T17:59:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021407,
+      "tag_name": "@tanstack/ai-skills@0.1.0",
+      "published_at": "2026-08-27T17:59:58Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-skills%400.1.0",
+      "body": "### Minor Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021431,
+      "tag_name": "@tanstack/ai-event-client@0.11.1",
+      "published_at": "2026-08-27T18:00:01Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-event-client%400.11.1",
+      "body": "### Patch Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n"
+    },
+    {
+      "id": 378021468,
+      "tag_name": "@tanstack/ai-vertex@0.2.4",
+      "published_at": "2026-08-27T18:00:04Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-gemini@0.26.3\n"
+    },
+    {
+      "id": 378021495,
+      "tag_name": "@tanstack/ai-devtools-core@0.5.10",
+      "published_at": "2026-08-27T18:00:07Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.10",
+      "body": "### Patch Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-event-client@0.11.1\n"
+    },
+    {
+      "id": 378021523,
+      "tag_name": "@tanstack/ai-byteplus@0.3.2",
+      "published_at": "2026-08-27T18:00:10Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021557,
+      "tag_name": "@tanstack/ai-sandbox@0.5.3",
+      "published_at": "2026-08-27T18:00:13Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.5.3",
+      "body": "### Patch Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai-skills@0.1.0\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-persistence@0.5.3\n"
+    },
+    {
+      "id": 378021580,
+      "tag_name": "@tanstack/ai-opencode@0.4.2",
+      "published_at": "2026-08-27T18:00:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.4.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-sandbox@0.5.3\n"
+    },
+    {
+      "id": 378021638,
+      "tag_name": "@tanstack/ai-fal@0.13.2",
+      "published_at": "2026-08-27T18:00:22Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.13.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021670,
+      "tag_name": "@tanstack/ai-react@0.22.3",
+      "published_at": "2026-08-27T18:00:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.22.3",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-client@0.29.1\n"
+    },
+    {
+      "id": 378021697,
+      "tag_name": "@tanstack/ai-codex@0.5.2",
+      "published_at": "2026-08-27T18:00:28Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.5.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-sandbox@0.5.3\n"
+    },
+    {
+      "id": 378021744,
+      "tag_name": "@tanstack/ai-anthropic@0.18.2",
+      "published_at": "2026-08-27T18:00:34Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.18.2",
+      "body": "### Patch Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021829,
+      "tag_name": "@tanstack/ai-code-mode-snippets@0.4.6",
+      "published_at": "2026-08-27T18:00:43Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-snippets%400.4.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-code-mode@0.4.6\n"
+    },
+    {
+      "id": 378021864,
+      "tag_name": "@tanstack/ai-ollama@0.10.2",
+      "published_at": "2026-08-27T18:00:46Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.10.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378021891,
+      "tag_name": "@tanstack/ai-sandbox-upstash-box@0.2.0",
+      "published_at": "2026-08-27T18:00:49Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-upstash-box%400.2.0",
+      "body": "### Minor Changes\n\n-   [#899](https://github.com/TanStack/ai/pull/899) [`8498be8`](https://github.com/TanStack/ai/commit/8498be8a6a2c805abdd778f07ed29d3d04ce429b) - Add `@tanstack/ai-sandbox-upstash-box`, an Upstash Box sandbox provider. Runs\n    harness adapters inside isolated Upstash Box cloud sandboxes through the uniform\n    `SandboxHandle` \u2014 a native filesystem (including `stat`-backed `exists`), shell\n    `exec` with separate stdout and stderr, background processes over Box's live\n    `exec.session` (real in-box pid, writable stdin, and `kill()` that signals the\n    process tree server-side), public preview URLs via `getPublicURL`, and native\n    snapshots (`box.snapshot()` / `Box.fromSnapshot()`), `fork()` built on the same\n    snapshot pair, and a `deny` network policy mapped onto Box's `deny-all` egress\n    mode.\n\n    Requires `@upstash/box` 0.7.1 or newer for `exec.session` and the filesystem\n    metadata operations.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b)]:\n    -   @tanstack/ai-sandbox@0.5.3\n"
+    },
+    {
+      "id": 378021926,
+      "tag_name": "@tanstack/ai-sandbox-cloudflare@0.3.9",
+      "published_at": "2026-08-27T18:00:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.3.9",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-sandbox@0.5.3\n    -   @tanstack/ai-sandbox-local-process@0.2.4\n"
+    },
+    {
+      "id": 378021958,
+      "tag_name": "@tanstack/ai-acp@0.3.7",
+      "published_at": "2026-08-27T18:00:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-sandbox@0.5.3\n"
+    },
+    {
+      "id": 378021980,
+      "tag_name": "@tanstack/ai-octane@0.1.5",
+      "published_at": "2026-08-27T18:00:58Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-octane%400.1.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-client@0.29.1\n"
+    },
+    {
+      "id": 378022003,
+      "tag_name": "@tanstack/ai-client@0.29.1",
+      "published_at": "2026-08-27T18:01:01Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.29.1",
+      "body": "### Patch Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n-   [#1244](https://github.com/TanStack/ai/pull/1244) [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9) - Keep `append()` pending until the HTTP response is fully processed, including later `RUN_FINISHED` events in the same agent loop.\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-event-client@0.11.1\n"
+    },
+    {
+      "id": 378022033,
+      "tag_name": "@tanstack/ai-grok-build@0.5.2",
+      "published_at": "2026-08-27T18:01:04Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.5.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-sandbox@0.5.3\n    -   @tanstack/ai-acp@0.3.7\n"
+    },
+    {
+      "id": 378022066,
+      "tag_name": "@tanstack/ai-code-mode@0.4.6",
+      "published_at": "2026-08-27T18:01:07Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.4.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378022101,
+      "tag_name": "@tanstack/ai-groq@0.7.2",
+      "published_at": "2026-08-27T18:01:10Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.7.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378022124,
+      "tag_name": "@tanstack/ai@0.51.0",
+      "published_at": "2026-08-27T18:01:13Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.51.0",
+      "body": "### Minor Changes\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n### Patch Changes\n\n-   [#1244](https://github.com/TanStack/ai/pull/1244) [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9) - Keep `append()` pending until the HTTP response is fully processed, including later `RUN_FINISHED` events in the same agent loop.\n\n-   [#1248](https://github.com/TanStack/ai/pull/1248) [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c) - Fix `StreamProcessor` dropping the first `TEXT_MESSAGE_CONTENT` delta when a `TOOL_CALL_START` event's `parentMessageId` precedes that message's `TEXT_MESSAGE_START` \u2014 the normal AG-UI shape for \"call a tool, then explain the result\" as one assistant turn ([#1247](https://github.com/TanStack/ai/issues/1247)).\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b)]:\n    -   @tanstack/ai-event-client@0.11.1\n"
+    },
+    {
+      "id": 378022156,
+      "tag_name": "@tanstack/ai-claude-code@0.6.2",
+      "published_at": "2026-08-27T18:01:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.6.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-sandbox@0.5.3\n"
+    },
+    {
+      "id": 378022183,
+      "tag_name": "@tanstack/ai-mcp@0.3.7",
+      "published_at": "2026-08-27T18:01:19Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378022210,
+      "tag_name": "@tanstack/ai-memory@0.1.8",
+      "published_at": "2026-08-27T18:01:22Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-memory%400.1.8",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n    -   @tanstack/ai-event-client@0.11.1\n"
+    },
+    {
+      "id": 378022230,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.2.4",
+      "published_at": "2026-08-27T18:01:25Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378022294,
+      "tag_name": "@tanstack/ai-openai@0.22.2",
+      "published_at": "2026-08-27T18:01:32Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.22.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31), [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/openai-base@0.10.7\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378022313,
+      "tag_name": "@tanstack/ai-elevenlabs@0.3.2",
+      "published_at": "2026-08-27T18:01:34Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.3.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    },
+    {
+      "id": 378022341,
+      "tag_name": "@tanstack/openai-base@0.10.7",
+      "published_at": "2026-08-27T18:01:37Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.7",
+      "body": "### Patch Changes\n\n-   [#1210](https://github.com/TanStack/ai/pull/1210) [`43b51f2`](https://github.com/TanStack/ai/commit/43b51f2e89db1c9fb23bb34b4ea4e052d370fb31) - Preserve draft-07 tuple `items` arrays during strict schema conversion.\n\n    Send tools that use `prefixItems` with `strict: false`. OpenAI strict mode rejects that keyword.\n\n-   [#1236](https://github.com/TanStack/ai/pull/1236) [`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b) - Add `@tanstack/ai-skills`: portable Agent Skills (`SKILL.md`) as a first-class `chat()` middleware.\n\n    `withSkills(sources, options?)` renders a skill catalog and a `load_skill` tool so any tool-calling model can load skills on demand, on any provider, with no server sandbox. Skills come from `inlineSkill`, `skillDirectory` (`/node`), or a build-time `staticSkills` bundle, and compose via `aggregate`/`dedupe`/`filter`/`cache`. `createResourceTool` exposes a skill's bundled files through `read_skill_resource`, and `runSkillSourceConformance` (`/testing`) validates custom `SkillSource` adapters. The catalog renders as `<available_skills>` XML for Anthropic models and markdown for others; portable and hosted (native) skills refuse to combine in one call.\n\n    Core `@tanstack/ai` now exports `SkillLimitError`. The native factories throw it (or add validation): `codeExecutionTool` (`@tanstack/ai-anthropic`) frames its 8-skill cap, and `shellTool` (`@tanstack/openai-base`) now validates `skill_id` format instead of nothing. `@tanstack/ai-sandbox` reuses the shared skill-directory walk from `@tanstack/ai-skills`.\n\n    `withSkills` sends a `skills:state` CUSTOM chunk so TanStack AI DevTools can show the catalog and which skills the model loaded.\n\n-   Updated dependencies \\[[`5dc4e1a`](https://github.com/TanStack/ai/commit/5dc4e1a08728b410f85956093ccef621d12b4d6b), [`a7e0798`](https://github.com/TanStack/ai/commit/a7e079872af372496728d25e6ec23149cd5e04b9), [`6a083bf`](https://github.com/TanStack/ai/commit/6a083bfcfaa4fd0c83368c4d10067e5c2298e22c)]:\n    -   @tanstack/ai@0.51.0\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/ai-svelte@0.19.2",
+    "@tanstack/ai-vue@0.19.3",
+    "@tanstack/ai-preact@0.14.3",
+    "@tanstack/ai-svelte@0.19.3",
+    "@tanstack/ai-solid@0.19.3",
+    "@tanstack/ai-angular@0.7.3"
+  ]
+}
