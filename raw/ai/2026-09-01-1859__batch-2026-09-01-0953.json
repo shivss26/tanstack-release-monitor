@@ -1,0 +1,43 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-09-01-0953",
+  "published_at": "2026-09-01T09:53:48Z",
+  "releases": [
+    {
+      "id": 380383804,
+      "tag_name": "@tanstack/ai@0.52.1",
+      "published_at": "2026-09-01T09:53:36Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.52.1",
+      "body": "### Patch Changes\n\n-   [#1271](https://github.com/TanStack/ai/pull/1271) [`cfb8454`](https://github.com/TanStack/ai/commit/cfb845469875e1b74def21b9525ee19d68a4abbd) - Keep the first text delta when a message speaks after a tool call and the text\n    arrives in more than one chunk.\n"
+    },
+    {
+      "id": 380383829,
+      "tag_name": "@tanstack/ai-openrouter@0.19.6",
+      "published_at": "2026-09-01T09:53:39Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.6",
+      "body": "### Patch Changes\n\n-   [#1264](https://github.com/TanStack/ai/pull/1264) [`4eb24ee`](https://github.com/TanStack/ai/commit/4eb24ee4514889521d316f54641699ebaf6fd2a9) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`cfb8454`](https://github.com/TanStack/ai/commit/cfb845469875e1b74def21b9525ee19d68a4abbd)]:\n    -   @tanstack/ai@0.52.1\n"
+    },
+    {
+      "id": 380383857,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.2.6",
+      "published_at": "2026-09-01T09:53:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.6",
+      "body": "### Patch Changes\n\n-   [#1264](https://github.com/TanStack/ai/pull/1264) [`4eb24ee`](https://github.com/TanStack/ai/commit/4eb24ee4514889521d316f54641699ebaf6fd2a9) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`cfb8454`](https://github.com/TanStack/ai/commit/cfb845469875e1b74def21b9525ee19d68a4abbd)]:\n    -   @tanstack/ai@0.52.1\n    -   @tanstack/openai-base@0.10.8\n"
+    },
+    {
+      "id": 380383889,
+      "tag_name": "@tanstack/ai-bedrock@0.3.4",
+      "published_at": "2026-09-01T09:53:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.4",
+      "body": "### Patch Changes\n\n-   [#1278](https://github.com/TanStack/ai/pull/1278) [`c3d4376`](https://github.com/TanStack/ai/commit/c3d4376b96548c0224c003b7dd24a665f4c247be) - fix: forward usage from Converse structuredOutputStream()\n\n    `ConverseTextAdapter.structuredOutputStream()` iterated the Converse event stream without a `metadata` branch, so the trailing usage event was ignored and `RUN_FINISHED` carried no token counts on the streaming structured-output path. The normal chat path (`processConverseStream`) and the non-stream `structuredOutput()` already handled it; this brings the third path in line.\n\n-   Updated dependencies \\[[`cfb8454`](https://github.com/TanStack/ai/commit/cfb845469875e1b74def21b9525ee19d68a4abbd)]:\n    -   @tanstack/ai@0.52.1\n    -   @tanstack/openai-base@0.10.8\n"
+    },
+    {
+      "id": 380383918,
+      "tag_name": "@tanstack/ai-gemini@0.26.5",
+      "published_at": "2026-09-01T09:53:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.26.5",
+      "body": "### Patch Changes\n\n-   [#1259](https://github.com/TanStack/ai/pull/1259) [`845696b`](https://github.com/TanStack/ai/commit/845696b00dab158821ef12fc6062aa0f93c6e30e) - Send Gemini function tool inputs through `parametersJsonSchema` so complete JSON Schema keywords reach the provider.\n\n-   [#1273](https://github.com/TanStack/ai/pull/1273) [`9c9746b`](https://github.com/TanStack/ai/commit/9c9746bd4bbe94198ebd973b12fedfbdb9fdb231) - Add Gemini Omni 1.1 Flash (`gemini-omni-1.1-flash`) as the GA Interactions video model.\n\n    `geminiVideo('gemini-omni-1.1-flash')` uses the existing Interactions video path. `gemini-omni-flash-preview` stays as a deprecated alias until it shuts down on 2026-09-30. Omni `size` is an `aspectRatio_resolution` template (`'16:9'` or `'16:9_1080p'`) that maps onto `response_format.aspect_ratio` and `response_format.resolution` (`360p` \\| `720p` \\| `1080p` \\| `4k`, default 720p). Duration stays 3\u201310 seconds per call.\n\n-   Updated dependencies \\[[`cfb8454`](https://github.com/TanStack/ai/commit/cfb845469875e1b74def21b9525ee19d68a4abbd)]:\n    -   @tanstack/ai@0.52.1\n"
+    }
+  ],
+  "excluded_tags": []
+}
