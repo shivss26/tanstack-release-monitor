@@ -1,0 +1,36 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-09-02-1859",
+  "published_at": "2026-09-02T18:59:47Z",
+  "releases": [
+    {
+      "id": 381502877,
+      "tag_name": "@tanstack/ai-vertex@0.2.7",
+      "published_at": "2026-09-02T18:59:38Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`452d6a4`](https://github.com/TanStack/ai/commit/452d6a405d669d00f2cc82d5725c53dfad8602cc), [`307b7ec`](https://github.com/TanStack/ai/commit/307b7ec285e60f4a1b9a6c03345130ec9bb93356)]:\n    -   @tanstack/ai@0.52.2\n    -   @tanstack/ai-gemini@0.28.0\n"
+    },
+    {
+      "id": 381502909,
+      "tag_name": "@tanstack/ai-gemini@0.28.0",
+      "published_at": "2026-09-02T18:59:41Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.28.0",
+      "body": "### Minor Changes\n\n-   [#1301](https://github.com/TanStack/ai/pull/1301) [`307b7ec`](https://github.com/TanStack/ai/commit/307b7ec285e60f4a1b9a6c03345130ec9bb93356) - Add Gemini 3.8 Flash (`gemini-3.8-flash`) with multimodal input, thinking, structured output, caching, built-in tools, and agentic video understanding.\n\n    Limit its thinking levels to low, medium, and high in both the standard and Interactions adapters.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`452d6a4`](https://github.com/TanStack/ai/commit/452d6a405d669d00f2cc82d5725c53dfad8602cc)]:\n    -   @tanstack/ai@0.52.2\n"
+    },
+    {
+      "id": 381502936,
+      "tag_name": "@tanstack/ai-bedrock@0.3.5",
+      "published_at": "2026-09-02T18:59:44Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.5",
+      "body": "### Patch Changes\n\n-   [#1300](https://github.com/TanStack/ai/pull/1300) [`d98a598`](https://github.com/TanStack/ai/commit/d98a598cf346f0fff9d4aa70c697c8153245743c) - Forward Bedrock Converse cache token counts to `TokenUsage`.\n\n    `cacheReadInputTokens` and `cacheWriteInputTokens` from the Converse `metadata.usage` event now land on `promptTokensDetails.cachedTokens` and `promptTokensDetails.cacheWriteTokens`, in `chatStream`, `structuredOutput`, and `structuredOutputStream`. Bedrock's `inputTokens` counts only the uncached part of the input, so without these fields a cached request looked like a near-zero-input call. Both fields are omitted when Bedrock omits them.\n\n-   Updated dependencies \\[[`452d6a4`](https://github.com/TanStack/ai/commit/452d6a405d669d00f2cc82d5725c53dfad8602cc)]:\n    -   @tanstack/ai@0.52.2\n    -   @tanstack/openai-base@0.10.8\n"
+    },
+    {
+      "id": 381502966,
+      "tag_name": "@tanstack/ai@0.52.2",
+      "published_at": "2026-09-02T18:59:47Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.52.2",
+      "body": "### Patch Changes\n\n-   [#1303](https://github.com/TanStack/ai/pull/1303) [`452d6a4`](https://github.com/TanStack/ai/commit/452d6a405d669d00f2cc82d5725c53dfad8602cc) - fix: `createChatOptions` now preserves the runtime-context requirement on its return type. When tools or middleware declare a required context, the input already enforces `context` via `RuntimeContextOption`, but the return type declared it optional \u2014 so spreading the result into `chat()` failed to typecheck (`Type 'undefined' is not assignable to type '...'`). The return type now applies the same `RuntimeContextOption` conditional as the parameter, so the documented spread pattern compiles with context-typed tools. Type-level only; runtime is unchanged.\n"
+    }
+  ],
+  "excluded_tags": []
+}
