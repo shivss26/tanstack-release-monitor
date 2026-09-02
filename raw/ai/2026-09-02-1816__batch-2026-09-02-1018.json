@@ -1,0 +1,50 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-09-02-1018",
+  "published_at": "2026-09-02T10:18:39Z",
+  "releases": [
+    {
+      "id": 381100381,
+      "tag_name": "@tanstack/ai-anthropic@0.18.4",
+      "published_at": "2026-09-02T08:49:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.18.4",
+      "body": "### Patch Changes\n\n-   [#1288](https://github.com/TanStack/ai/pull/1288) [`c9f5ddd`](https://github.com/TanStack/ai/commit/c9f5ddd039034263f511d876d4f9604d099e507b) - Update model metadata from OpenRouter API\n"
+    },
+    {
+      "id": 381100415,
+      "tag_name": "@tanstack/ai-gemini@0.27.0",
+      "published_at": "2026-09-02T08:50:02Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.27.0",
+      "body": "### Minor Changes\n\n-   [#1294](https://github.com/TanStack/ai/pull/1294) [`4964221`](https://github.com/TanStack/ai/commit/49642217ca1efa521773643036ab9480720ad63a) - Add agentic video understanding to the Gemini text adapter.\n\n    Set `metadata.processing: 'agentic'` on a video content part to route the request through the Gemini Interactions API for multi-pass \"agentic\" video understanding (GA on `gemini-3.7-flash`, `gemini-3.6-flash`, and `gemini-3.5-flash-lite`). Omit it for the default single-pass `generateContent` sampling. New `uploadGeminiFile()` and `geminiVideoPart()` helpers cover the Files API upload + poll-until-ACTIVE flow, and the three models now carry an `agentic_video` capability.\n"
+    },
+    {
+      "id": 381100438,
+      "tag_name": "@tanstack/ai-openrouter@0.19.7",
+      "published_at": "2026-09-02T08:50:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.7",
+      "body": "### Patch Changes\n\n-   [#1288](https://github.com/TanStack/ai/pull/1288) [`c9f5ddd`](https://github.com/TanStack/ai/commit/c9f5ddd039034263f511d876d4f9604d099e507b) - Update model metadata from OpenRouter API\n"
+    },
+    {
+      "id": 381100468,
+      "tag_name": "@tanstack/ai-vertex@0.2.6",
+      "published_at": "2026-09-02T08:50:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`4964221`](https://github.com/TanStack/ai/commit/49642217ca1efa521773643036ab9480720ad63a)]:\n    -   @tanstack/ai-gemini@0.27.0\n"
+    },
+    {
+      "id": 381100506,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.2.7",
+      "published_at": "2026-09-02T08:50:11Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.7",
+      "body": "### Patch Changes\n\n-   [#1288](https://github.com/TanStack/ai/pull/1288) [`c9f5ddd`](https://github.com/TanStack/ai/commit/c9f5ddd039034263f511d876d4f9604d099e507b) - Update model metadata from OpenRouter API\n"
+    },
+    {
+      "id": 381155418,
+      "tag_name": "@tanstack/ai-remix@0.1.0",
+      "published_at": "2026-09-02T10:18:39Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-remix%400.1.0",
+      "body": "### Minor Changes\n\n-   [#1289](https://github.com/TanStack/ai/pull/1289) [`7fa93de`](https://github.com/TanStack/ai/commit/7fa93dec08dbd9f7457c730e388168fc579b1ac1) - Add `@tanstack/ai-remix` with Remix 3 `createChat` and a typed headless chat UI on `@tanstack/ai-remix/ui`. Call `createChatHook({ options, ...components })` once at module scope, then `createAppChat(handle)` in setup.\n"
+    }
+  ],
+  "excluded_tags": []
+}
