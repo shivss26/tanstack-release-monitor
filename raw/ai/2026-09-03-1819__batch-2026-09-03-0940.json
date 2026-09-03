@@ -1,0 +1,78 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-09-03-0940",
+  "published_at": "2026-09-03T09:40:17Z",
+  "releases": [
+    {
+      "id": 381899552,
+      "tag_name": "@tanstack/ai-mistral@0.6.0",
+      "published_at": "2026-09-03T09:39:50Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.6.0",
+      "body": "### Minor Changes\n\n-   [#1312](https://github.com/TanStack/ai/pull/1312) [`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197) - Accept `baseURL` and `defaultHeaders` on every adapter's client config so one gateway config (Cloudflare AI Gateway, Vercel AI Gateway, a corporate proxy) can be spread into any adapter. The vendor-specific names (`httpOptions`, `serverURL`, `host`, `baseUrl`, `headers`) keep working. Bedrock's Converse adapter now applies `defaultHeaders` too.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n"
+    },
+    {
+      "id": 381899580,
+      "tag_name": "@tanstack/ai-vertex@0.2.8",
+      "published_at": "2026-09-03T09:39:53Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.8",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197), [`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai-gemini@0.29.0\n    -   @tanstack/ai@0.52.3\n"
+    },
+    {
+      "id": 381899608,
+      "tag_name": "@tanstack/ai-elevenlabs@0.4.0",
+      "published_at": "2026-09-03T09:39:56Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1312](https://github.com/TanStack/ai/pull/1312) [`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197) - Accept `baseURL` and `defaultHeaders` on every adapter's client config so one gateway config (Cloudflare AI Gateway, Vercel AI Gateway, a corporate proxy) can be spread into any adapter. The vendor-specific names (`httpOptions`, `serverURL`, `host`, `baseUrl`, `headers`) keep working. Bedrock's Converse adapter now applies `defaultHeaders` too.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n"
+    },
+    {
+      "id": 381899646,
+      "tag_name": "@tanstack/openai-base@0.10.9",
+      "published_at": "2026-09-03T09:39:59Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.9",
+      "body": "### Patch Changes\n\n-   [#1290](https://github.com/TanStack/ai/pull/1290) [`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a) - Replay OpenAI Responses reasoning items with function_call on the next tool turn. Default `include: ['reasoning.encrypted_content']` only on reasoning models.\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n"
+    },
+    {
+      "id": 381899685,
+      "tag_name": "@tanstack/ai-gemini@0.29.0",
+      "published_at": "2026-09-03T09:40:02Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.29.0",
+      "body": "### Minor Changes\n\n-   [#1312](https://github.com/TanStack/ai/pull/1312) [`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197) - Accept `baseURL` and `defaultHeaders` on every adapter's client config so one gateway config (Cloudflare AI Gateway, Vercel AI Gateway, a corporate proxy) can be spread into any adapter. The vendor-specific names (`httpOptions`, `serverURL`, `host`, `baseUrl`, `headers`) keep working. Bedrock's Converse adapter now applies `defaultHeaders` too.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n"
+    },
+    {
+      "id": 381899717,
+      "tag_name": "@tanstack/ai-cohere@0.4.0",
+      "published_at": "2026-09-03T09:40:05Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.4.0",
+      "body": "### Minor Changes\n\n-   [#1312](https://github.com/TanStack/ai/pull/1312) [`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197) - Accept `baseURL` and `defaultHeaders` on every adapter's client config so one gateway config (Cloudflare AI Gateway, Vercel AI Gateway, a corporate proxy) can be spread into any adapter. The vendor-specific names (`httpOptions`, `serverURL`, `host`, `baseUrl`, `headers`) keep working. Bedrock's Converse adapter now applies `defaultHeaders` too.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n"
+    },
+    {
+      "id": 381899756,
+      "tag_name": "@tanstack/ai-bedrock@0.3.6",
+      "published_at": "2026-09-03T09:40:08Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.6",
+      "body": "### Patch Changes\n\n-   [#1312](https://github.com/TanStack/ai/pull/1312) [`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197) - Accept `baseURL` and `defaultHeaders` on every adapter's client config so one gateway config (Cloudflare AI Gateway, Vercel AI Gateway, a corporate proxy) can be spread into any adapter. The vendor-specific names (`httpOptions`, `serverURL`, `host`, `baseUrl`, `headers`) keep working. Bedrock's Converse adapter now applies `defaultHeaders` too.\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n    -   @tanstack/openai-base@0.10.9\n"
+    },
+    {
+      "id": 381899791,
+      "tag_name": "@tanstack/ai@0.52.3",
+      "published_at": "2026-09-03T09:40:11Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.52.3",
+      "body": "### Patch Changes\n\n-   [#1290](https://github.com/TanStack/ai/pull/1290) [`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a) - Replay OpenAI Responses reasoning items with function_call on the next tool turn. Default `include: ['reasoning.encrypted_content']` only on reasoning models.\n"
+    },
+    {
+      "id": 381899821,
+      "tag_name": "@tanstack/ai-openai@0.22.4",
+      "published_at": "2026-09-03T09:40:14Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.22.4",
+      "body": "### Patch Changes\n\n-   [#1290](https://github.com/TanStack/ai/pull/1290) [`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a) - Replay OpenAI Responses reasoning items with function_call on the next tool turn. Default `include: ['reasoning.encrypted_content']` only on reasoning models.\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n    -   @tanstack/openai-base@0.10.9\n"
+    },
+    {
+      "id": 381899851,
+      "tag_name": "@tanstack/ai-ollama@0.11.0",
+      "published_at": "2026-09-03T09:40:17Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.11.0",
+      "body": "### Minor Changes\n\n-   [#1312](https://github.com/TanStack/ai/pull/1312) [`5305d32`](https://github.com/TanStack/ai/commit/5305d320aae400b07bfe3a440d2d720cece44197) - Accept `baseURL` and `defaultHeaders` on every adapter's client config so one gateway config (Cloudflare AI Gateway, Vercel AI Gateway, a corporate proxy) can be spread into any adapter. The vendor-specific names (`httpOptions`, `serverURL`, `host`, `baseUrl`, `headers`) keep working. Bedrock's Converse adapter now applies `defaultHeaders` too.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`819e77c`](https://github.com/TanStack/ai/commit/819e77cee018106bdcd44870cea2c4f9b6d3004a)]:\n    -   @tanstack/ai@0.52.3\n"
+    }
+  ],
+  "excluded_tags": []
+}
