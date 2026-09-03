@@ -1,0 +1,317 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-09-03-1718",
+  "published_at": "2026-09-03T17:18:06Z",
+  "releases": [
+    {
+      "id": 382200873,
+      "tag_name": "@tanstack/ai-codex@0.5.4",
+      "published_at": "2026-09-03T17:15:40Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.5.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382200922,
+      "tag_name": "@tanstack/ai-compaction@0.1.1",
+      "published_at": "2026-09-03T17:15:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-compaction%400.1.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382200956,
+      "tag_name": "@tanstack/ai-acp@0.3.9",
+      "published_at": "2026-09-03T17:15:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.9",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382200986,
+      "tag_name": "@tanstack/ai-cohere@0.4.1",
+      "published_at": "2026-09-03T17:15:51Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.4.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201020,
+      "tag_name": "@tanstack/ai-llmgateway@0.1.6",
+      "published_at": "2026-09-03T17:15:54Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-llmgateway%400.1.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201044,
+      "tag_name": "@tanstack/ai-anthropic@0.18.5",
+      "published_at": "2026-09-03T17:15:57Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.18.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201070,
+      "tag_name": "@tanstack/ai-groq@0.7.4",
+      "published_at": "2026-09-03T17:16:00Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.7.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201090,
+      "tag_name": "@tanstack/ai-devtools-core@0.5.12",
+      "published_at": "2026-09-03T17:16:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201114,
+      "tag_name": "@tanstack/ai-mistral@0.6.1",
+      "published_at": "2026-09-03T17:16:07Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.6.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201144,
+      "tag_name": "@tanstack/ai-sandbox-local-process@0.2.5",
+      "published_at": "2026-09-03T17:16:09Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-local-process%400.2.5",
+      "body": "### Patch Changes\n\n-   [#1293](https://github.com/TanStack/ai/pull/1293) [`efba9cf`](https://github.com/TanStack/ai/commit/efba9cf6768fc895ff4ecd8b89edea9cb3080cb5) - fix: stop an uncaught EPIPE when a write goes to a child that closed its stdin\n\n-   Updated dependencies \\[]:\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382201175,
+      "tag_name": "@tanstack/ai-fal@0.13.4",
+      "published_at": "2026-09-03T17:16:12Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.13.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201206,
+      "tag_name": "@tanstack/ai-client@0.31.0",
+      "published_at": "2026-09-03T17:16:16Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.31.0",
+      "body": "### Minor Changes\n\n-   [#1309](https://github.com/TanStack/ai/pull/1309) [`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871) - Add `@tanstack/ai-cloudflare`: a Cloudflare adapter for Workers AI chat, summarization, embeddings, image generation, text-to-speech, and transcription over the `env.AI` binding or the REST API, with AI Gateway routing (`gateway` option and `cloudflareGateway()` helper for other providers). `@tanstack/ai` learns the `cloudflare` max-tokens key for summarize, lets `defineByokProvider` declare companion credentials with `with`, and adds `getByokKeys(request, { name: provider })` to `@tanstack/ai/byok/server`. `@tanstack/ai-client`'s `defineByok` takes `providers`: a send for a provider with companions (Cloudflare token plus account id) carries every `x-byok-*` header and prompts for each missing value.\n\n-   [#1302](https://github.com/TanStack/ai/pull/1302) [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab) - Add the `registerWebMCPTools` registrar to `@tanstack/ai-client`. Each framework package adds a lifecycle wrapper through `useWebMCPTools`, `createWebMCPTools`, or `injectWebMCPTools`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201240,
+      "tag_name": "@tanstack/ai-ollama@0.11.1",
+      "published_at": "2026-09-03T17:16:19Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.11.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201275,
+      "tag_name": "@tanstack/ai-cloudflare@0.1.0",
+      "published_at": "2026-09-03T17:16:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cloudflare%400.1.0",
+      "body": "### Minor Changes\n\n-   [#1309](https://github.com/TanStack/ai/pull/1309) [`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871) - Add `@tanstack/ai-cloudflare`: a Cloudflare adapter for Workers AI chat, summarization, embeddings, image generation, text-to-speech, and transcription over the `env.AI` binding or the REST API, with AI Gateway routing (`gateway` option and `cloudflareGateway()` helper for other providers). `@tanstack/ai` learns the `cloudflare` max-tokens key for summarize, lets `defineByokProvider` declare companion credentials with `with`, and adds `getByokKeys(request, { name: provider })` to `@tanstack/ai/byok/server`. `@tanstack/ai-client`'s `defineByok` takes `providers`: a send for a provider with companions (Cloudflare token plus account id) carries every `x-byok-*` header and prompts for each missing value.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201381,
+      "tag_name": "@tanstack/ai-claude-code@0.6.4",
+      "published_at": "2026-09-03T17:16:28Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.6.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382201417,
+      "tag_name": "@tanstack/ai-byteplus@0.3.4",
+      "published_at": "2026-09-03T17:16:30Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.3.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201456,
+      "tag_name": "@tanstack/ai-sandbox@0.5.6",
+      "published_at": "2026-09-03T17:16:33Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.5.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-persistence@0.5.6\n    -   @tanstack/ai-skills@0.1.2\n"
+    },
+    {
+      "id": 382201484,
+      "tag_name": "@tanstack/ai-elevenlabs@0.4.1",
+      "published_at": "2026-09-03T17:16:36Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.4.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201522,
+      "tag_name": "@tanstack/ai-memory@0.1.10",
+      "published_at": "2026-09-03T17:16:39Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-memory%400.1.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201547,
+      "tag_name": "@tanstack/ai-sandbox-cloudflare@0.3.11",
+      "published_at": "2026-09-03T17:16:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.3.11",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871), [`efba9cf`](https://github.com/TanStack/ai/commit/efba9cf6768fc895ff4ecd8b89edea9cb3080cb5)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-sandbox-local-process@0.2.5\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382201578,
+      "tag_name": "@tanstack/ai-code-mode@0.4.8",
+      "published_at": "2026-09-03T17:16:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.4.8",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201622,
+      "tag_name": "@tanstack/ai-persistence@0.5.6",
+      "published_at": "2026-09-03T17:16:49Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.5.6",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201673,
+      "tag_name": "@tanstack/openai-base@0.10.10",
+      "published_at": "2026-09-03T17:16:54Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201706,
+      "tag_name": "@tanstack/ai-bedrock@0.3.7",
+      "published_at": "2026-09-03T17:16:57Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.7",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201728,
+      "tag_name": "@tanstack/ai-mcp@0.3.9",
+      "published_at": "2026-09-03T17:17:00Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.9",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201758,
+      "tag_name": "@tanstack/ai-durable-stream@0.1.10",
+      "published_at": "2026-09-03T17:17:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.10",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382201825,
+      "tag_name": "@tanstack/ai-remix@0.2.0",
+      "published_at": "2026-09-03T17:17:09Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-remix%400.2.0",
+      "body": "### Minor Changes\n\n-   [#1302](https://github.com/TanStack/ai/pull/1302) [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab) - Add the `registerWebMCPTools` registrar to `@tanstack/ai-client`. Each framework package adds a lifecycle wrapper through `useWebMCPTools`, `createWebMCPTools`, or `injectWebMCPTools`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871), [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-client@0.31.0\n"
+    },
+    {
+      "id": 382201863,
+      "tag_name": "@tanstack/ai-octane@0.3.0",
+      "published_at": "2026-09-03T17:17:12Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-octane%400.3.0",
+      "body": "### Minor Changes\n\n-   [#1302](https://github.com/TanStack/ai/pull/1302) [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab) - Add the `registerWebMCPTools` registrar to `@tanstack/ai-client`. Each framework package adds a lifecycle wrapper through `useWebMCPTools`, `createWebMCPTools`, or `injectWebMCPTools`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871), [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-client@0.31.0\n"
+    },
+    {
+      "id": 382201884,
+      "tag_name": "@tanstack/ai-grok@0.18.4",
+      "published_at": "2026-09-03T17:17:15Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.18.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201909,
+      "tag_name": "@tanstack/ai@0.53.0",
+      "published_at": "2026-09-03T17:17:18Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.53.0",
+      "body": "### Minor Changes\n\n-   [#1309](https://github.com/TanStack/ai/pull/1309) [`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871) - Add `@tanstack/ai-cloudflare`: a Cloudflare adapter for Workers AI chat, summarization, embeddings, image generation, text-to-speech, and transcription over the `env.AI` binding or the REST API, with AI Gateway routing (`gateway` option and `cloudflareGateway()` helper for other providers). `@tanstack/ai` learns the `cloudflare` max-tokens key for summarize, lets `defineByokProvider` declare companion credentials with `with`, and adds `getByokKeys(request, { name: provider })` to `@tanstack/ai/byok/server`. `@tanstack/ai-client`'s `defineByok` takes `providers`: a send for a provider with companions (Cloudflare token plus account id) carries every `x-byok-*` header and prompts for each missing value.\n"
+    },
+    {
+      "id": 382201929,
+      "tag_name": "@tanstack/ai-openai@0.22.5",
+      "published_at": "2026-09-03T17:17:21Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.22.5",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201962,
+      "tag_name": "@tanstack/ai-lovable@0.2.4",
+      "published_at": "2026-09-03T17:17:24Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-lovable%400.2.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382201985,
+      "tag_name": "@tanstack/ai-vertex@0.2.9",
+      "published_at": "2026-09-03T17:17:27Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.9",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-gemini@0.29.1\n"
+    },
+    {
+      "id": 382202036,
+      "tag_name": "@tanstack/ai-grok-build@0.5.4",
+      "published_at": "2026-09-03T17:17:33Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.5.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-acp@0.3.9\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382202094,
+      "tag_name": "@tanstack/ai-react-ui@0.9.1",
+      "published_at": "2026-09-03T17:17:39Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.9.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab)]:\n    -   @tanstack/ai-react@0.24.0\n"
+    },
+    {
+      "id": 382202120,
+      "tag_name": "@tanstack/ai-gemini@0.29.1",
+      "published_at": "2026-09-03T17:17:42Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.29.1",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382202144,
+      "tag_name": "@tanstack/ai-opencode@0.4.4",
+      "published_at": "2026-09-03T17:17:45Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.4.4",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-sandbox@0.5.6\n"
+    },
+    {
+      "id": 382202174,
+      "tag_name": "@tanstack/ai-vercel-gateway@0.2.8",
+      "published_at": "2026-09-03T17:17:48Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.8",
+      "body": "### Patch Changes\n\n-   [#1315](https://github.com/TanStack/ai/pull/1315) [`b694368`](https://github.com/TanStack/ai/commit/b6943686b503740f772002467b94ff9d635f841e) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/openai-base@0.10.10\n"
+    },
+    {
+      "id": 382202213,
+      "tag_name": "@tanstack/ai-perplexity@0.2.9",
+      "published_at": "2026-09-03T17:17:52Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.9",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382202248,
+      "tag_name": "@tanstack/ai-code-mode-snippets@0.4.8",
+      "published_at": "2026-09-03T17:17:55Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-snippets%400.4.8",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-code-mode@0.4.8\n"
+    },
+    {
+      "id": 382202271,
+      "tag_name": "@tanstack/ai-openrouter@0.19.8",
+      "published_at": "2026-09-03T17:17:58Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.8",
+      "body": "### Patch Changes\n\n-   [#1315](https://github.com/TanStack/ai/pull/1315) [`b694368`](https://github.com/TanStack/ai/commit/b6943686b503740f772002467b94ff9d635f841e) - Update model metadata from OpenRouter API\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    },
+    {
+      "id": 382202342,
+      "tag_name": "@tanstack/ai-react@0.24.0",
+      "published_at": "2026-09-03T17:18:03Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.24.0",
+      "body": "### Minor Changes\n\n-   [#1302](https://github.com/TanStack/ai/pull/1302) [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab) - Add the `registerWebMCPTools` registrar to `@tanstack/ai-client`. Each framework package adds a lifecycle wrapper through `useWebMCPTools`, `createWebMCPTools`, or `injectWebMCPTools`.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871), [`82ced0f`](https://github.com/TanStack/ai/commit/82ced0f5018297e5756828ecc4d312ba78adeaab)]:\n    -   @tanstack/ai@0.53.0\n    -   @tanstack/ai-client@0.31.0\n"
+    },
+    {
+      "id": 382202366,
+      "tag_name": "@tanstack/ai-skills@0.1.2",
+      "published_at": "2026-09-03T17:18:06Z",
+      "html_url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-skills%400.1.2",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`21775ee`](https://github.com/TanStack/ai/commit/21775ee2d23dd594cdc184678ff587341bd74871)]:\n    -   @tanstack/ai@0.53.0\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/ai-angular@0.9.0",
+    "@tanstack/ai-solid@0.21.0",
+    "@tanstack/ai-vue@0.21.0",
+    "@tanstack/ai-preact@0.16.0",
+    "@tanstack/ai-vue-ui@0.3.1",
+    "@tanstack/ai-svelte@0.21.0",
+    "@tanstack/ai-solid-ui@0.8.1"
+  ]
+}
