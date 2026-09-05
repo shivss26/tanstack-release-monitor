@@ -2,10 +2,6 @@
   "router": {
     "last_seen_id": 377478372,
     "yank_watch": {
-      "366253835": {
-        "tag": "release-2026-08-06-1344",
-        "published_at": "2026-08-06T13:44:10Z"
-      },
       "366694996": {
         "tag": "release-2026-08-07-1110",
         "published_at": "2026-08-07T11:10:46Z"
