@@ -1,0 +1,5 @@
+# release-2026-09-10-1817  model=claude-sonnet-5
+
+=== iteration 1 (stop=end_turn) ===
+[thinking]
+I'm going through the changelog to spot React-relevant items: the store upgrade touches useStore/useSelector, the start-server-core headers fix affects react-start, while nx/CI and solid-only fixes can be skipped. The store upgrade also updated React and Vue Router state subscriptions to make reactive state updates more efficient.
