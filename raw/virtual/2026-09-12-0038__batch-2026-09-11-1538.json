@@ -1,0 +1,29 @@
+{
+  "style": "package-batch",
+  "tag": "batch-2026-09-11-1538",
+  "published_at": "2026-09-11T15:38:32Z",
+  "releases": [
+    {
+      "id": 387151160,
+      "tag_name": "@tanstack/react-virtual@3.14.12",
+      "published_at": "2026-09-11T15:38:23Z",
+      "html_url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/react-virtual%403.14.12",
+      "body": "### Patch Changes\n\n-   Updated dependencies \\[[`ab3278c`](https://github.com/TanStack/virtual/commit/ab3278cbe7b9a895ecdde263ad3c55c868b85d74)]:\n    -   @tanstack/virtual-core@3.17.10\n"
+    },
+    {
+      "id": 387151259,
+      "tag_name": "@tanstack/virtual-core@3.17.10",
+      "published_at": "2026-09-11T15:38:32Z",
+      "html_url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/virtual-core%403.17.10",
+      "body": "### Patch Changes\n\n-   [#1272](https://github.com/TanStack/virtual/pull/1272) [`ab3278c`](https://github.com/TanStack/virtual/commit/ab3278cbe7b9a895ecdde263ad3c55c868b85d74) - Keep an end-pinned virtualizer following appended items when older items are trimmed in the same update and the item count does not increase. Recognize ordered, overlapping windows while preserving reading anchors for users who have scrolled away from the end.\n\n    Preserve item keys in the lazy measurement cache so a stable `getItemKey` callback reading mutable data cannot change the identity of previously measured rows.\n"
+    }
+  ],
+  "excluded_tags": [
+    "@tanstack/angular-virtual@6.0.5",
+    "@tanstack/lit-virtual@3.14.1",
+    "@tanstack/vue-virtual@3.13.38",
+    "@tanstack/svelte-virtual@3.13.38",
+    "@tanstack/solid-virtual@3.13.39",
+    "@tanstack/marko-virtual@3.15.3"
+  ]
+}
