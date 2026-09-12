@@ -1,6 +1,6 @@
 {
   "test_key": "2026-09-12-agentmail",
-  "status": "sent",
+  "status": "complete",
   "delivery": {
     "message_id": "<010001a09442cf83-3219c6ba-278d-46f1-9553-70c1a9e65d0d-000000@email.amazonses.com>",
     "thread_id": "7e925ccf-1eca-457c-902c-a7d3f5d57d4b",
@@ -8,6 +8,8 @@
   },
   "idempotency": {
     "pre_send_duplicate_found": false,
-    "post_send_check": "pending"
+    "post_send_check": "passed",
+    "second_send": "blocked",
+    "checked_at": "2026-09-12T06:17:33.261Z"
   }
 }
