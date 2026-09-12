@@ -1,0 +1,13 @@
+{
+  "test_key": "2026-09-12-agentmail",
+  "status": "ready-to-send",
+  "delivery": {
+    "message_id": null,
+    "thread_id": null,
+    "sent_at": null
+  },
+  "idempotency": {
+    "pre_send_duplicate_found": false,
+    "post_send_check": "pending"
+  }
+}
