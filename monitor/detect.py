@@ -43,7 +43,10 @@ MAX_PAGES = 10
 YANK_WATCH_DAYS = 30
 IST = timezone(timedelta(hours=5, minutes=30))  # fixed offset; no tzdata dependency
 
-ROOT = Path(__file__).resolve().parent.parent  # monitor/ -> repo root
+# `collect.py` runs detection in an isolated staging root.  The normal CLI keeps
+# the historical repository root, while the environment override prevents a
+# candidate watermark or raw GitHub payload from touching canonical files.
+ROOT = Path(os.environ.get("MONITOR_ROOT", Path(__file__).resolve().parent.parent)).resolve()
 STATE_PATH = ROOT / "state.json"
 CONFIG_PATH = ROOT / "monitor" / "config.json"
 
@@ -125,9 +128,9 @@ def now_iso():
 
 def det_stamp_now():
     # Detection time in IST, `YYYY-MM-DD-HHMM`. Computed once per run so multiple
-    # rollups detected together share it; the tag disambiguates. The orchestrator
-    # keys raw/prefetch/summary on this stamp.
-    return datetime.now(IST).strftime("%Y-%m-%d-%H%M")
+    # rollups detected together share it; the tag disambiguates. Actions supplies
+    # a fixed stamp so its temporary raw output can become one ledger collection.
+    return os.environ.get("MONITOR_DETECTION_STAMP") or datetime.now(IST).strftime("%Y-%m-%d-%H%M")
 
 
 def write_raw(label, record, det_stamp, tag):
@@ -158,7 +161,7 @@ def write_yank(label, entry, det_stamp, detected_at):
 def process_watched(src, state, det_stamp, tag_re, wrap=None):
     """Shared flow for the "rollup" and "single-package" styles: one release =
     one raw record, with yank tracking. `wrap` optionally wraps the raw release
-    JSON in a style envelope for the enrich stage."""
+    JSON in a style envelope for the public-ledger writer."""
     label, owner, repo = src["label"], src["owner"], src["repo"]
     token = os.environ.get("GITHUB_TOKEN", "")
     detected_at = now_iso()

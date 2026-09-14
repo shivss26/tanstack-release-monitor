@@ -1,3 +1,12 @@
+# Historical legacy testbench — superseded
+
+This is the completed 2026-07-11 validation record for the previous
+Claude-and-Resend pipeline. It remains as deterministic-helper audit evidence,
+but its enrichment, email, and artifact expectations are not the current
+production design. Follow [`TESTING.md`](./TESTING.md) for this migration.
+
+---
+
 # Testbench plan — bulletproofing the monitor before production
 
 Goal: wide coverage of true triggers and false positives for all 11 sources and

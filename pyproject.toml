@@ -1,10 +1,8 @@
 [project]
 name = "tanstack-release-monitor"
 version = "0.1.0"
-requires-python = ">=3.13"
-dependencies = [
-    "anthropic==0.116.0",
-]
+requires-python = "==3.13.*"
+dependencies = []
 
 [tool.uv]
 exclude-newer = "7 days"          # self-updating 7-day cooldown
