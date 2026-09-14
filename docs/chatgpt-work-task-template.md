@@ -9,12 +9,11 @@ Keep the actual recipient and sender in secure task configuration, not this
 repository. Give the recipient a fixed non-secret alias such as
 `tanstack-monitor-recipient-v1` for the manifest contract.
 
-The task's AgentMail integration must be bound to the dedicated
-inbox-scoped credential for `tanstack-release-monitor@agentmail.to`. A broad
-OAuth connection that happens to expose this inbox is not an equivalent
-least-privilege control and is not a production gate pass. The local `.env`
-is deliberately unavailable to web-cloud Work and must never be uploaded or
-copied into a prompt.
+This personal workflow uses the configured AgentMail plugin. At the beginning
+of the run and immediately before sending, verify that the selected sender is
+exactly `tanstack-release-monitor@agentmail.to`. The Send Allow List is an
+additional delivery guard. Do not ask for, copy, upload, or use an API key or
+local `.env` in web-cloud Work.
 
 ## Task instructions
 
@@ -51,10 +50,11 @@ email. Do not browse beyond the canonical GitHub URLs in validated event files.
    not resend in that run. This provides at-least-once delivery with duplicate
    suppression, not exactly-once delivery.
 6. Send only through the dedicated AgentMail inbox and exact configured test or
-   production recipient. If GitHub read access, the inbox-scoped AgentMail
-   connection, or AgentMail search/send is not available, make no guess and
-   send no email. Do not commit, push, edit a connector, modify a schedule, or
-   change recipients.
+   production recipient. Verify the selected sender is exactly
+   `tanstack-release-monitor@agentmail.to` immediately before sending. If
+   GitHub read access, that inbox selection, or AgentMail search/send is not
+   available, make no guess and send no email. Do not commit, push, edit a
+   connector, modify a schedule, or change recipients.
 
 For catch-up, send one email containing a six-line block for each undelivered
 IST date and one combined factual summary.
