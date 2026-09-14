@@ -15,17 +15,16 @@ upstream commits while refusing concurrent `state.json` or `ledger/` changes.
 
 ## Migration-branch Action test
 
-1. Dispatch the workflow from the migration branch using one declared slot.
-2. Inspect its commit: only `state.json` and `ledger/` may be staged. No raw
-   GitHub payload, release body, secret, email address, AgentMail identifier,
-   model output, or legacy generated path may appear.
-3. Confirm the slot receipt’s outcome and event IDs agree with its event files.
-4. Confirm the last old-workflow `state.json` is the starting watermark. A
-   release already captured by that workflow must not reappear; a new one must
-   appear exactly once.
-5. Induce a test-only conversion error. Confirm a failed receipt is committed,
-   `state.json` is unchanged, and the following successful run recovers the
-   same new event without a duplicate.
+1. Dispatch `workflow_dispatch` from the migration branch using one declared
+   slot. It is intentionally a dry run.
+2. Confirm successful dry-run logs, then confirm the branch SHA, `state.json`,
+   and `ledger/` are unchanged. No staging-generated artifact may be merged.
+3. Confirm the last old-workflow `state.json` remains the production starting
+   watermark. A release already captured by that workflow must not reappear;
+   a new one must appear exactly once after scheduled production collection.
+4. Induce a test-only conversion error. Confirm the watermark remains
+   unchanged and the following successful scheduled run recovers the same new
+   event without a duplicate.
 
 ## AgentMail and Work staging gates
 
@@ -55,5 +54,6 @@ and production recipient disabled.
 
 Proceed only after an independent security/code review, the staging checks,
 and a reviewed merge that includes the final old-workflow watermark. Rollback
-is to pause Work, revoke the dedicated AgentMail key, and disable the new
-Actions schedule; do not delete ledger or sent-mail evidence.
+is to pause Work, disconnect or disable the dedicated AgentMail plugin/inbox,
+and disable the new Actions schedule; do not delete ledger or sent-mail
+evidence.

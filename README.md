@@ -14,11 +14,12 @@ GitHub Actions at six IST slots
   -> AgentMail sent folder is the delivery record
 ```
 
-GitHub Actions runs at 00:00, 04:00, 08:00, 12:00, 16:00, and 20:00 IST. It
-records a receipt for every slot. A failed or absent slot is never described as
-quiet. At 22:00 IST, ChatGPT Work sends one daily email with six health lines;
-an entirely complete quiet day ends with `No changes on this day.` A later Work
-run sends a single catch-up email covering every undelivered IST date.
+GitHub Actions runs at 00:00, 04:00, 08:00, 12:00, 16:00, and 20:00 IST. Each
+scheduled run commits its receipt and sanitized events directly to `main`. At
+22:00 IST, ChatGPT Work reports every collection actually committed between its
+previous sent SHA marker and a captured current `main` SHA. If Work is delayed,
+the next email simply covers the larger Git range; it does not invent absent
+Action runs.
 
 ## Safety and consistency properties
 
