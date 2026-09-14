@@ -26,3 +26,10 @@ _Avoid_: Send, notification run
 **Coverage**:
 The set of expected Collections whose outcomes are known by an email cutoff.
 _Avoid_: Success rate, uptime
+
+## Canonical records
+
+Only `state.json` and the versioned records under `ledger/` are canonical
+repository state. AgentMail sent mail is the Delivery record and carries the
+last successfully delivered `main` SHA. Files under `obsolete/` are temporary
+legacy reference material; they are never read by the current implementation.

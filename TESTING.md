@@ -5,23 +5,27 @@
 Run before any remote dispatch:
 
 ```sh
-uv run python -m unittest tests/test_public_ledger.py -v
+python3 -m unittest tests/test_public_ledger.py -v
 ```
+
+The suite and production scripts use only the Python standard library. GitHub
+Actions invokes `python3` directly; no project package installation is needed.
 
 The suite proves: hostile release prose is excluded; URL and schema allowlists
 are enforced; a conversion failure does not advance the canonical watermark;
 the next run recovers the release once; and the push retry preserves unrelated
 upstream commits while refusing concurrent `state.json` or `ledger/` changes.
 
-## Migration-branch Action test
+## Collector Action verification
 
-1. Dispatch `workflow_dispatch` from the migration branch using one declared
-   slot. It is intentionally a dry run.
+1. Dispatch `workflow_dispatch` from a non-`main` branch using one declared
+   slot. It is intentionally a dry run; manual dispatch from `main` fails
+   closed.
 2. Confirm successful dry-run logs, then confirm the branch SHA, `state.json`,
    and `ledger/` are unchanged. No staging-generated artifact may be merged.
-3. Confirm the last old-workflow `state.json` remains the production starting
-   watermark. A release already captured by that workflow must not reappear;
-   a new one must appear exactly once after scheduled production collection.
+3. Confirm a release already represented by the current `state.json` does not
+   reappear, while a new release appears exactly once after scheduled
+   production collection.
 4. Induce a test-only conversion error. Confirm the watermark remains
    unchanged and the following successful scheduled run recovers the same new
    event without a duplicate.
@@ -48,7 +52,8 @@ and production recipient disabled.
    Git range. An ambiguous send must not advance the SHA cursor.
 6. Test quiet and catch-up dates. A date whose actual collected receipts all
    contain no events may contain `No changes on this day.`
-7. Run shadow collections spanning multiple scheduled slots before merge.
+7. During initial rollout, inspect scheduled collections spanning multiple
+   slots before enabling the production Work recipient.
 
 ## Production enablement
 

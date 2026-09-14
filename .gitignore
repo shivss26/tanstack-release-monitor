@@ -3,18 +3,20 @@
 __pycache__/
 *.pyc
 .worktrees/
+.DS_Store
 
 # Local agent and retrieval state. These must never enter the public repository.
 .agents/
 .codex/
 .firecrawl/
+skills-lock.json
+/IMPLEMENTATION-HANDOFF.md
+/REVIEW-CORRECTION-HANDOFF.md
 
-# The old pipeline's generated payloads can include full upstream text or delivery
-# metadata. Keep the historical tracked examples, but never add new ones.
+# The retired pipeline is retained only in obsolete/. Never recreate its old
+# output paths at the repository root.
 /raw/**
-!/raw/.gitkeep
 /yanks/**
-!/yanks/.gitkeep
 /prefetch/
 /summaries/
 /transcripts/

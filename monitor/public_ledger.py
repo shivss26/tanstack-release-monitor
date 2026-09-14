@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Strict, metadata-only public ledger helpers.
+"""Metadata-only public ledger helpers and schema validation.
 
 GitHub release bodies are untrusted third-party text. They are deliberately
 excluded from the public ledger and from the mail-capable Work task.

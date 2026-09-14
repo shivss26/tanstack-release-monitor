@@ -2,6 +2,7 @@
 
 This public project watches selected TanStack repositories for stable releases
 relevant to a React stack. It runs without the owner’s computer being online.
+The runtime is standard-library Python and requires no package installation.
 
 ## Architecture
 
@@ -39,10 +40,12 @@ Action runs.
 
 ## Public-repository boundary
 
-Future Action commits stage only `state.json` and `ledger/`. The old pipeline’s
-`raw/`, `yanks/`, `prefetch/`, `summaries/`, `transcripts/`, `digest/`, and
-`sent/` paths are ignored for future output. Never place mailbox addresses,
-API keys, delivery IDs, or private data in this repository.
+Action commits stage only `state.json` and `ledger/`. The previous
+Claude-and-Resend pipeline and its historical outputs are quarantined under
+`obsolete/` as a temporary rollback reference while the replacement operates
+in production. Nothing under `obsolete/` is runtime input or canonical state.
+Never place mailbox addresses, API keys, delivery IDs, or private data in this
+repository.
 
 ## Layout
 
@@ -50,16 +53,18 @@ API keys, delivery IDs, or private data in this repository.
 |---|---|
 | `monitor/detect.py` | Existing deterministic detector and React filtering. |
 | `monitor/collect.py` | Transaction boundary between candidate detection and canonical state/ledger. |
-| `monitor/public_ledger.py` | Strict metadata-only event and receipt schema. |
+| `monitor/public_ledger.py` | Metadata-only event and receipt schema and validation. |
 | `monitor/publish.py` | Bounded push retry that fails closed on state/ledger overlap. |
 | `ledger/events/` | Validated release and retraction events. |
 | `ledger/collections/` | One collection receipt per Action attempt. |
+| `docs/ledger-schema.md` | Versioned public event and collection receipt schema. |
 | `docs/chatgpt-work-task-template.md` | Read-only Work delivery instructions. |
+| `obsolete/` | Temporary, non-canonical backup of the retired pipeline. |
 
 ## Verification
 
 ```sh
-uv run python -m unittest tests/test_public_ledger.py -v
+python3 -m unittest tests/test_public_ledger.py -v
 ```
 
 Follow [`TESTING.md`](./TESTING.md) before enabling the production Work
