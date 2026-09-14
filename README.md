@@ -67,5 +67,5 @@ repository.
 python3 -m unittest tests/test_public_ledger.py -v
 ```
 
-Follow [`TESTING.md`](./TESTING.md) before enabling the production Work
-schedule or recipient.
+See [`TESTING.md`](./TESTING.md) for the reusable rollout gates and the
+production verification recorded when this architecture went live.

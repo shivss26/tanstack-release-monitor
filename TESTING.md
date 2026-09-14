@@ -30,10 +30,11 @@ upstream commits while refusing concurrent `state.json` or `ledger/` changes.
    unchanged and the following successful scheduled run recovers the same new
    event without a duplicate.
 
-## AgentMail and Work staging gates
+## AgentMail and Work pre-production gates
 
-Use only the agreed secondary test recipient. Keep the production Work schedule
-and production recipient disabled.
+For a new deployment or a replacement of either connection, use only the agreed
+secondary test recipient and keep the production Work schedule and recipient
+disabled until these checks pass.
 
 1. Create the dedicated monitoring inbox and its Send Allow List. In the Work
    task, verify the configured AgentMail plugin selects that inbox at the start
@@ -62,3 +63,22 @@ and a reviewed merge that includes the final old-workflow watermark. Rollback
 is to pause Work, disconnect or disable the dedicated AgentMail plugin/inbox,
 and disable the new Actions schedule; do not delete ledger or sent-mail
 evidence.
+
+### Current production status
+
+The replacement architecture went live on 14 September 2026:
+
+- Scheduled GitHub Actions collection completed successfully on `main` in run
+  `34868964023` and committed the validated receipt and events in `9a8b693`.
+- A production-shaped ChatGPT Work delivery covered the full range from cutover
+  commit `a1e998e` through captured commit `1633bc9`: one authoritative
+  collection, two event records, and three releases.
+- The sent copy was verified in both AgentMail and the receiving Gmail inbox.
+  Its authored body contains the standalone `1633bc9` SHA marker, followed only
+  by AgentMail's provider-managed footer.
+- The standalone ChatGPT Work task is active daily at 22:00 `Asia/Kolkata` with
+  read-only GitHub and the dedicated AgentMail connection. It did not run again
+  during setup, so the successful manual delivery remains the initial cursor.
+
+These are dated rollout facts, not a claim that later scheduled runs have
+succeeded. Ongoing delivery state remains the newest valid sent-mail SHA marker.
