@@ -31,13 +31,19 @@ class LedgerTests(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         return root
 
-    def raw(self, root, body="ignored"):
-        path = root / "raw" / "query" / f"{self.stamp}__release-2026-09-14-1430.json"
+    def raw(self, root, body="ignored", stamp=None):
+        path = root / "raw" / "query" / f"{stamp or self.stamp}__release-2026-09-14-1430.json"
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps({"id": 42, "tag_name": "release-2026-09-14-1430",
             "published_at": "2026-09-14T14:30:00Z",
             "html_url": "https://github.com/TanStack/query/releases/tag/release-2026-09-14-1430",
             "body": body, "author": {"login": "untrusted"}}))
+
+    @staticmethod
+    def slot_outcomes(date="2026-09-14", outcome="completed", receipt_prefix="github-actions:1"):
+        return [{"date": date, "slot": slot, "outcome": outcome,
+                 "receipt_id": f"{receipt_prefix}:{index}"}
+                for index, slot in enumerate(delivery_contract.SLOTS, start=1)]
 
     def test_metadata_only_excludes_hostile_release_prose(self):
         root = self.root()
@@ -71,6 +77,10 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual(["release:query:42"], completed["event_ids"])
         self.assertEqual([], failed["event_ids"])
         self.assertEqual("20:00", completed["scheduled_slot_ist"])
+        self.assertTrue(completed["authoritative"])
+        self.assertEqual("schedule", completed["trigger"])
+        manual = public_ledger.write_collection(root, self.stamp, self.config(), "125", "1", "30 14 * * *", "failed", "2026-09-14T14:33:00Z", "workflow_dispatch")
+        self.assertFalse(manual["authoritative"])
 
     def test_retraction_without_a_known_original_timestamp_is_publishable(self):
         root = self.root()
@@ -97,7 +107,7 @@ class LedgerTests(unittest.TestCase):
         self.assertFalse(success)
         self.assertEqual("failed", receipt["outcome"])
         self.assertEqual(before, (root / "state.json").read_text())
-        self.assertFalse((root / "ledger" / "events").exists())
+        self.assertFalse(list((root / "ledger" / "events").glob("*.json")) if (root / "ledger" / "events").exists() else [])
 
         def good_detector(_root, candidate, _stamp):
             (candidate / "state.json").write_text(json.dumps({"query": {"last_seen_id": 42}}))
@@ -125,11 +135,57 @@ class LedgerTests(unittest.TestCase):
         self.assertFalse(success)
         self.assertEqual(before, (root / "state.json").read_text())
 
+    def test_failure_after_event_copy_rolls_back_and_retry_recovers_once(self):
+        root = self.root()
+        before = (root / "state.json").read_text()
+
+        def detector(_root, candidate, _stamp):
+            (candidate / "state.json").write_text(json.dumps({"query": {"last_seen_id": 42}}))
+            self.raw(candidate)
+
+        original = collect._install_state
+        def fail_after_copy(_candidate, _root):
+            raise OSError("simulated state install failure")
+        collect._install_state = fail_after_copy
+        try:
+            _, success = collect.run_collection(root, self.stamp, "103", "1", "30 14 * * *", "2026-09-14T14:36:00Z", detector)
+        finally:
+            collect._install_state = original
+        self.assertFalse(success)
+        self.assertEqual(before, (root / "state.json").read_text())
+        self.assertFalse(list((root / "ledger" / "events").glob("*.json")) if (root / "ledger" / "events").exists() else [])
+
+        receipt, success = collect.run_collection(root, self.stamp, "104", "1", "30 14 * * *", "2026-09-14T14:37:00Z", detector)
+        self.assertTrue(success)
+        self.assertEqual(["release:query:42"], receipt["event_ids"])
+        self.assertEqual(1, len(list((root / "ledger" / "events").glob("*.json"))))
+
+    def test_interrupted_event_copy_is_recovered_with_a_new_detection_stamp(self):
+        root = self.root()
+        old_stamp = "2026-09-14-1600"
+        orphan = root / "orphan"
+        self.raw(orphan, stamp=old_stamp)
+        public_ledger.write_collection(orphan, old_stamp, self.config(), "91", "1", "30 10 * * *", "completed", "2026-09-14T10:31:00Z")
+        orphan_event = next((orphan / "ledger" / "events").glob("*.json"))
+        destination = root / "ledger" / "events" / orphan_event.name
+        destination.parent.mkdir(parents=True)
+        destination.write_bytes(orphan_event.read_bytes())
+
+        def detector(_root, candidate, _stamp):
+            (candidate / "state.json").write_text(json.dumps({"query": {"last_seen_id": 42}}))
+            self.raw(candidate)
+
+        receipt, success = collect.run_collection(root, self.stamp, "105", "1", "30 14 * * *", "2026-09-14T14:37:00Z", detector)
+        self.assertTrue(success)
+        self.assertEqual(["release:query:42"], receipt["event_ids"])
+        self.assertEqual({"query": {"last_seen_id": 42}}, json.loads((root / "state.json").read_text()))
+        self.assertEqual(1, len(list((root / "ledger" / "events").glob("*.json"))))
+
     def test_manifest_golden_vector_and_exact_sent_matching(self):
-        slots = [{"date": "2026-09-14", "slot": "20:00", "outcome": "completed"}]
+        slots = self.slot_outcomes()
         manifest = delivery_contract.manifest(["2026-09-14"], slots, ["release:query:42"], "tanstack-monitor-recipient-v1")
         key = delivery_contract.delivery_key(manifest)
-        self.assertEqual("tsrm-v1-1087be98b9dae6b8ab6d6450af0891bb64122c4097458f5804fb32b4504c812a", key)
+        self.assertEqual("tsrm-v2-a01bea1bf1793df051f317b1a202d7b67f16f8c79bea14f34c5c1080afe16649", key)
         message = {"location": "sent", "from": "monitor@example.test", "to": ["target@example.test"],
                    "subject": key, "body": "Summary\n" + delivery_contract.footer(manifest)}
         self.assertTrue(delivery_contract.exact_sent_match(message, "monitor@example.test", "target@example.test", key, manifest))
@@ -139,7 +195,13 @@ class LedgerTests(unittest.TestCase):
     def test_noncanonical_footer_and_duplicate_manifest_inputs_rejected(self):
         with self.assertRaises(ValueError):
             delivery_contract.manifest(["2026-09-14", "2026-09-14"], [], [], "alias")
-        self.assertIsNone(delivery_contract.parse_footer("<!-- tsrm-manifest-v1:eyJ4IjoxfQ -->"))
+        with self.assertRaisesRegex(ValueError, "exactly six"):
+            delivery_contract.manifest(["2026-09-14"], [], [], "alias")
+        slots = self.slot_outcomes()
+        slots[0]["slot"] = "20:00"
+        with self.assertRaisesRegex(ValueError, "ordered"):
+            delivery_contract.manifest(["2026-09-14"], slots, [], "alias")
+        self.assertIsNone(delivery_contract.parse_footer("<!-- tsrm-manifest-v2:eyJ4IjoxfQ -->"))
 
     def test_push_retry_preserves_unrelated_upstream_commit(self):
         with tempfile.TemporaryDirectory() as temp:

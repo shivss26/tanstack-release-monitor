@@ -28,11 +28,18 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6.0.3
         with:
           # Conflict-safe retry may need the common ancestor with origin/main.
           fetch-depth: 0
+
+      - name: Protect the production watermark from manual dispatch
+        if: github.event_name == 'workflow_dispatch' && github.ref_name == 'main'
+        run: |
+          echo "Run manual collector checks from a staging branch, never main."
+          exit 1
 
       - name: Establish collection identity
         id: collection
@@ -44,13 +51,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SCHEDULE_CRON: ${{ github.event.schedule || inputs.schedule }}
+          COLLECTION_TRIGGER: ${{ github.event_name }}
         run: |
           python3 monitor/collect.py \
             --stamp "${{ steps.collection.outputs.stamp }}" \
             --run-id "${{ github.run_id }}" \
             --run-attempt "${{ github.run_attempt }}" \
             --schedule "$SCHEDULE_CRON" \
-            --completed-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            --trigger "$COLLECTION_TRIGGER"
 
       - name: Commit public collection bundle
         if: always()

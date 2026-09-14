@@ -41,6 +41,7 @@ BATCH_SETTLE_MIN = int(os.environ.get("BATCH_SETTLE_MIN", "30"))
 PER_PAGE = 100
 MAX_PAGES = 10
 YANK_WATCH_DAYS = 30
+HTTP_TIMEOUT_SECONDS = 30
 IST = timezone(timedelta(hours=5, minutes=30))  # fixed offset; no tzdata dependency
 
 # `collect.py` runs detection in an isolated staging root.  The normal CLI keeps
@@ -64,7 +65,7 @@ def _request(url, token):
 
 
 def api_json(url, token):
-    with urllib.request.urlopen(_request(url, token)) as resp:
+    with urllib.request.urlopen(_request(url, token), timeout=HTTP_TIMEOUT_SECONDS) as resp:
         return json.loads(resp.read().decode())
 
 
@@ -72,7 +73,7 @@ def release_exists(owner, repo, release_id, token):
     """True if the release id still exists (HTTP 200); False if deleted (404)."""
     url = f"{API}/repos/{owner}/{repo}/releases/{release_id}"
     try:
-        urllib.request.urlopen(_request(url, token))
+        urllib.request.urlopen(_request(url, token), timeout=HTTP_TIMEOUT_SECONDS)
         return True
     except urllib.error.HTTPError as e:
         if e.code == 404:

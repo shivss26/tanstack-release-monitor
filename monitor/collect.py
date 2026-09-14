@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 import public_ledger
@@ -21,7 +22,18 @@ def _json(path):
     return json.loads(path.read_text())
 
 
-def _copy_candidate_ledger(candidate, root):
+def _canonical_event_equivalent(existing, candidate):
+    """An interrupted install may leave the same event with an older stamp."""
+    if existing.get("event_id") != candidate.get("event_id"):
+        return False
+    existing = dict(existing)
+    candidate = dict(candidate)
+    existing.pop("detected_at_ist", None)
+    candidate.pop("detected_at_ist", None)
+    return existing == candidate
+
+
+def _copy_candidate_ledger(candidate, root, created):
     source = candidate / "ledger"
     if not source.exists():
         return
@@ -37,9 +49,11 @@ def _copy_candidate_ledger(candidate, root):
         destination = root / "ledger" / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
         if destination.exists() and destination.read_bytes() != path.read_bytes():
-            raise ValueError(f"canonical ledger collision: {relative}")
+            if not (parts[0] == "events" and _canonical_event_equivalent(_json(destination), _json(path))):
+                raise ValueError(f"canonical ledger collision: {relative}")
         if not destination.exists():
             shutil.copy2(path, destination)
+            created.append(destination)
 
 
 def _install_state(candidate, root):
@@ -53,6 +67,30 @@ def _install_state(candidate, root):
     os.replace(temporary, root / "state.json")
 
 
+def _install_bundle(candidate, root):
+    """Install ledger metadata and watermark as one recoverable logical bundle.
+
+    A normal failure rolls back copied metadata and restores the previous
+    watermark.  If a runner is interrupted after an event copy, a later retry
+    recognizes the same immutable event identity and completes the bundle.
+    """
+    before_state = (root / "state.json").read_bytes() if (root / "state.json").exists() else None
+    created = []
+    try:
+        _copy_candidate_ledger(candidate, root, created)
+        _install_state(candidate, root)
+    except Exception:
+        for path in reversed(created):
+            path.unlink(missing_ok=True)
+        if before_state is None:
+            (root / "state.json").unlink(missing_ok=True)
+        else:
+            temporary = root / ".state.json.rollback"
+            temporary.write_bytes(before_state)
+            os.replace(temporary, root / "state.json")
+        raise
+
+
 def detect_in_staging(root, candidate, stamp, env=None):
     (candidate / "monitor").mkdir(parents=True)
     shutil.copy2(root / "monitor" / "config.json", candidate / "monitor" / "config.json")
@@ -64,12 +102,16 @@ def detect_in_staging(root, candidate, stamp, env=None):
     subprocess.run([sys.executable, str(root / "monitor" / "detect.py")], env=child_env, check=True)
 
 
-def run_collection(root, stamp, run_id, run_attempt, schedule, completed_at, detector=detect_in_staging):
+def _completed_now():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def run_collection(root, stamp, run_id, run_attempt, schedule, completed_at=None,
+                   detector=detect_in_staging, trigger="schedule"):
     """Run and publish one collection. Returns ``(receipt, success)``.
 
-    Events/receipt precede state installation.  Therefore interruption during
-    installation can create harmless duplicate-suppressible metadata, never a
-    lost release caused by a prematurely advanced watermark.
+    The canonical event/receipt bundle and watermark install together.  Failed
+    attempts retain only a failed receipt and never advance the watermark.
     """
     config = _json(root / "monitor" / "config.json")
     try:
@@ -77,15 +119,14 @@ def run_collection(root, stamp, run_id, run_attempt, schedule, completed_at, det
             candidate = Path(temp)
             detector(root, candidate, stamp)
             receipt = public_ledger.write_collection(candidate, stamp, config, run_id, run_attempt,
-                                                      schedule, "completed", completed_at)
-            _copy_candidate_ledger(candidate, root)
-            _install_state(candidate, root)
+                                                      schedule, "completed", completed_at or _completed_now(), trigger)
+            _install_bundle(candidate, root)
             return receipt, True
     except Exception as exc:
         # This path must not inspect candidate raw prose or write candidate state.
         print(f"collection failed safely: {type(exc).__name__}", file=sys.stderr)
         receipt = public_ledger.write_collection(root, stamp, config, run_id, run_attempt,
-                                                  schedule, "failed", completed_at)
+                                                  schedule, "failed", completed_at or _completed_now(), trigger)
         return receipt, False
 
 
@@ -96,10 +137,11 @@ def main():
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--run-attempt", required=True)
     parser.add_argument("--schedule", required=True)
-    parser.add_argument("--completed-at", required=True)
+    parser.add_argument("--completed-at", default="")
+    parser.add_argument("--trigger", choices=("schedule", "workflow_dispatch"), default="schedule")
     args = parser.parse_args()
     receipt, success = run_collection(Path(args.root), args.stamp, args.run_id, args.run_attempt,
-                                      args.schedule, args.completed_at)
+                                      args.schedule, args.completed_at or None, trigger=args.trigger)
     print(f"collection {receipt['collection_id']} {receipt['outcome']} events={len(receipt['event_ids'])}")
     if not success:
         raise SystemExit(1)

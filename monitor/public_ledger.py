@@ -152,28 +152,33 @@ def slot_from_schedule(schedule):
     return SLOTS[schedule]
 
 
-def _receipt(stamp, run_id, run_attempt, schedule, outcome, completed_at, event_ids):
+def _receipt(stamp, run_id, run_attempt, schedule, outcome, completed_at, event_ids, trigger):
     if outcome not in {"completed", "failed"}:
         raise ValueError(f"unsupported collection outcome: {outcome!r}")
     if not isinstance(run_id, str) or not run_id.isdecimal() or not str(run_attempt).isdecimal():
         raise ValueError("invalid GitHub run identity")
     if not isinstance(completed_at, str) or not ISO_UTC_RE.fullmatch(completed_at):
         raise ValueError("invalid completion timestamp")
+    if trigger not in {"schedule", "workflow_dispatch"}:
+        raise ValueError("invalid collection trigger")
     stamp_ist = _stamp_to_ist(stamp)
     receipt = {"schema_version": SCHEMA_VERSION,
                "collection_id": f"github-actions:{run_id}:{run_attempt}",
                "collection_date_ist": stamp_ist.date().isoformat(),
                "scheduled_slot_ist": slot_from_schedule(schedule),
                "outcome": outcome, "completed_at_utc": completed_at,
+               "trigger": trigger,
+               "authoritative": trigger == "schedule",
                "event_ids": sorted(event_ids) if outcome == "completed" else []}
     validate_receipt(receipt)
     return receipt
 
 
-def write_collection(root, stamp, config, run_id, run_attempt, schedule, outcome, completed_at):
+def write_collection(root, stamp, config, run_id, run_attempt, schedule, outcome, completed_at,
+                     trigger="schedule"):
     events = discover_events(root, stamp, config) if outcome == "completed" else []
     receipt = _receipt(stamp, str(run_id), str(run_attempt), schedule, outcome, completed_at,
-                       [event["event_id"] for event in events])
+                       [event["event_id"] for event in events], trigger)
     events_dir = root / "ledger" / "events"
     for event in events:
         events_dir.mkdir(parents=True, exist_ok=True)
@@ -212,13 +217,17 @@ def validate_event(payload):
 
 
 def validate_receipt(receipt):
-    required = {"schema_version", "collection_id", "collection_date_ist", "scheduled_slot_ist", "outcome", "completed_at_utc", "event_ids"}
+    required = {"schema_version", "collection_id", "collection_date_ist", "scheduled_slot_ist", "outcome", "completed_at_utc", "trigger", "authoritative", "event_ids"}
     if set(receipt) != required or receipt["schema_version"] != SCHEMA_VERSION:
         raise ValueError("receipt schema keys are invalid")
     if receipt["scheduled_slot_ist"] not in set(SLOTS.values()) or receipt["outcome"] not in {"completed", "failed"}:
         raise ValueError("receipt schema values are invalid")
     if not ISO_UTC_RE.fullmatch(receipt["completed_at_utc"]):
         raise ValueError("receipt timestamp is invalid")
+    if receipt["trigger"] not in {"schedule", "workflow_dispatch"}:
+        raise ValueError("receipt trigger is invalid")
+    if receipt["authoritative"] is not (receipt["trigger"] == "schedule"):
+        raise ValueError("receipt authority is invalid")
     if not isinstance(receipt["event_ids"], list) or receipt["event_ids"] != sorted(set(receipt["event_ids"])):
         raise ValueError("receipt event ids are invalid")
 
@@ -233,11 +242,12 @@ def main():
     parser.add_argument("--schedule", required=True)
     parser.add_argument("--outcome", required=True, choices=("completed", "failed"))
     parser.add_argument("--completed-at", required=True)
+    parser.add_argument("--trigger", choices=("schedule", "workflow_dispatch"), default="schedule")
     args = parser.parse_args()
     root = Path(args.root)
     config_path = Path(args.config) if args.config else root / "monitor" / "config.json"
     receipt = write_collection(root, args.stamp, _json(config_path), args.run_id, args.run_attempt,
-                               args.schedule, args.outcome, args.completed_at)
+                               args.schedule, args.outcome, args.completed_at, args.trigger)
     print(f"collection {receipt['collection_id']} {receipt['outcome']} events={len(receipt['event_ids'])}")
 
 

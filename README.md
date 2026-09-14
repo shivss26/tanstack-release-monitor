@@ -22,17 +22,18 @@ run sends a single catch-up email covering every undelivered IST date.
 
 ## Safety and consistency properties
 
-- The collector performs detection in a disposable root. It writes the real
-  `state.json` only after all public events and a collection receipt validate.
-  A conversion failure produces only a failed receipt, so a later run can
-  recover the release instead of skipping it.
+- The collector performs detection in a disposable root. It installs the
+  validated public ledger bundle and real `state.json` recoverably; a failed
+  install restores the prior watermark, and a retry recognizes the same event
+  identity instead of skipping it.
 - GitHub Actions is the only writer to GitHub. ChatGPT Work has read-only
   GitHub access and never creates delivery commits or changes detector state.
 - Ledger events contain only validated source identity, release ID/tag/time,
   canonical GitHub release URL, package names, and retraction status. Release
   bodies, PR text, model output, provider metadata, and credentials are absent.
-- Delivery uses a canonical manifest and stable key. Work accepts prior delivery
-  only after an exact sent-folder match (sender, recipient, subject/key, and
+- Delivery uses a versioned canonical manifest and stable key. Work revisits
+  dates with a new receipt or event identity, then accepts prior delivery only
+  after an exact sent-folder match (sender, recipient, subject/key, and
   manifest footer). This is at-least-once delivery with duplicate suppression,
   not an unsupported exactly-once claim.
 

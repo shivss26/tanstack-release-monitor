@@ -32,8 +32,11 @@ upstream commits while refusing concurrent `state.json` or `ledger/` changes.
 Use only the agreed secondary test recipient. Keep the production Work schedule
 and production recipient disabled.
 
-1. Create the dedicated inbox and least-privilege key; record its effective
-   scopes and a denied forbidden operation outside this repository.
+1. Create the dedicated monitoring inbox and its Send Allow List. In the Work
+   task, verify the configured AgentMail plugin selects that inbox at the start
+   of the run and immediately before sending. This approved plugin workflow
+   does not use an API key; do not claim a broader connector is credential-
+   scoped merely because it selected the right sender.
 2. Give Work only GitHub read access. Verify it can read the two ledger
    directories but cannot create a branch, commit, or push.
 3. Verify whether the AgentMail send tool supports an idempotency key. If not,
@@ -42,7 +45,9 @@ and production recipient disabled.
    undelivered event, not only the latest slot, and has six health lines per
    date.
 5. Repeat the same run. Exact sent-folder matching must suppress a duplicate.
-   An inbound spoof or a partial subject match must not suppress delivery.
+   Then add a later receipt or event to an already emailed date and verify a
+   catch-up email is produced. An inbound spoof or a partial subject match must
+   not suppress delivery.
 6. Test complete quiet, failed, missing, and catch-up dates. Only a fully
    complete quiet date may contain `No changes on this day.`
 7. Run shadow collections spanning multiple scheduled slots before merge.
