@@ -14,8 +14,9 @@ delivery boundary. This workflow uses no API key or local `.env`.
 1. Capture `main` HEAD SHA as `current_sha` before reading ledger data. This is
    the immutable upper bound for the run.
 2. Find the newest successful sent AgentMail report from the dedicated sender
-   to the configured recipient whose **final line** is exactly
-   `<!-- tsrm-main-sha:SHA -->`. Its SHA is `previous_sha`. On the first
+   to the configured recipient whose authored body contains exactly one
+   standalone line of the form `<!-- tsrm-main-sha:SHA -->`. Provider-managed
+   footer text may follow that line. Its SHA is `previous_sha`. On the first
    production run, use the configured cutover SHA as `previous_sha`.
 3. Read only collection receipts and referenced event files introduced by
    `previous_sha..current_sha`, in Git commit order. Ignore manual-dispatch
@@ -27,11 +28,13 @@ delivery boundary. This workflow uses no API key or local `.env`.
    retraction flag. If every collection on a rendered date has no events, end
    that date block with exactly `No changes on this day.` Do not invent a
    missing Action run.
-5. Send one email only after the complete range is rendered. Its final line is
-   exactly `<!-- tsrm-main-sha:CURRENT_SHA -->`, replacing `CURRENT_SHA` with
-   `current_sha`. The sent copy is the completion marker. If send status is
-   ambiguous, search sent mail for that exact final line before retrying; if
-   unresolved, report `delivery_unknown` and do not send again in that run.
+5. Send one email only after the complete range is rendered. End the authored
+   body with the standalone line `<!-- tsrm-main-sha:CURRENT_SHA -->`, replacing
+   `CURRENT_SHA` with `current_sha`. A provider-managed footer may appear after
+   it in the sent copy. The sent copy is the completion marker. If send status
+   is ambiguous, search sent mail for that exact standalone marker before
+   retrying; if unresolved, report `delivery_unknown` and do not send again in
+   that run.
 
 Never commit, push, create branches, alter schedules, change credentials, or
 change recipients. If GitHub read access, dedicated inbox selection, or

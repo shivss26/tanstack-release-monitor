@@ -23,5 +23,6 @@ does not require a second delivery ledger or one branch per collection.
 - Runtime scripts use only the Python standard library and run as `python3`.
 - Old raw, enrichment, transcript, digest, and send artifacts are non-canonical
   and temporarily retained only under `obsolete/` for rollout reference.
-- Delivery advances only when the AgentMail sent copy contains the final SHA
-  marker. A failed or ambiguous delivery leaves the cursor unchanged.
+- Delivery advances only when the AgentMail sent copy contains exactly one
+  standalone SHA marker in the authored body. A provider footer may follow it;
+  a failed or ambiguous delivery leaves the cursor unchanged.
