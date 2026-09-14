@@ -59,6 +59,7 @@ repository.
 | `ledger/collections/` | One collection receipt per Action attempt. |
 | `docs/ledger-schema.md` | Versioned public event and collection receipt schema. |
 | `docs/chatgpt-work-task-template.md` | Read-only Work delivery instructions. |
+| `PERFORMANCE-REVIEW-HANDOFF.md` | Read-only checklist for reviewing the first production runs. |
 | `obsolete/` | Temporary, non-canonical backup of the retired pipeline. |
 
 ## Verification
