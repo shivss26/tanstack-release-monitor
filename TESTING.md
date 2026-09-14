@@ -42,14 +42,13 @@ and production recipient disabled.
 3. Verify whether the AgentMail send tool supports an idempotency key. If not,
    exercise search-before-send and an ambiguous-send delayed-sent-folder case.
 4. Seed multiple collection slots and events. Verify one email includes every
-   undelivered event, not only the latest slot, and has six health lines per
-   date.
-5. Repeat the same run. Exact sent-folder matching must suppress a duplicate.
-   Then add a later receipt or event to an already emailed date and verify a
-   catch-up email is produced. An inbound spoof or a partial subject match must
-   not suppress delivery.
-6. Test complete quiet, failed, missing, and catch-up dates. Only a fully
-   complete quiet date may contain `No changes on this day.`
+   authoritative receipt and referenced event in the `previous_sha..current_sha`
+   range, not only the latest slot.
+5. Repeat the same run. The exact sent marker must suppress a duplicate. Then
+   add another Action commit and verify the next run processes only the new
+   Git range. An ambiguous send must not advance the SHA cursor.
+6. Test quiet and catch-up dates. A date whose actual collected receipts all
+   contain no events may contain `No changes on this day.`
 7. Run shadow collections spanning multiple scheduled slots before merge.
 
 ## Production enablement

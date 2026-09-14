@@ -107,7 +107,7 @@ def _completed_now():
 
 
 def run_collection(root, stamp, run_id, run_attempt, schedule, completed_at=None,
-                   detector=detect_in_staging, trigger="schedule"):
+                   detector=detect_in_staging, trigger="schedule", dry_run=False):
     """Run and publish one collection. Returns ``(receipt, success)``.
 
     The canonical event/receipt bundle and watermark install together.  Failed
@@ -120,6 +120,8 @@ def run_collection(root, stamp, run_id, run_attempt, schedule, completed_at=None
             detector(root, candidate, stamp)
             receipt = public_ledger.write_collection(candidate, stamp, config, run_id, run_attempt,
                                                       schedule, "completed", completed_at or _completed_now(), trigger)
+            if dry_run:
+                return receipt, True
             _install_bundle(candidate, root)
             return receipt, True
     except Exception as exc:
@@ -139,9 +141,11 @@ def main():
     parser.add_argument("--schedule", required=True)
     parser.add_argument("--completed-at", default="")
     parser.add_argument("--trigger", choices=("schedule", "workflow_dispatch"), default="schedule")
+    parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     receipt, success = run_collection(Path(args.root), args.stamp, args.run_id, args.run_attempt,
-                                      args.schedule, args.completed_at or None, trigger=args.trigger)
+                                      args.schedule, args.completed_at or None, trigger=args.trigger,
+                                      dry_run=args.dry_run)
     print(f"collection {receipt['collection_id']} {receipt['outcome']} events={len(receipt['event_ids'])}")
     if not success:
         raise SystemExit(1)

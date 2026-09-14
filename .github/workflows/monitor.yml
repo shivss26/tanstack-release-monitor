@@ -41,6 +41,15 @@ jobs:
           echo "Run manual collector checks from a staging branch, never main."
           exit 1
 
+      - name: Choose publication mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "args=--dry-run" >> "$GITHUB_OUTPUT"
+          else
+            echo "args=" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Establish collection identity
         id: collection
         run: echo "stamp=$(TZ=Asia/Kolkata date +%Y-%m-%d-%H%M)" >> "$GITHUB_OUTPUT"
@@ -53,15 +62,17 @@ jobs:
           SCHEDULE_CRON: ${{ github.event.schedule || inputs.schedule }}
           COLLECTION_TRIGGER: ${{ github.event_name }}
         run: |
+          EXTRA_ARGS="${{ steps.mode.outputs.args }}"
           python3 monitor/collect.py \
             --stamp "${{ steps.collection.outputs.stamp }}" \
             --run-id "${{ github.run_id }}" \
             --run-attempt "${{ github.run_attempt }}" \
             --schedule "$SCHEDULE_CRON" \
-            --trigger "$COLLECTION_TRIGGER"
+            --trigger "$COLLECTION_TRIGGER" \
+            $EXTRA_ARGS
 
       - name: Commit public collection bundle
-        if: always()
+        if: always() && github.event_name == 'schedule'
         env:
           TARGET_BRANCH: ${{ github.ref_name }}
         run: |

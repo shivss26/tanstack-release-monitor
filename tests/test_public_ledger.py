@@ -9,7 +9,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "monitor"))
 
 import collect  # noqa: E402
-import delivery_contract  # noqa: E402
 import public_ledger  # noqa: E402
 import publish  # noqa: E402
 
@@ -38,12 +37,6 @@ class LedgerTests(unittest.TestCase):
             "published_at": "2026-09-14T14:30:00Z",
             "html_url": "https://github.com/TanStack/query/releases/tag/release-2026-09-14-1430",
             "body": body, "author": {"login": "untrusted"}}))
-
-    @staticmethod
-    def slot_outcomes(date="2026-09-14", outcome="completed", receipt_prefix="github-actions:1"):
-        return [{"date": date, "slot": slot, "outcome": outcome,
-                 "receipt_id": f"{receipt_prefix}:{index}"}
-                for index, slot in enumerate(delivery_contract.SLOTS, start=1)]
 
     def test_metadata_only_excludes_hostile_release_prose(self):
         root = self.root()
@@ -181,27 +174,21 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual({"query": {"last_seen_id": 42}}, json.loads((root / "state.json").read_text()))
         self.assertEqual(1, len(list((root / "ledger" / "events").glob("*.json"))))
 
-    def test_manifest_golden_vector_and_exact_sent_matching(self):
-        slots = self.slot_outcomes()
-        manifest = delivery_contract.manifest(["2026-09-14"], slots, ["release:query:42"], "tanstack-monitor-recipient-v1")
-        key = delivery_contract.delivery_key(manifest)
-        self.assertEqual("tsrm-v2-a01bea1bf1793df051f317b1a202d7b67f16f8c79bea14f34c5c1080afe16649", key)
-        message = {"location": "sent", "from": "monitor@example.test", "to": ["target@example.test"],
-                   "subject": key, "body": "Summary\n" + delivery_contract.footer(manifest)}
-        self.assertTrue(delivery_contract.exact_sent_match(message, "monitor@example.test", "target@example.test", key, manifest))
-        message["location"] = "inbox"
-        self.assertFalse(delivery_contract.exact_sent_match(message, "monitor@example.test", "target@example.test", key, manifest))
+    def test_manual_dry_run_never_changes_the_branch_watermark_or_ledger(self):
+        root = self.root()
+        before = (root / "state.json").read_text()
 
-    def test_noncanonical_footer_and_duplicate_manifest_inputs_rejected(self):
-        with self.assertRaises(ValueError):
-            delivery_contract.manifest(["2026-09-14", "2026-09-14"], [], [], "alias")
-        with self.assertRaisesRegex(ValueError, "exactly six"):
-            delivery_contract.manifest(["2026-09-14"], [], [], "alias")
-        slots = self.slot_outcomes()
-        slots[0]["slot"] = "20:00"
-        with self.assertRaisesRegex(ValueError, "ordered"):
-            delivery_contract.manifest(["2026-09-14"], slots, [], "alias")
-        self.assertIsNone(delivery_contract.parse_footer("<!-- tsrm-manifest-v2:eyJ4IjoxfQ -->"))
+        def detector(_root, candidate, _stamp):
+            (candidate / "state.json").write_text(json.dumps({"query": {"last_seen_id": 42}}))
+            self.raw(candidate)
+
+        receipt, success = collect.run_collection(root, self.stamp, "106", "1", "30 14 * * *",
+                                                  "2026-09-14T14:38:00Z", detector,
+                                                  trigger="workflow_dispatch", dry_run=True)
+        self.assertTrue(success)
+        self.assertFalse(receipt["authoritative"])
+        self.assertEqual(before, (root / "state.json").read_text())
+        self.assertFalse((root / "ledger").exists())
 
     def test_push_retry_preserves_unrelated_upstream_commit(self):
         with tempfile.TemporaryDirectory() as temp:

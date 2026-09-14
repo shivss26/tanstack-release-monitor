@@ -31,11 +31,10 @@ run sends a single catch-up email covering every undelivered IST date.
 - Ledger events contain only validated source identity, release ID/tag/time,
   canonical GitHub release URL, package names, and retraction status. Release
   bodies, PR text, model output, provider metadata, and credentials are absent.
-- Delivery uses a versioned canonical manifest and stable key. Work revisits
-  dates with a new receipt or event identity, then accepts prior delivery only
-  after an exact sent-folder match (sender, recipient, subject/key, and
-  manifest footer). This is at-least-once delivery with duplicate suppression,
-  not an unsupported exactly-once claim.
+- Delivery uses the sent AgentMail report as a single Git commit cursor. Work
+  reads receipts/events introduced after the previous sent report's `main` SHA
+  through a captured current `main` SHA. A failed or absent Work run therefore
+  catches up naturally without a second delivery ledger.
 
 ## Public-repository boundary
 
@@ -52,7 +51,6 @@ API keys, delivery IDs, or private data in this repository.
 | `monitor/collect.py` | Transaction boundary between candidate detection and canonical state/ledger. |
 | `monitor/public_ledger.py` | Strict metadata-only event and receipt schema. |
 | `monitor/publish.py` | Bounded push retry that fails closed on state/ledger overlap. |
-| `monitor/delivery_contract.py` | Canonical manifest, key, footer, and sent-record matching contract. |
 | `ledger/events/` | Validated release and retraction events. |
 | `ledger/collections/` | One collection receipt per Action attempt. |
 | `docs/chatgpt-work-task-template.md` | Read-only Work delivery instructions. |
