@@ -1,6 +1,6 @@
 {
   "router": {
-    "last_seen_id": 387906563,
+    "last_seen_id": 388287490,
     "yank_watch": {
       "372449496": {
         "tag": "release-2026-08-18-1518",
@@ -33,6 +33,10 @@
       "387906563": {
         "tag": "release-2026-09-13-1319",
         "published_at": "2026-09-13T13:19:16Z"
+      },
+      "388287490": {
+        "tag": "release-2026-09-14-0945",
+        "published_at": "2026-09-14T09:45:17Z"
       }
     }
   },
@@ -121,7 +125,7 @@
     "last_seen_id": 382202366
   },
   "virtual": {
-    "last_seen_id": 387151285
+    "last_seen_id": 388307563
   },
   "store": {
     "last_seen_id": 365735483
