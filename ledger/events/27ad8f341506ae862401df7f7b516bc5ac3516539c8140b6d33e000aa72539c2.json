@@ -1,0 +1,87 @@
+{
+  "detected_at_ist": "2026-09-17T23:55:00+05:30",
+  "event_id": "release-batch:ai:390899560,390899586,390899614,390899671,390899761,390899790,390899818,390899912,390899939,390899960,390899990",
+  "filtered_packages": [
+    "@tanstack/ai-angular@0.11.0",
+    "@tanstack/ai-preact@0.18.0",
+    "@tanstack/ai-solid-ui@0.8.4",
+    "@tanstack/ai-solid@0.24.0",
+    "@tanstack/ai-svelte@0.23.0",
+    "@tanstack/ai-vue-ui@0.3.4",
+    "@tanstack/ai-vue@0.24.0"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 390899560,
+      "published_at": "2026-09-17T16:57:07Z",
+      "tag": "@tanstack/ai-octane@0.5.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-octane%400.5.0"
+    },
+    {
+      "id": 390899586,
+      "published_at": "2026-09-17T16:57:10Z",
+      "tag": "@tanstack/ai-vercel-gateway@0.2.12",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.12"
+    },
+    {
+      "id": 390899614,
+      "published_at": "2026-09-17T16:57:13Z",
+      "tag": "@tanstack/ai-mcp@0.4.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.4.0"
+    },
+    {
+      "id": 390899671,
+      "published_at": "2026-09-17T16:57:19Z",
+      "tag": "@tanstack/ai-client@0.32.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.32.1"
+    },
+    {
+      "id": 390899761,
+      "published_at": "2026-09-17T16:57:28Z",
+      "tag": "@tanstack/ai-gemini@0.30.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.30.0"
+    },
+    {
+      "id": 390899790,
+      "published_at": "2026-09-17T16:57:31Z",
+      "tag": "@tanstack/ai-openrouter@0.19.12",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.12"
+    },
+    {
+      "id": 390899818,
+      "published_at": "2026-09-17T16:57:34Z",
+      "tag": "@tanstack/ai-react-ui@0.9.4",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.9.4"
+    },
+    {
+      "id": 390899912,
+      "published_at": "2026-09-17T16:57:43Z",
+      "tag": "@tanstack/ai-vertex@0.2.12",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.12"
+    },
+    {
+      "id": 390899939,
+      "published_at": "2026-09-17T16:57:46Z",
+      "tag": "@tanstack/ai-remix@0.4.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-remix%400.4.0"
+    },
+    {
+      "id": 390899960,
+      "published_at": "2026-09-17T16:57:49Z",
+      "tag": "@tanstack/ai-sandbox-cloudflare@0.4.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.4.0"
+    },
+    {
+      "id": 390899990,
+      "published_at": "2026-09-17T16:57:52Z",
+      "tag": "@tanstack/ai-react@0.27.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.27.0"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
