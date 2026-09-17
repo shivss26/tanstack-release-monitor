@@ -1,0 +1,279 @@
+{
+  "detected_at_ist": "2026-09-17T17:29:00+05:30",
+  "event_id": "release-batch:ai:390600355,390600389,390600448,390600513,390600542,390600572,390600593,390600650,390600708,390600746,390600781,390600812,390600838,390600876,390600906,390600937,390600975,390601011,390601043,390601080,390601111,390601145,390601183,390601222,390601261,390601292,390601325,390601364,390601398,390601435,390601483,390601520,390601593,390601666,390601702,390601755,390601792,390601854,390601900,390601936,390601971,390602002,390602025",
+  "filtered_packages": [
+    "@tanstack/ai-angular@0.10.0",
+    "@tanstack/ai-preact@0.17.0",
+    "@tanstack/ai-solid-ui@0.8.3",
+    "@tanstack/ai-solid@0.23.0",
+    "@tanstack/ai-svelte@0.22.0",
+    "@tanstack/ai-vue-ui@0.3.3",
+    "@tanstack/ai-vue@0.23.0"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 390600355,
+      "published_at": "2026-09-17T09:58:39Z",
+      "tag": "@tanstack/ai-code-mode@0.4.10",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%400.4.10"
+    },
+    {
+      "id": 390600389,
+      "published_at": "2026-09-17T09:58:41Z",
+      "tag": "@tanstack/ai-octane@0.4.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-octane%400.4.0"
+    },
+    {
+      "id": 390600448,
+      "published_at": "2026-09-17T09:58:47Z",
+      "tag": "@tanstack/ai-memory@0.2.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-memory%400.2.0"
+    },
+    {
+      "id": 390600513,
+      "published_at": "2026-09-17T09:58:53Z",
+      "tag": "@tanstack/ai-anthropic@0.18.7",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.18.7"
+    },
+    {
+      "id": 390600542,
+      "published_at": "2026-09-17T09:58:56Z",
+      "tag": "@tanstack/ai-byteplus@0.3.7",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%400.3.7"
+    },
+    {
+      "id": 390600572,
+      "published_at": "2026-09-17T09:58:59Z",
+      "tag": "@tanstack/ai-mistral@0.6.3",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mistral%400.6.3"
+    },
+    {
+      "id": 390600593,
+      "published_at": "2026-09-17T09:59:02Z",
+      "tag": "@tanstack/ai-openai@0.22.8",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%400.22.8"
+    },
+    {
+      "id": 390600650,
+      "published_at": "2026-09-17T09:59:08Z",
+      "tag": "@tanstack/ai-grok-build@0.5.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok-build%400.5.6"
+    },
+    {
+      "id": 390600708,
+      "published_at": "2026-09-17T09:59:14Z",
+      "tag": "@tanstack/ai-cohere@0.4.3",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%400.4.3"
+    },
+    {
+      "id": 390600746,
+      "published_at": "2026-09-17T09:59:17Z",
+      "tag": "@tanstack/ai-skills@0.1.4",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-skills%400.1.4"
+    },
+    {
+      "id": 390600781,
+      "published_at": "2026-09-17T09:59:20Z",
+      "tag": "@tanstack/ai-mcp@0.3.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%400.3.11"
+    },
+    {
+      "id": 390600812,
+      "published_at": "2026-09-17T09:59:23Z",
+      "tag": "@tanstack/ai-persistence@0.6.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%400.6.0"
+    },
+    {
+      "id": 390600838,
+      "published_at": "2026-09-17T09:59:26Z",
+      "tag": "@tanstack/ai@0.55.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%400.55.0"
+    },
+    {
+      "id": 390600876,
+      "published_at": "2026-09-17T09:59:29Z",
+      "tag": "@tanstack/ai-durable-stream@0.1.12",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.12"
+    },
+    {
+      "id": 390600906,
+      "published_at": "2026-09-17T09:59:32Z",
+      "tag": "@tanstack/ai-react-ui@0.9.3",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react-ui%400.9.3"
+    },
+    {
+      "id": 390600937,
+      "published_at": "2026-09-17T09:59:35Z",
+      "tag": "@tanstack/ai-elevenlabs@0.4.4",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-elevenlabs%400.4.4"
+    },
+    {
+      "id": 390600975,
+      "published_at": "2026-09-17T09:59:38Z",
+      "tag": "@tanstack/ai-claude-code@0.6.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-claude-code%400.6.6"
+    },
+    {
+      "id": 390601011,
+      "published_at": "2026-09-17T09:59:41Z",
+      "tag": "@tanstack/ai-react@0.26.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%400.26.0"
+    },
+    {
+      "id": 390601043,
+      "published_at": "2026-09-17T09:59:44Z",
+      "tag": "@tanstack/ai-sandbox@0.5.9",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox%400.5.9"
+    },
+    {
+      "id": 390601080,
+      "published_at": "2026-09-17T09:59:47Z",
+      "tag": "@tanstack/ai-compaction@0.1.3",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-compaction%400.1.3"
+    },
+    {
+      "id": 390601111,
+      "published_at": "2026-09-17T09:59:50Z",
+      "tag": "@tanstack/ai-grok@0.18.7",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.18.7"
+    },
+    {
+      "id": 390601145,
+      "published_at": "2026-09-17T09:59:53Z",
+      "tag": "@tanstack/ai-client@0.32.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%400.32.0"
+    },
+    {
+      "id": 390601183,
+      "published_at": "2026-09-17T09:59:56Z",
+      "tag": "@tanstack/openai-base@0.10.12",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%400.10.12"
+    },
+    {
+      "id": 390601222,
+      "published_at": "2026-09-17T09:59:59Z",
+      "tag": "@tanstack/ai-fal@0.14.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.14.1"
+    },
+    {
+      "id": 390601261,
+      "published_at": "2026-09-17T10:00:02Z",
+      "tag": "@tanstack/ai-cloudflare@0.1.2",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cloudflare%400.1.2"
+    },
+    {
+      "id": 390601292,
+      "published_at": "2026-09-17T10:00:05Z",
+      "tag": "@tanstack/ai-code-mode-snippets@0.4.10",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode-snippets%400.4.10"
+    },
+    {
+      "id": 390601325,
+      "published_at": "2026-09-17T10:00:08Z",
+      "tag": "@tanstack/ai-perplexity@0.2.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-perplexity%400.2.11"
+    },
+    {
+      "id": 390601364,
+      "published_at": "2026-09-17T10:00:11Z",
+      "tag": "@tanstack/ai-openrouter@0.19.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.11"
+    },
+    {
+      "id": 390601398,
+      "published_at": "2026-09-17T10:00:14Z",
+      "tag": "@tanstack/ai-vertex@0.2.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.11"
+    },
+    {
+      "id": 390601435,
+      "published_at": "2026-09-17T10:00:17Z",
+      "tag": "@tanstack/ai-codex@0.5.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-codex%400.5.6"
+    },
+    {
+      "id": 390601483,
+      "published_at": "2026-09-17T10:00:20Z",
+      "tag": "@tanstack/ai-remix@0.3.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-remix%400.3.0"
+    },
+    {
+      "id": 390601520,
+      "published_at": "2026-09-17T10:00:23Z",
+      "tag": "@tanstack/ai-llmgateway@0.1.8",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-llmgateway%400.1.8"
+    },
+    {
+      "id": 390601593,
+      "published_at": "2026-09-17T10:00:29Z",
+      "tag": "@tanstack/ai-bedrock@0.3.9",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-bedrock%400.3.9"
+    },
+    {
+      "id": 390601666,
+      "published_at": "2026-09-17T10:00:35Z",
+      "tag": "@tanstack/ai-sandbox-cloudflare@0.3.14",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.3.14"
+    },
+    {
+      "id": 390601702,
+      "published_at": "2026-09-17T10:00:38Z",
+      "tag": "@tanstack/ai-gemini@0.29.4",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.29.4"
+    },
+    {
+      "id": 390601755,
+      "published_at": "2026-09-17T10:00:41Z",
+      "tag": "@tanstack/ai-vercel-gateway@0.2.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.11"
+    },
+    {
+      "id": 390601792,
+      "published_at": "2026-09-17T10:00:44Z",
+      "tag": "@tanstack/ai-ollama@0.11.3",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%400.11.3"
+    },
+    {
+      "id": 390601854,
+      "published_at": "2026-09-17T10:00:50Z",
+      "tag": "@tanstack/ai-devtools-core@0.5.14",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%400.5.14"
+    },
+    {
+      "id": 390601900,
+      "published_at": "2026-09-17T10:00:53Z",
+      "tag": "@tanstack/ai-groq@0.7.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-groq%400.7.6"
+    },
+    {
+      "id": 390601936,
+      "published_at": "2026-09-17T10:00:56Z",
+      "tag": "@tanstack/ai-lovable@0.2.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-lovable%400.2.6"
+    },
+    {
+      "id": 390601971,
+      "published_at": "2026-09-17T10:00:59Z",
+      "tag": "@tanstack/ai-reactor@0.2.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-reactor%400.2.1"
+    },
+    {
+      "id": 390602002,
+      "published_at": "2026-09-17T10:01:02Z",
+      "tag": "@tanstack/ai-acp@0.3.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-acp%400.3.11"
+    },
+    {
+      "id": 390602025,
+      "published_at": "2026-09-17T10:01:05Z",
+      "tag": "@tanstack/ai-opencode@0.4.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-opencode%400.4.6"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
