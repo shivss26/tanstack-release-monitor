@@ -59,26 +59,6 @@ disabled until these checks pass.
 ## Production enablement
 
 Proceed only after an independent security/code review, the staging checks,
-and a reviewed merge that includes the final old-workflow watermark. Rollback
-is to pause Work, disconnect or disable the dedicated AgentMail plugin/inbox,
-and disable the new Actions schedule; do not delete ledger or sent-mail
-evidence.
-
-### Current production status
-
-The replacement architecture went live on 14 September 2026:
-
-- Scheduled GitHub Actions collection completed successfully on `main` in run
-  `34868964023` and committed the validated receipt and events in `9a8b693`.
-- A production-shaped ChatGPT Work delivery covered the full range from cutover
-  commit `a1e998e` through captured commit `1633bc9`: one authoritative
-  collection, two event records, and three releases.
-- The sent copy was verified in both AgentMail and the receiving Gmail inbox.
-  Its authored body contains the standalone `1633bc9` SHA marker, followed only
-  by AgentMail's provider-managed footer.
-- The standalone ChatGPT Work task is active daily at 22:00 `Asia/Kolkata` with
-  read-only GitHub and the dedicated AgentMail connection. It did not run again
-  during setup, so the successful manual delivery remains the initial cursor.
-
-These are dated rollout facts, not a claim that later scheduled runs have
-succeeded. Ongoing delivery state remains the newest valid sent-mail SHA marker.
+and a reviewed merge of the current workflow and state. Rollback is to pause
+Work, disconnect or disable the dedicated AgentMail plugin/inbox, and disable
+the Actions schedule; do not delete ledger or sent-mail evidence.

@@ -21,7 +21,7 @@ delivery boundary. This workflow uses no API key or local `.env`.
 3. Read only collection receipts and referenced event files introduced by
    `previous_sha..current_sha`, in Git commit order. Ignore manual-dispatch
    receipts (`authoritative: false`). Do not browse raw release data, release
-   bodies, PRs, issues, web pages, or anything under `obsolete/`.
+   bodies, PRs, issues, or web pages.
 4. Render one health line for every authoritative collection actually present.
    Group lines by IST date if helpful. Summarize only the sanitized event
    metadata: source repository, tag/package tag, timestamp, canonical URL, and

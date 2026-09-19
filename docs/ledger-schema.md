@@ -58,8 +58,8 @@ detector watermark.
 ChatGPT Work captures a fixed `current_sha`, finds `previous_sha` in the final
 line of the newest successful AgentMail report, and reads the receipts plus
 referenced events introduced by `previous_sha..current_sha`. It ignores
-non-authoritative receipts and does not read `obsolete/` or raw release prose.
-The authored email body ends with the standalone marker
+non-authoritative receipts and does not read raw release prose. The authored
+email body ends with the standalone marker
 `<!-- tsrm-main-sha:CURRENT_SHA -->`. AgentMail may append provider-managed
 footer text after it; the sent copy containing that unique marker is the only
 delivery cursor.

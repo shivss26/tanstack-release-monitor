@@ -40,12 +40,8 @@ Action runs.
 
 ## Public-repository boundary
 
-Action commits stage only `state.json` and `ledger/`. The previous
-Claude-and-Resend pipeline and its historical outputs are quarantined under
-`obsolete/` as a temporary rollback reference while the replacement operates
-in production. Nothing under `obsolete/` is runtime input or canonical state.
-Never place mailbox addresses, API keys, delivery IDs, or private data in this
-repository.
+Action commits stage only `state.json` and `ledger/`. Never place mailbox
+addresses, API keys, delivery IDs, or private data in this repository.
 
 ## Layout
 
@@ -59,8 +55,7 @@ repository.
 | `ledger/collections/` | One collection receipt per Action attempt. |
 | `docs/ledger-schema.md` | Versioned public event and collection receipt schema. |
 | `docs/chatgpt-work-task-template.md` | Read-only Work delivery instructions. |
-| `PERFORMANCE-REVIEW-HANDOFF.md` | Read-only checklist for reviewing the first production runs. |
-| `obsolete/` | Temporary, non-canonical backup of the retired pipeline. |
+| `docs/adr/0001-public-ledger-and-daily-work-delivery.md` | Architecture decision and operational consequences. |
 
 ## Verification
 
