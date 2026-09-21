@@ -1,0 +1,18 @@
+{
+  "detected_at_ist": "2026-09-22T03:34:00+05:30",
+  "event_id": "release:router:393274472",
+  "kind": "release",
+  "releases": [
+    {
+      "id": 393274472,
+      "published_at": "2026-09-21T20:24:36Z",
+      "tag": "release-2026-09-21-2024",
+      "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-21-2024"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "router",
+    "repository": "TanStack/router"
+  }
+}
