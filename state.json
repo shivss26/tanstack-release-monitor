@@ -43,10 +43,6 @@
   "query": {
     "last_seen_id": 392868682,
     "yank_watch": {
-      "375012242": {
-        "tag": "release-2026-08-22-1856",
-        "published_at": "2026-08-22T18:56:36Z"
-      },
       "375185951": {
         "tag": "release-2026-08-23-1100",
         "published_at": "2026-08-23T11:00:47Z"
@@ -138,7 +134,7 @@
     "last_seen_id": 388772790
   },
   "ai": {
-    "last_seen_id": 392619114
+    "last_seen_id": 393221311
   },
   "virtual": {
     "last_seen_id": 388307563
