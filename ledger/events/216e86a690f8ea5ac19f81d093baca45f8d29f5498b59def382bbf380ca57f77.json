@@ -1,0 +1,42 @@
+{
+  "detected_at_ist": "2026-09-22T17:29:00+05:30",
+  "event_id": "release-batch:ai:393622685,393622721,393622759,393622795,393622830",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 393622685,
+      "published_at": "2026-09-22T10:06:46Z",
+      "tag": "@tanstack/ai-durable-stream@0.1.16",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-durable-stream%400.1.16"
+    },
+    {
+      "id": 393622721,
+      "published_at": "2026-09-22T10:06:49Z",
+      "tag": "@tanstack/ai-vertex@0.2.16",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vertex%400.2.16"
+    },
+    {
+      "id": 393622759,
+      "published_at": "2026-09-22T10:06:52Z",
+      "tag": "@tanstack/ai-gemini@0.32.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%400.32.0"
+    },
+    {
+      "id": 393622795,
+      "published_at": "2026-09-22T10:06:55Z",
+      "tag": "@tanstack/ai-fal@0.14.5",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%400.14.5"
+    },
+    {
+      "id": 393622830,
+      "published_at": "2026-09-22T10:06:58Z",
+      "tag": "@tanstack/ai-anthropic@0.18.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-anthropic%400.18.11"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
