@@ -1,0 +1,30 @@
+{
+  "detected_at_ist": "2026-09-24T00:00:00+05:30",
+  "event_id": "release-batch:ai:394847452,394847493,394847544",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 394847452,
+      "published_at": "2026-09-23T16:24:09Z",
+      "tag": "@tanstack/ai-grok@0.19.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%400.19.0"
+    },
+    {
+      "id": 394847493,
+      "published_at": "2026-09-23T16:24:12Z",
+      "tag": "@tanstack/ai-vercel-gateway@0.2.17",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%400.2.17"
+    },
+    {
+      "id": 394847544,
+      "published_at": "2026-09-23T16:24:15Z",
+      "tag": "@tanstack/ai-openrouter@0.19.17",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%400.19.17"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
