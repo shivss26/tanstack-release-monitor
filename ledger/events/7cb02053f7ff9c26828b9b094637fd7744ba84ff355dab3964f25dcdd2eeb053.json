@@ -1,0 +1,54 @@
+{
+  "detected_at_ist": "2026-09-25T13:29:00+05:30",
+  "event_id": "release-batch:ai:396364998,396365029,396365060,396365092,396365119,396365148,396365172",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 396364998,
+      "published_at": "2026-09-25T06:32:29Z",
+      "tag": "@tanstack/ai-sandbox-sprites@0.2.5",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-sprites%400.2.5"
+    },
+    {
+      "id": 396365029,
+      "published_at": "2026-09-25T06:32:31Z",
+      "tag": "@tanstack/ai-sandbox-blaxel@0.3.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-blaxel%400.3.1"
+    },
+    {
+      "id": 396365060,
+      "published_at": "2026-09-25T06:32:34Z",
+      "tag": "@tanstack/ai-skills@0.1.11",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-skills%400.1.11"
+    },
+    {
+      "id": 396365092,
+      "published_at": "2026-09-25T06:32:37Z",
+      "tag": "@tanstack/ai-sandbox-local-process@0.2.6",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-local-process%400.2.6"
+    },
+    {
+      "id": 396365119,
+      "published_at": "2026-09-25T06:32:40Z",
+      "tag": "@tanstack/ai-sandbox-vercel@0.2.5",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-vercel%400.2.5"
+    },
+    {
+      "id": 396365148,
+      "published_at": "2026-09-25T06:32:43Z",
+      "tag": "@tanstack/ai-sandbox-daytona@0.3.4",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-daytona%400.3.4"
+    },
+    {
+      "id": 396365172,
+      "published_at": "2026-09-25T06:32:47Z",
+      "tag": "@tanstack/ai-sandbox-cloudflare@0.4.7",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-sandbox-cloudflare%400.4.7"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
