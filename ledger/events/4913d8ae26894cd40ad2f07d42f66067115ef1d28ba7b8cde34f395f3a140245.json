@@ -1,0 +1,49 @@
+{
+  "detected_at_ist": "2026-09-28T23:44:00+05:30",
+  "event_id": "release-batch:pacer:398448607,398448643,398448738,398448818,398448913",
+  "filtered_packages": [
+    "@tanstack/angular-pacer@0.25.0",
+    "@tanstack/preact-pacer-devtools@0.8.0",
+    "@tanstack/preact-pacer@0.24.0",
+    "@tanstack/solid-pacer-devtools@0.8.0",
+    "@tanstack/solid-pacer@0.23.0"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 398448607,
+      "published_at": "2026-09-28T16:57:05Z",
+      "tag": "@tanstack/pacer@0.23.0",
+      "url": "https://github.com/TanStack/pacer/releases/tag/%40tanstack/pacer%400.23.0"
+    },
+    {
+      "id": 398448643,
+      "published_at": "2026-09-28T16:57:08Z",
+      "tag": "@tanstack/pacer-lite@0.3.0",
+      "url": "https://github.com/TanStack/pacer/releases/tag/%40tanstack/pacer-lite%400.3.0"
+    },
+    {
+      "id": 398448738,
+      "published_at": "2026-09-28T16:57:14Z",
+      "tag": "@tanstack/pacer-devtools@1.5.0",
+      "url": "https://github.com/TanStack/pacer/releases/tag/%40tanstack/pacer-devtools%401.5.0"
+    },
+    {
+      "id": 398448818,
+      "published_at": "2026-09-28T16:57:20Z",
+      "tag": "@tanstack/react-pacer@0.24.0",
+      "url": "https://github.com/TanStack/pacer/releases/tag/%40tanstack/react-pacer%400.24.0"
+    },
+    {
+      "id": 398448913,
+      "published_at": "2026-09-28T16:57:29Z",
+      "tag": "@tanstack/react-pacer-devtools@0.9.0",
+      "url": "https://github.com/TanStack/pacer/releases/tag/%40tanstack/react-pacer-devtools%400.9.0"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "pacer",
+    "repository": "TanStack/pacer"
+  }
+}
