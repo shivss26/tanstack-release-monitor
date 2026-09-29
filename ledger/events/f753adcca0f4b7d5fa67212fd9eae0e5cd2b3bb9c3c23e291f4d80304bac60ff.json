@@ -1,0 +1,38 @@
+{
+  "detected_at_ist": "2026-09-29T14:14:00+05:30",
+  "event_id": "release-batch:store:398929929,398929975,398930090",
+  "filtered_packages": [
+    "@tanstack/angular-store@0.11.2",
+    "@tanstack/lit-store@0.14.2",
+    "@tanstack/preact-store@0.13.4",
+    "@tanstack/solid-store@0.11.2",
+    "@tanstack/svelte-store@0.12.2",
+    "@tanstack/vue-store@0.11.2"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 398929929,
+      "published_at": "2026-09-29T07:59:05Z",
+      "tag": "@tanstack/react-store@0.11.2",
+      "url": "https://github.com/TanStack/store/releases/tag/%40tanstack/react-store%400.11.2"
+    },
+    {
+      "id": 398929975,
+      "published_at": "2026-09-29T07:59:08Z",
+      "tag": "@tanstack/octane-store@0.12.3",
+      "url": "https://github.com/TanStack/store/releases/tag/%40tanstack/octane-store%400.12.3"
+    },
+    {
+      "id": 398930090,
+      "published_at": "2026-09-29T07:59:17Z",
+      "tag": "@tanstack/store@0.11.2",
+      "url": "https://github.com/TanStack/store/releases/tag/%40tanstack/store%400.11.2"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "store",
+    "repository": "TanStack/store"
+  }
+}

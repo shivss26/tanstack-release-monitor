@@ -93,10 +93,6 @@
   "intent": {
     "last_seen_id": 383129362,
     "yank_watch": {
-      "379191361": {
-        "tag": "v0.3.8",
-        "published_at": "2026-08-30T05:36:40Z"
-      },
       "383129362": {
         "tag": "v0.4.0",
         "published_at": "2026-09-05T04:11:23Z"
@@ -116,7 +112,7 @@
     "last_seen_id": 388307563
   },
   "store": {
-    "last_seen_id": 395792090
+    "last_seen_id": 398930121
   },
   "pacer": {
     "last_seen_id": 398448958
