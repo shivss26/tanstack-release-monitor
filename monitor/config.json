@@ -2,7 +2,7 @@
   "sources": [
     { "label": "router", "owner": "TanStack", "repo": "router", "libraries": ["router", "start"] },
     { "label": "query",  "owner": "TanStack", "repo": "query",  "libraries": ["query"] },
-    { "label": "create-tsrouter-app", "owner": "TanStack", "repo": "create-tsrouter-app", "libraries": ["cli", "router", "start"] },
+    { "label": "create-tsrouter-app", "owner": "TanStack", "repo": "cli", "libraries": ["cli", "router", "start"] },
     { "label": "table",  "owner": "TanStack", "repo": "table",  "libraries": ["table"],
       "style": "rollup", "tag_re": "^v\\d+\\.\\d+\\.\\d+$" },
     { "label": "intent", "owner": "TanStack", "repo": "intent", "libraries": ["intent"],
