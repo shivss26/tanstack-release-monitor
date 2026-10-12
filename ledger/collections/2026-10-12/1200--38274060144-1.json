@@ -1,0 +1,13 @@
+{
+  "authoritative": true,
+  "collection_date_ist": "2026-10-12",
+  "collection_id": "github-actions:38274060144:1",
+  "completed_at_utc": "2026-10-12T15:58:30Z",
+  "event_ids": [
+    "release-batch:virtual:410516379,410516466,410568109,410568244"
+  ],
+  "outcome": "completed",
+  "scheduled_slot_ist": "12:00",
+  "schema_version": 1,
+  "trigger": "schedule"
+}
