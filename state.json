@@ -34,10 +34,6 @@
         "tag": "release-2026-09-14-0945",
         "published_at": "2026-09-14T09:45:17Z"
       },
-      "387906563": {
-        "tag": "release-2026-09-13-1319",
-        "published_at": "2026-09-13T13:19:16Z"
-      },
       "411070497": {
         "tag": "release-2026-10-12-2321",
         "published_at": "2026-10-12T23:21:09Z"
@@ -137,7 +133,7 @@
     "last_seen_id": 407903391
   },
   "virtual": {
-    "last_seen_id": 410568276
+    "last_seen_id": 411488327
   },
   "store": {
     "last_seen_id": 408421359
