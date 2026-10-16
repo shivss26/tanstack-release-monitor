@@ -1,0 +1,32 @@
+{
+  "detected_at_ist": "2026-10-16T17:19:00+05:30",
+  "event_id": "release-batch:virtual:414879798,414880074",
+  "filtered_packages": [
+    "@tanstack/angular-virtual@6.1.7",
+    "@tanstack/lit-virtual@3.14.10",
+    "@tanstack/marko-virtual@3.16.7",
+    "@tanstack/solid-virtual@3.13.48",
+    "@tanstack/svelte-virtual@3.13.47",
+    "@tanstack/vue-virtual@3.13.47"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 414879798,
+      "published_at": "2026-10-16T11:18:47Z",
+      "tag": "@tanstack/virtual-core@3.19.6",
+      "url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/virtual-core%403.19.6"
+    },
+    {
+      "id": 414880074,
+      "published_at": "2026-10-16T11:19:05Z",
+      "tag": "@tanstack/react-virtual@3.14.21",
+      "url": "https://github.com/TanStack/virtual/releases/tag/%40tanstack/react-virtual%403.14.21"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "virtual",
+    "repository": "TanStack/virtual"
+  }
+}
