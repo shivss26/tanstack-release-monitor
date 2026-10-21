@@ -1,0 +1,120 @@
+{
+  "detected_at_ist": "2026-10-22T00:18:00+05:30",
+  "event_id": "release-batch:db:419886738,419886779,419886833,419886888,419886954,419887048,419887097,419887137,419887238,419887324,419887438,419887492,419887536,419887567,419887608,419887656,419887701",
+  "filtered_packages": [
+    "@tanstack/angular-db@0.2.12",
+    "@tanstack/solid-db@0.3.12",
+    "@tanstack/svelte-db@0.5.12",
+    "@tanstack/vue-db@0.3.12"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 419886738,
+      "published_at": "2026-10-21T18:05:08Z",
+      "tag": "@tanstack/cloudflare-durable-objects-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/cloudflare-durable-objects-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419886779,
+      "published_at": "2026-10-21T18:05:11Z",
+      "tag": "@tanstack/capacitor-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/capacitor-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419886833,
+      "published_at": "2026-10-21T18:05:14Z",
+      "tag": "@tanstack/offline-transactions@1.1.4",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.1.4"
+    },
+    {
+      "id": 419886888,
+      "published_at": "2026-10-21T18:05:17Z",
+      "tag": "@tanstack/browser-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/browser-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419886954,
+      "published_at": "2026-10-21T18:05:20Z",
+      "tag": "@tanstack/db-sqlite-persistence-core@0.4.12",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db-sqlite-persistence-core%400.4.12"
+    },
+    {
+      "id": 419887048,
+      "published_at": "2026-10-21T18:05:26Z",
+      "tag": "@tanstack/react-native-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-native-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419887097,
+      "published_at": "2026-10-21T18:05:29Z",
+      "tag": "@tanstack/rxdb-db-collection@0.1.111",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/rxdb-db-collection%400.1.111"
+    },
+    {
+      "id": 419887137,
+      "published_at": "2026-10-21T18:05:32Z",
+      "tag": "@tanstack/expo-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/expo-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419887238,
+      "published_at": "2026-10-21T18:05:38Z",
+      "tag": "@tanstack/tauri-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/tauri-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419887324,
+      "published_at": "2026-10-21T18:05:44Z",
+      "tag": "@tanstack/query-db-collection@1.4.8",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.4.8"
+    },
+    {
+      "id": 419887438,
+      "published_at": "2026-10-21T18:05:50Z",
+      "tag": "@tanstack/trailbase-db-collection@0.1.123",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/trailbase-db-collection%400.1.123"
+    },
+    {
+      "id": 419887492,
+      "published_at": "2026-10-21T18:05:53Z",
+      "tag": "@tanstack/electron-db-sqlite-persistence@0.2.13",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electron-db-sqlite-persistence%400.2.13"
+    },
+    {
+      "id": 419887536,
+      "published_at": "2026-10-21T18:05:56Z",
+      "tag": "@tanstack/electric-db-collection@0.6.3",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/electric-db-collection%400.6.3"
+    },
+    {
+      "id": 419887567,
+      "published_at": "2026-10-21T18:05:59Z",
+      "tag": "@tanstack/powersync-db-collection@0.2.13",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/powersync-db-collection%400.2.13"
+    },
+    {
+      "id": 419887608,
+      "published_at": "2026-10-21T18:06:02Z",
+      "tag": "@tanstack/db@0.15.2",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/db%400.15.2"
+    },
+    {
+      "id": 419887656,
+      "published_at": "2026-10-21T18:06:05Z",
+      "tag": "@tanstack/node-db-sqlite-persistence@0.2.37",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/node-db-sqlite-persistence%400.2.37"
+    },
+    {
+      "id": 419887701,
+      "published_at": "2026-10-21T18:06:08Z",
+      "tag": "@tanstack/react-db@0.5.12",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/react-db%400.5.12"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "db",
+    "repository": "TanStack/db"
+  }
+}
