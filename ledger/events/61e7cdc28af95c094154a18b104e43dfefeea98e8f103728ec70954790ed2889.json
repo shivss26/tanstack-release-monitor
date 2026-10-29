@@ -1,0 +1,116 @@
+{
+  "detected_at_ist": "2026-10-30T01:15:00+05:30",
+  "event_id": "release-batch:ai:428196457,428196521,428196577,428196637,428196756,428196795,428196944,428196994,428197038,428197131,428197178,428197288,428197399,428197458,428197501,428197559",
+  "filtered_packages": [
+    "@tanstack/ai-angular@1.0.1",
+    "@tanstack/ai-preact@1.0.1",
+    "@tanstack/ai-vue@1.0.1",
+    "@tanstack/preact-ai-devtools@1.0.1",
+    "@tanstack/solid-ai-devtools@1.0.1",
+    "@tanstack/svelte-ai-devtools@1.0.1"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 428196457,
+      "published_at": "2026-10-29T17:40:34Z",
+      "tag": "@tanstack/ai-lovable@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-lovable%401.0.1"
+    },
+    {
+      "id": 428196521,
+      "published_at": "2026-10-29T17:40:37Z",
+      "tag": "@tanstack/ai-grok@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-grok%401.0.1"
+    },
+    {
+      "id": 428196577,
+      "published_at": "2026-10-29T17:40:40Z",
+      "tag": "@tanstack/ai-code-mode@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-code-mode%401.0.1"
+    },
+    {
+      "id": 428196637,
+      "published_at": "2026-10-29T17:40:43Z",
+      "tag": "@tanstack/ai-byteplus@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-byteplus%401.0.1"
+    },
+    {
+      "id": 428196756,
+      "published_at": "2026-10-29T17:40:49Z",
+      "tag": "@tanstack/ai-gemini@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%401.0.1"
+    },
+    {
+      "id": 428196795,
+      "published_at": "2026-10-29T17:40:52Z",
+      "tag": "@tanstack/ai-harness@0.1.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-harness%400.1.1"
+    },
+    {
+      "id": 428196944,
+      "published_at": "2026-10-29T17:41:01Z",
+      "tag": "@tanstack/ai-openai@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openai%401.0.1"
+    },
+    {
+      "id": 428196994,
+      "published_at": "2026-10-29T17:41:04Z",
+      "tag": "@tanstack/ai-fal@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-fal%401.0.1"
+    },
+    {
+      "id": 428197038,
+      "published_at": "2026-10-29T17:41:07Z",
+      "tag": "@tanstack/ai-react@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-react%401.0.1"
+    },
+    {
+      "id": 428197131,
+      "published_at": "2026-10-29T17:41:13Z",
+      "tag": "@tanstack/ai-openrouter@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%401.0.1"
+    },
+    {
+      "id": 428197178,
+      "published_at": "2026-10-29T17:41:16Z",
+      "tag": "@tanstack/react-ai-devtools@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/react-ai-devtools%401.0.1"
+    },
+    {
+      "id": 428197288,
+      "published_at": "2026-10-29T17:41:22Z",
+      "tag": "@tanstack/ai-ollama@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-ollama%401.0.1"
+    },
+    {
+      "id": 428197399,
+      "published_at": "2026-10-29T17:41:28Z",
+      "tag": "@tanstack/ai@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%401.0.1"
+    },
+    {
+      "id": 428197458,
+      "published_at": "2026-10-29T17:41:31Z",
+      "tag": "@tanstack/ai-persistence@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-persistence%401.0.1"
+    },
+    {
+      "id": 428197501,
+      "published_at": "2026-10-29T17:41:34Z",
+      "tag": "@tanstack/ai-client@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-client%401.0.1"
+    },
+    {
+      "id": 428197559,
+      "published_at": "2026-10-29T17:41:37Z",
+      "tag": "@tanstack/ai-devtools-core@1.0.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-devtools-core%401.0.1"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
