@@ -6,10 +6,6 @@
         "tag": "release-2026-10-10-0730",
         "published_at": "2026-10-10T07:30:08Z"
       },
-      "400294272": {
-        "tag": "release-2026-09-30-1747",
-        "published_at": "2026-09-30T17:47:28Z"
-      },
       "411070497": {
         "tag": "release-2026-10-12-2321",
         "published_at": "2026-10-12T23:21:09Z"
@@ -64,10 +60,6 @@
   "create-tsrouter-app": {
     "last_seen_id": 415417097,
     "yank_watch": {
-      "400346458": {
-        "tag": "release-2026-09-30-1855",
-        "published_at": "2026-09-30T18:55:56Z"
-      },
       "415417097": {
         "tag": "release-2026-10-16-2203",
         "published_at": "2026-10-16T22:03:12Z"
