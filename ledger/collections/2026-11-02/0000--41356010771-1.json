@@ -1,0 +1,13 @@
+{
+  "authoritative": true,
+  "collection_date_ist": "2026-11-02",
+  "collection_id": "github-actions:41356010771:1",
+  "completed_at_utc": "2026-11-01T22:13:21Z",
+  "event_ids": [
+    "release:create-tsrouter-app:430824121"
+  ],
+  "outcome": "completed",
+  "scheduled_slot_ist": "00:00",
+  "schema_version": 1,
+  "trigger": "schedule"
+}
