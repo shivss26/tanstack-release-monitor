@@ -1,0 +1,18 @@
+{
+  "detected_at_ist": "2026-11-01T19:12:00+05:30",
+  "event_id": "release:query:430497680",
+  "kind": "release",
+  "releases": [
+    {
+      "id": 430497680,
+      "published_at": "2026-11-01T10:08:38Z",
+      "tag": "release-2026-11-01-1008",
+      "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-01-1008"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "query",
+    "repository": "TanStack/query"
+  }
+}

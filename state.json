@@ -29,12 +29,8 @@
     }
   },
   "query": {
-    "last_seen_id": 424058050,
+    "last_seen_id": 430497680,
     "yank_watch": {
-      "401710536": {
-        "tag": "release-2026-10-02-1005",
-        "published_at": "2026-10-02T10:05:43Z"
-      },
       "409878238": {
         "tag": "release-2026-10-11-1936",
         "published_at": "2026-10-11T19:36:25Z"
@@ -54,6 +50,10 @@
       "424058050": {
         "tag": "release-2026-10-26-0932",
         "published_at": "2026-10-26T09:32:54Z"
+      },
+      "430497680": {
+        "tag": "release-2026-11-01-1008",
+        "published_at": "2026-11-01T10:08:38Z"
       }
     }
   },
@@ -109,7 +109,7 @@
     "last_seen_id": 428197559
   },
   "virtual": {
-    "last_seen_id": 427747952
+    "last_seen_id": 430553493
   },
   "store": {
     "last_seen_id": 408421359
