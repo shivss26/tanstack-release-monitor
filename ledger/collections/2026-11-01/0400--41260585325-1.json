@@ -1,0 +1,11 @@
+{
+  "authoritative": true,
+  "collection_date_ist": "2026-11-01",
+  "collection_id": "github-actions:41260585325:1",
+  "completed_at_utc": "2026-11-01T01:19:18Z",
+  "event_ids": [],
+  "outcome": "completed",
+  "scheduled_slot_ist": "04:00",
+  "schema_version": 1,
+  "trigger": "schedule"
+}
