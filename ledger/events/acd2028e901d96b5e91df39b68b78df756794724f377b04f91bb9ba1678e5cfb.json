@@ -1,0 +1,18 @@
+{
+  "detected_at_ist": "2026-11-03T15:14:00+05:30",
+  "event_id": "release-batch:db:432261641",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 432261641,
+      "published_at": "2026-11-03T03:58:00Z",
+      "tag": "@tanstack/query-db-collection@1.5.1",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.5.1"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "db",
+    "repository": "TanStack/db"
+  }
+}

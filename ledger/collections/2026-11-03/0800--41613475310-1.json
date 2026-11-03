@@ -1,0 +1,15 @@
+{
+  "authoritative": true,
+  "collection_date_ist": "2026-11-03",
+  "collection_id": "github-actions:41613475310:1",
+  "completed_at_utc": "2026-11-03T09:44:50Z",
+  "event_ids": [
+    "release-batch:db:432261641",
+    "release:create-tsrouter-app:432286528",
+    "release:create-tsrouter-app:432400944"
+  ],
+  "outcome": "completed",
+  "scheduled_slot_ist": "08:00",
+  "schema_version": 1,
+  "trigger": "schedule"
+}
