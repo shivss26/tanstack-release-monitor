@@ -1,0 +1,18 @@
+{
+  "detected_at_ist": "2026-11-03T20:04:00+05:30",
+  "event_id": "release:create-tsrouter-app:432687947",
+  "kind": "release",
+  "releases": [
+    {
+      "id": 432687947,
+      "published_at": "2026-11-03T12:47:26Z",
+      "tag": "release-2026-11-03-1247",
+      "url": "https://github.com/TanStack/cli/releases/tag/release-2026-11-03-1247"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "create-tsrouter-app",
+    "repository": "TanStack/cli"
+  }
+}
