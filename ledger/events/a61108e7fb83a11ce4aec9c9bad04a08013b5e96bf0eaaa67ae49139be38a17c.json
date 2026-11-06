@@ -1,0 +1,51 @@
+{
+  "detected_at_ist": "2026-11-07T01:59:00+05:30",
+  "event_id": "release-batch:ai:436807907,436807954,436808013,436808054,436808111,436808166",
+  "filtered_packages": [
+    "@tanstack/ai-angular@1.1.0"
+  ],
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 436807907,
+      "published_at": "2026-11-06T17:44:04Z",
+      "tag": "@tanstack/ai-vercel-gateway@1.1.2",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-vercel-gateway%401.1.2"
+    },
+    {
+      "id": 436807954,
+      "published_at": "2026-11-06T17:44:06Z",
+      "tag": "@tanstack/ai-openrouter@1.1.2",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-openrouter%401.1.2"
+    },
+    {
+      "id": 436808013,
+      "published_at": "2026-11-06T17:44:09Z",
+      "tag": "@tanstack/ai-gemini@1.2.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-gemini%401.2.0"
+    },
+    {
+      "id": 436808054,
+      "published_at": "2026-11-06T17:44:13Z",
+      "tag": "@tanstack/ai-neon@0.2.2",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-neon%400.2.2"
+    },
+    {
+      "id": 436808111,
+      "published_at": "2026-11-06T17:44:16Z",
+      "tag": "@tanstack/ai-effect@0.1.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-effect%400.1.0"
+    },
+    {
+      "id": 436808166,
+      "published_at": "2026-11-06T17:44:19Z",
+      "tag": "@tanstack/ai-llmgateway@1.0.2",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-llmgateway%401.0.2"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
