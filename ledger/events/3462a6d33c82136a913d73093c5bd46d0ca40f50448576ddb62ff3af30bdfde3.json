@@ -1,0 +1,24 @@
+{
+  "detected_at_ist": "2026-11-10T02:28:00+05:30",
+  "event_id": "release-batch:ai:439451500,439451535",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 439451500,
+      "published_at": "2026-11-09T17:43:54Z",
+      "tag": "@tanstack/ai-mcp@1.2.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-mcp%401.2.0"
+    },
+    {
+      "id": 439451535,
+      "published_at": "2026-11-09T17:43:57Z",
+      "tag": "@tanstack/ai@1.4.0",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai%401.4.0"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
