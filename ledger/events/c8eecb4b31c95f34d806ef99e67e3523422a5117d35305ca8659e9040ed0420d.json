@@ -1,0 +1,24 @@
+{
+  "detected_at_ist": "2026-11-11T23:29:00+05:30",
+  "event_id": "release-batch:db:441879899,441880302",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 441879899,
+      "published_at": "2026-11-11T15:35:17Z",
+      "tag": "@tanstack/offline-transactions@1.2.1",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/offline-transactions%401.2.1"
+    },
+    {
+      "id": 441880302,
+      "published_at": "2026-11-11T15:35:38Z",
+      "tag": "@tanstack/query-db-collection@1.5.2",
+      "url": "https://github.com/TanStack/db/releases/tag/%40tanstack/query-db-collection%401.5.2"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "db",
+    "repository": "TanStack/db"
+  }
+}
