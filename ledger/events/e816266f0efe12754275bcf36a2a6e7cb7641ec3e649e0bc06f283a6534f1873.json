@@ -1,0 +1,30 @@
+{
+  "detected_at_ist": "2026-11-11T15:07:00+05:30",
+  "event_id": "release-batch:ai:441434807,441434863,441434916",
+  "kind": "release-batch",
+  "releases": [
+    {
+      "id": 441434807,
+      "published_at": "2026-11-11T08:55:50Z",
+      "tag": "@tanstack/ai-cohere@1.1.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-cohere%401.1.1"
+    },
+    {
+      "id": 441434863,
+      "published_at": "2026-11-11T08:55:53Z",
+      "tag": "@tanstack/ai-effect@0.1.1",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/ai-effect%400.1.1"
+    },
+    {
+      "id": 441434916,
+      "published_at": "2026-11-11T08:55:56Z",
+      "tag": "@tanstack/openai-base@1.0.4",
+      "url": "https://github.com/TanStack/ai/releases/tag/%40tanstack/openai-base%401.0.4"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "label": "ai",
+    "repository": "TanStack/ai"
+  }
+}
